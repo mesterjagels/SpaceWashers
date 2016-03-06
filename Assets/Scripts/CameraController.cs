@@ -27,11 +27,12 @@ public class CameraController : MonoBehaviour {
 //		}
 		targetPos = new Vector3 (spaceship.position.x, spaceship.position.y, startPos.z);
 		if (tf.position != targetPos) {
-			tf.position = Vector3.Lerp (tf.position, targetPos, Time.deltaTime*5);
+//			tf.position = Vector3.Lerp (tf.position, targetPos, Time.deltaTime*5);
+			tf.position = targetPos;
 		}
 		distBetweenPlayers = Mathf.Abs (Vector3.Distance(players[0].transform.position, players[1].transform.position));
 		if (cam.orthographicSize + distBetweenPlayers < 15) {
-//			transform.position = new Vector3 (startPos.x, startPos.y + distBetweenPlayers, startPos.z);
+//			tf.position = new Vector3 (tf.position.x, startPos.y + distBetweenPlayers, startPos.z);
 			cam.orthographicSize = startSize+distBetweenPlayers;
 		}
 	}

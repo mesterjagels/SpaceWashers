@@ -11,7 +11,7 @@ public class SpaceshipController : MonoBehaviour {
 	float moveTime, rotTime;
 	public AnimationClip left, right;
 	Animation anim;
-	public float moveSpeed;
+	public float moveSpeed, laneSwitchSpeed;
 	float moveTo;
 	public Vector2 velocity;
 	Rigidbody2D rb;
@@ -41,7 +41,7 @@ public class SpaceshipController : MonoBehaviour {
 			moveTime += Time.deltaTime*0.25f;
 			rotTime = moveTime*2;
 			if (tf.position.x != targetPos.x) {
-				tf.position = Vector3.Lerp (tf.position, new Vector3 (targetPos.x, tf.position.y, tf.position.z), moveTime);
+				tf.position = Vector3.Lerp (tf.position, new Vector3 (targetPos.x, tf.position.y, tf.position.z), moveTime*laneSwitchSpeed);
 //				if (moveTime < 0.5f){
 ////					targetRot = new Quaternion (startRot.x, startRot.y-25, startRot.z, startRot.w);
 ////					tf.rotation = Quaternion.Lerp (tf.rotation, targetRot, rotTime);
