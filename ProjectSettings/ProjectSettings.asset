@@ -10,7 +10,7 @@ PlayerSettings:
   useOnDemandResources: 0
   accelerometerFrequency: 60
   companyName: DefaultCompany
-  productName: Spaceship Thing
+  productName: SpaceWashers
   defaultCursor: {fileID: 0}
   cursorHotspot: {x: 0, y: 0}
   m_ShowUnitySplashScreen: 1
@@ -96,12 +96,12 @@ PlayerSettings:
   metroEnableLowLatencyPresentationAPI: 0
   xboxOneDisableKinectGpuReservation: 0
   virtualRealitySupported: 0
-  productGUID: 412cd7532b9396e478d33d2f13064bbc
+  productGUID: 860ece594f5eef34ba239cb7317e0b97
   AndroidBundleVersionCode: 1
   AndroidMinSdkVersion: 9
   AndroidPreferredInstallLocation: 1
   aotOptions: 
-  apiCompatibilityLevel: 2
+  apiCompatibilityLevel: 1
   stripEngineCode: 1
   iPhoneStrippingLevel: 0
   iPhoneScriptCallOptimization: 0
@@ -169,7 +169,13 @@ PlayerSettings:
     banner: {fileID: 0}
   androidGamepadSupportLevel: 0
   resolutionDialogBanner: {fileID: 0}
-  m_BuildTargetIcons: []
+  m_BuildTargetIcons:
+  - m_BuildTarget: 
+    m_Icons:
+    - serializedVersion: 2
+      m_Icon: {fileID: 0}
+      m_Width: 128
+      m_Height: 128
   m_BuildTargetBatching: []
   m_BuildTargetGraphicsAPIs: []
   webPlayerTemplate: APPLICATION:Default
@@ -325,14 +331,14 @@ PlayerSettings:
   psmSplashimage: {fileID: 0}
   spritePackerPolicy: 
   scriptingDefineSymbols: {}
-  metroPackageName: Spaceship Thing
+  metroPackageName: SpaceWashers
   metroPackageVersion: 
   metroCertificatePath: 
   metroCertificatePassword: 
   metroCertificateSubject: 
   metroCertificateIssuer: 
   metroCertificateNotAfter: 0000000000000000
-  metroApplicationDescription: Spaceship Thing
+  metroApplicationDescription: SpaceWashers
   wsaImages: {}
   metroTileShortName: 
   metroCommandLineArgsFile: 
@@ -411,58 +417,15 @@ PlayerSettings:
   XboxOnePersistentLocalStorageSize: 0
   intPropertyNames:
   - Android::ScriptingBackend
-  - Metro::ScriptingBackend
   - Standalone::ScriptingBackend
-<<<<<<< HEAD
-=======
-  - WP8::ScriptingBackend
->>>>>>> Different stuff
-  - WebGL::ScriptingBackend
-  - WebGL::audioCompressionFormat
-  - WebGL::exceptionSupport
-  - WebGL::memorySize
   - WebPlayer::ScriptingBackend
-  - iOS::Architecture
-  - iOS::EnableIncrementalBuildSupportForIl2cpp
-  - iOS::ScriptingBackend
   Android::ScriptingBackend: 0
-  Metro::ScriptingBackend: 2
   Standalone::ScriptingBackend: 0
-<<<<<<< HEAD
-=======
-  WP8::ScriptingBackend: 2
->>>>>>> Different stuff
-  WebGL::ScriptingBackend: 1
-  WebGL::audioCompressionFormat: 4
-  WebGL::exceptionSupport: 1
-  WebGL::memorySize: 256
   WebPlayer::ScriptingBackend: 0
-  iOS::Architecture: 2
-  iOS::EnableIncrementalBuildSupportForIl2cpp: 0
-  iOS::ScriptingBackend: 1
   boolPropertyNames:
-  - WebGL::analyzeBuildSize
-  - WebGL::dataCaching
-  - WebGL::useEmbeddedResources
   - XboxOne::enus
-  WebGL::analyzeBuildSize: 0
-  WebGL::dataCaching: 0
-  WebGL::useEmbeddedResources: 0
   XboxOne::enus: 1
-  stringPropertyNames:
-  - WebGL::emscriptenArgs
-  - WebGL::template
-  - additionalIl2CppArgs::additionalIl2CppArgs
-  WebGL::emscriptenArgs: 
-  WebGL::template: APPLICATION:Default
-  additionalIl2CppArgs::additionalIl2CppArgs: 
-<<<<<<< HEAD
-<<<<<<< HEAD
-  firstStreamedSceneWithResources: 0
-=======
->>>>>>> Different stuff
-=======
->>>>>>> Imported UNIDUINO package
+  stringPropertyNames: []
   cloudProjectId: 
   projectName: 
   organizationId: 
