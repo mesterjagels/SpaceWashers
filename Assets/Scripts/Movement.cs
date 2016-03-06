@@ -12,6 +12,9 @@ public class Movement : MonoBehaviour {
 	Rigidbody rb;
 	public Vector3 curVelocity;
 	Vector3 velX, velZ;
+	public Transform cord;
+	LineRenderer line;
+	public float distToCord;
 	// Use this for initialization
 	void Start () {
 		tf = gameObject.transform;
@@ -19,6 +22,7 @@ public class Movement : MonoBehaviour {
 		rb = gameObject.GetComponent<Rigidbody> ();
 		slow = 1;
 		magnet = false;
+		line = gameObject.GetComponent<LineRenderer>();
 	}
 	
 	// Update is called once per frame
@@ -92,6 +96,9 @@ public class Movement : MonoBehaviour {
 			Invoke ("Boots", 1.5f);
 
 		}
+		line.SetPosition (0, tf.position);
+		line.SetPosition (1, cord.position);
+		distToCord = Vector3.Distance (tf.position, cord.position);
 //		curVelocity = rb.velocity;
 	}
 
