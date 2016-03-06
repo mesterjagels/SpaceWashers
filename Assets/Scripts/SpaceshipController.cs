@@ -58,7 +58,7 @@ public class SpaceshipController : MonoBehaviour {
 
 		moveTo = (Time.deltaTime * moveSpeed);
 //		tf.position += Vector3.up * moveTo;
-		moveSpeed += Time.deltaTime*0.1f;
+//		moveSpeed += Time.deltaTime*0.1f;
 		rb.velocity = new Vector2 (0,moveSpeed);
 		velocity = GetComponent<Rigidbody2D> ().velocity;
 //		Quaternion vibRot = new Quaternion (tf.rotation.x, 0.5f+(Mathf.PingPong (Time.time * vibSpeed,1)), tf.rotation.z, tf.rotation.w);

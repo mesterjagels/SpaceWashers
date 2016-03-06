@@ -96,7 +96,11 @@ PlayerSettings:
   metroEnableLowLatencyPresentationAPI: 0
   xboxOneDisableKinectGpuReservation: 0
   virtualRealitySupported: 0
+<<<<<<< HEAD
   productGUID: 860ece594f5eef34ba239cb7317e0b97
+=======
+  productGUID: 78273e9f341f40c428b479f4a23ba516
+>>>>>>> Added rope to WashTest 2d and currently key 'Q' as detach/reattach for player 1.
   AndroidBundleVersionCode: 1
   AndroidMinSdkVersion: 9
   AndroidPreferredInstallLocation: 1
