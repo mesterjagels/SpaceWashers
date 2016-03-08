@@ -3,15 +3,15 @@ using System.Collections;
 
 public class Movement : MonoBehaviour {
 
-	public KeyCode left, right, up, down, magnetBoots;
+	public KeyCode left, right, up, down, magnetBoots, detach;
 	public float moveSpeed, nonRbSpeed, bracingSlow;
 	Transform tf;
 	Vector3 movePos;
 	bool magnet;
 	float slow;
-	Rigidbody rb;
+	Rigidbody2D rb;
 	public Vector3 curVelocity;
-	Vector3 velX, velZ;
+	Vector2 velX, velZ;
 	public Transform cord;
 	LineRenderer line;
 	public float distToCord;
@@ -19,36 +19,33 @@ public class Movement : MonoBehaviour {
 	void Start () {
 		tf = gameObject.transform;
 		movePos = new Vector3 (tf.position.x, 2.5f, tf.position.z);
-		rb = gameObject.GetComponent<Rigidbody> ();
+		rb = gameObject.GetComponent<Rigidbody2D> ();
 		slow = 1;
 		magnet = false;
-		line = gameObject.GetComponent<LineRenderer>();
+//		line = gameObject.GetComponent<LineRenderer>();
 	}
 	
 	// Update is called once per frame
 	void Update () {
-		if (Input.GetKey (left)) 
-		{
-			if (!magnet) 
-			{
-				rb.AddForce (Vector3.left * moveSpeed * slow * Time.deltaTime);
-				velX += (Vector3.left * moveSpeed * slow * Time.deltaTime*0.2f);
+		if (Input.GetKey (left)) {
+			if (!magnet) {
+//				rb.AddForce (Vector2.left * moveSpeed * slow * Time.deltaTime);
+				velX += (Vector2.left * moveSpeed * slow * Time.deltaTime * 0.2f);
 				MoveRB ();
-			} else 
-			{
+			} else {
 				movePos.x -= (nonRbSpeed * slow * Time.deltaTime);
 				Move ();
 			}
-
-
+		} else if (Input.GetKeyUp (left)) {
+			velX = Vector2.zero;
 		}
 
 		if (Input.GetKey (right)) 
 		{
 			if (!magnet) 
 			{
-				rb.AddForce (Vector3.right * moveSpeed * slow * Time.deltaTime);
-				velX += (Vector3.right * moveSpeed * slow * Time.deltaTime*0.2f);
+//				rb.AddForce (Vector2.right * moveSpeed * slow * Time.deltaTime);
+				velX += (Vector2.right * moveSpeed * slow * Time.deltaTime*0.2f);
 				MoveRB ();
 			} else 
 			{
@@ -57,6 +54,8 @@ public class Movement : MonoBehaviour {
 			}
 
 
+		}else if (Input.GetKeyUp (right)) {
+			velX = Vector2.zero;
 		}
 
 		if (Input.GetKey (up)) 
@@ -64,13 +63,15 @@ public class Movement : MonoBehaviour {
 			if (!magnet) 
 			{
 //				rb.AddForce (Vector3.forward * moveSpeed * slow * Time.deltaTime);
-				velZ += Vector3.forward * moveSpeed * slow * Time.deltaTime*0.2f;
+				velZ += Vector2.up * moveSpeed * slow * Time.deltaTime*0.2f;
 				MoveRB ();
 			} else 
 			{
 				movePos.z += (nonRbSpeed * slow * Time.deltaTime);
 				Move ();
 			}
+		}else if (Input.GetKeyUp (up)) {
+			velZ = Vector2.zero;
 		}
 
 		if (Input.GetKey (down)) 
@@ -78,17 +79,19 @@ public class Movement : MonoBehaviour {
 			if (!magnet) 
 			{
 //				rb.AddForce (Vector3.back * moveSpeed * slow * Time.deltaTime);
-				velZ += Vector3.back * moveSpeed * slow * Time.deltaTime*0.2f;
+				velZ += Vector2.down * moveSpeed * slow * Time.deltaTime*0.2f;
 				MoveRB ();
 			} else 
 			{
 				movePos.z -= (nonRbSpeed * slow * Time.deltaTime);
 				Move ();
 			}
+		}else if (Input.GetKeyUp (down)) {
+			velZ = Vector2.zero;
 		}
 
-		if (magnet && rb.velocity != Vector3.zero) {
-			rb.velocity = Vector3.zero;
+		if (magnet && rb.velocity != Vector2.zero) {
+			rb.velocity = Vector2.zero;
 		}
 
 		if (Input.GetKeyDown (magnetBoots) )
@@ -96,8 +99,12 @@ public class Movement : MonoBehaviour {
 			Invoke ("Boots", 1.5f);
 
 		}
-		line.SetPosition (0, tf.position);
-		line.SetPosition (1, cord.position);
+
+		if (Input.GetKeyDown (detach)) {
+			cord.gameObject.GetComponent<RopeStart> ().Detach (tf.position);
+		}
+//		line.SetPosition (0, tf.position);
+//		line.SetPosition (1, cord.position);
 		distToCord = Vector3.Distance (tf.position, cord.position);
 //		curVelocity = rb.velocity;
 	}
@@ -107,15 +114,15 @@ public class Movement : MonoBehaviour {
 	}
 
 	void MoveRB () {
-		rb.velocity = new Vector3 (velX.x, 0, velZ.z);
+		rb.velocity = new Vector2 (velX.x, velZ.y);
 	}
 
 	void Boots () {
 		if (magnet) 
 		{
 			slow = 1;
-			rb.velocity = Vector3.zero;
-			rb.angularVelocity = Vector3.zero;
+			rb.velocity = Vector2.zero;
+			rb.angularVelocity = 0;
 			magnet = false;
 		} else 
 		{

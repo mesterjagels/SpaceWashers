@@ -8,6 +8,7 @@ TagManager:
   - Background
   - Obstacle
   - Spaceship
+  - RopeLink
   layers:
   - Default
   - TransparentFX
