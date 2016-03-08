@@ -15,6 +15,7 @@ public class Movement : MonoBehaviour {
 	public Transform cord;
 	LineRenderer line;
 	public float distToCord;
+
 	// Use this for initialization
 	void Start () {
 		tf = gameObject.transform;
