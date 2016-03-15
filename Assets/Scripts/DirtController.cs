@@ -25,7 +25,11 @@ public class DirtController : MonoBehaviour {
 		totalPixels = alreadyWashed.Length;
 		CalculateStuff ();
 	}
-	
+
+	void OnEnable () {
+		GameObject.FindGameObjectWithTag("GameController").GetComponent<AmountWashed>().UpdateDirts();
+	}
+
 	// Update is called once per frame
 	void Update () {
 	
@@ -48,6 +52,7 @@ public class DirtController : MonoBehaviour {
 		}
 
 		duplicate.SetPixels32 (Mathf.FloorToInt (pixelUV.x), Mathf.FloorToInt (pixelUV.y), brushSize, brushSize, colors);
+		Debug.Log (Mathf.FloorToInt (pixelUV.x) + " " + Mathf.FloorToInt (pixelUV.y) + " " + brushSize + " " + brushSize + " " + colors);
 		duplicate.Apply ();
 		CalculateStuff ();
 

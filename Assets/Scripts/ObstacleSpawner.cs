@@ -30,34 +30,37 @@ public class ObstacleSpawner : MonoBehaviour {
 //		}
 
 		for (int i = 0; i < numberOfZones; i++) {
-			int randomX = Random.Range (0, xPos.Length);
+			int randomX = Random.Range (-100, 100);
 			int randomObs = Random.Range (0, obstacles.Length);
 
 			if (!randomOrder) 
 			{
 				if (i <= (easyZones - 1)) {
-					GameObject obs = Instantiate (obstacles [randomObs], new Vector3 (xPos [randomX], spaceYSize + (spaceYSize * i * 2.5f), 0), Quaternion.identity) as GameObject;
+					GameObject obs = Instantiate (obstacles [randomObs], new Vector3 (randomX, spaceYSize + (spaceYSize * i * 2.5f), 0), Quaternion.identity) as GameObject;
 					obs.transform.name = "Easy" + i;
+					obs.transform.parent = gameObject.transform;
 				} else if (i > (easyZones - 1) && i <= (easyZones + mediumZones - 1)) {
-					GameObject obs = Instantiate (obstacles [randomObs], new Vector3 (xPos [randomX], spaceYSize + (spaceYSize * i * 2.5f), 0), Quaternion.identity) as GameObject;
+					GameObject obs = Instantiate (obstacles [randomObs], new Vector3 (randomX, spaceYSize + (spaceYSize * i * 2.5f), 0), Quaternion.identity) as GameObject;
 					obs.transform.localScale = new Vector3 (obs.transform.localScale.x * 1.5f, obs.transform.localScale.y, obs.transform.localScale.z);
 					obs.transform.name = "Medium" + i;
+					obs.transform.parent = gameObject.transform;
 				} else if (i > (easyZones + mediumZones - 1) && i <= (easyZones + mediumZones + hardZones - 1)) {
-					GameObject obs = Instantiate (obstacles [randomObs], new Vector3 (xPos [randomX], spaceYSize + (spaceYSize * i * 2.5f), 0), Quaternion.identity) as GameObject;
+					GameObject obs = Instantiate (obstacles [randomObs], new Vector3 (randomX, spaceYSize + (spaceYSize * i * 2.5f), 0), Quaternion.identity) as GameObject;
 					obs.transform.localScale = new Vector3 (obs.transform.localScale.x * 2, obs.transform.localScale.y, obs.transform.localScale.z);
 					obs.transform.name = "Hard" + i;
+					obs.transform.parent = gameObject.transform;
 				}
 			} else 
 			{
 				int diff = Random.Range (0, 3);
 				if (diff == 0 && curEz < easyZones) {
-					SpawnEasy (obstacles [randomObs], new Vector3 (xPos [randomX], spaceYSize + (spaceYSize * i * 2.5f), 0), i);
+					SpawnEasy (obstacles [randomObs], new Vector3 (randomX, spaceYSize + (spaceYSize * i * 2.5f), 0), i);
 					curEz++;
 				}else if (diff == 1 && curMed < mediumZones) {
-					SpawnMedium (obstacles [randomObs], new Vector3 (xPos [randomX], spaceYSize + (spaceYSize * i * 2.5f), 0), i);
+					SpawnMedium (obstacles [randomObs], new Vector3 (randomX, spaceYSize + (spaceYSize * i * 2.5f), 0), i);
 					curMed++;
 				}else if (diff == 2 && curHard < hardZones) {
-					SpawnHard (obstacles [randomObs], new Vector3 (xPos [randomX], spaceYSize + (spaceYSize * i * 2.5f), 0), i);
+					SpawnHard (obstacles [randomObs], new Vector3 (randomX, spaceYSize + (spaceYSize * i * 2.5f), 0), i);
 					curMed++;
 				}
 			}
@@ -67,7 +70,7 @@ public class ObstacleSpawner : MonoBehaviour {
 //		{
 //			int randomX = Random.Range (0, xPos.Length);
 //			int randomObs = Random.Range (0, obstacles.Length);
-//			GameObject obs = Instantiate (obstacles [randomObs], new Vector3 (xPos [randomX], spaceYSize + (spaceYSize * i * 2.5f), 0), Quaternion.identity) as GameObject;
+//			GameObject obs = Instantiate (obstacles [randomObs], new Vector3 (randomX, spaceYSize + (spaceYSize * i * 2.5f), 0), Quaternion.identity) as GameObject;
 //			obs.transform.name = "Easy" + i;
 //			numberSpawned++;
 //			Debug.Log ("easy " + numberSpawned);
@@ -78,11 +81,11 @@ public class ObstacleSpawner : MonoBehaviour {
 //			int randomX = Random.Range (0, xPos.Length);
 //			int randomObs = Random.Range (0, obstacles.Length);
 //			if (j == 0) {
-//				GameObject obs = Instantiate (obstacles [randomObs], new Vector3 (xPos [randomX], (spaceYSize*2) + (spaceYSize * (j + 1) * numberSpawned * 2), 0), Quaternion.identity) as GameObject;
+//				GameObject obs = Instantiate (obstacles [randomObs], new Vector3 (randomX, (spaceYSize*2) + (spaceYSize * (j + 1) * numberSpawned * 2), 0), Quaternion.identity) as GameObject;
 //				obs.transform.localScale = new Vector3 (obs.transform.localScale.x * 1.5f, obs.transform.localScale.y, obs.transform.localScale.z);
 //				obs.transform.name = "Medium" + j;
 //			} else {
-//				GameObject obs = Instantiate (obstacles [randomObs], new Vector3 (xPos [randomX], spaceYSize + (spaceYSize * (j + 1) * numberSpawned * 2), 0), Quaternion.identity) as GameObject;
+//				GameObject obs = Instantiate (obstacles [randomObs], new Vector3 (randomX, spaceYSize + (spaceYSize * (j + 1) * numberSpawned * 2), 0), Quaternion.identity) as GameObject;
 //				obs.transform.localScale = new Vector3 (obs.transform.localScale.x * 1.5f, obs.transform.localScale.y, obs.transform.localScale.z);
 //				obs.transform.name = "Medium" + j;
 //			}
@@ -96,11 +99,11 @@ public class ObstacleSpawner : MonoBehaviour {
 //			int randomX = Random.Range (0, xPos.Length);
 //			int randomObs = Random.Range (0, obstacles.Length);
 //			if (k == 0) {
-//				GameObject obs = Instantiate (obstacles [randomObs], new Vector3 (xPos [randomX], (spaceYSize*2) + (spaceYSize * (k + 2) * numberSpawned * 1.75f), 0), Quaternion.identity) as GameObject;
+//				GameObject obs = Instantiate (obstacles [randomObs], new Vector3 (randomX, (spaceYSize*2) + (spaceYSize * (k + 2) * numberSpawned * 1.75f), 0), Quaternion.identity) as GameObject;
 //				obs.transform.localScale = new Vector3 (obs.transform.localScale.x * 2, obs.transform.localScale.y, obs.transform.localScale.z);
 //				obs.transform.name = "Hard" + k;
 //			} else {
-//				GameObject obs = Instantiate (obstacles [randomObs], new Vector3 (xPos [randomX], spaceYSize + (spaceYSize * (k + 2) * numberSpawned * 1.75f), 0), Quaternion.identity) as GameObject;
+//				GameObject obs = Instantiate (obstacles [randomObs], new Vector3 (randomX, spaceYSize + (spaceYSize * (k + 2) * numberSpawned * 1.75f), 0), Quaternion.identity) as GameObject;
 //				obs.transform.localScale = new Vector3 (obs.transform.localScale.x * 2, obs.transform.localScale.y, obs.transform.localScale.z);
 //				obs.transform.name = "Hard" + k;
 //			}
@@ -114,18 +117,21 @@ public class ObstacleSpawner : MonoBehaviour {
 	void SpawnEasy (GameObject obj, Vector3 pos, int nr) {
 		GameObject obs = Instantiate (obj, pos, Quaternion.identity) as GameObject;
 		obs.transform.name = "Easy" + nr;
+		obs.transform.parent = gameObject.transform;
 	}
 
 	void SpawnMedium (GameObject obj, Vector3 pos, int nr) {
 		GameObject obs = Instantiate (obj, pos, Quaternion.identity) as GameObject;
 		obs.transform.name = "Medium" + nr;
 		obs.transform.localScale = new Vector3 (obs.transform.localScale.x * 1.5f, obs.transform.localScale.y, obs.transform.localScale.z);
+		obs.transform.parent = gameObject.transform;
 	}
 
 	void SpawnHard (GameObject obj, Vector3 pos, int nr) {
 		GameObject obs = Instantiate (obj, pos, Quaternion.identity) as GameObject;
 		obs.transform.name = "Hard" + nr;
 		obs.transform.localScale = new Vector3 (obs.transform.localScale.x * 2, obs.transform.localScale.y, obs.transform.localScale.z);
+		obs.transform.parent = gameObject.transform;
 	}
 }
 
