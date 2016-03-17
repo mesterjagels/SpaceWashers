@@ -60,6 +60,7 @@ public class SpaceshipController : MonoBehaviour {
 			sideMove = true;
 		}
 		if (Input.GetMouseButtonUp(0) && !gridMovement && rb.velocity.x > 0){
+			//TODO: Insert controller support by using arduino.digitalRead() 
 			decel = true;
 			sideMove = false;
 		}
@@ -68,9 +69,18 @@ public class SpaceshipController : MonoBehaviour {
 			sideMove = true;
 		}
 		if (Input.GetMouseButtonUp(1) && !gridMovement && rb.velocity.x < 0){
+		 	//TODO: Insert controller support by using arduino.digitalRead() 
 			decel = true;
 			Debug.Log ("decelerate");
 			sideMove = false;
+		}
+		if(arduino.digitalRead(pinBtn1) == 1 ){
+			Debug.Log("You are pressing button 1");
+			//TODO: Insert fancy boost method here
+		}
+		if(arduino.digitalRead(pinBtn2) == 1 ){
+			Debug.Log("You are pressing button 2");
+			//TODO: Insert fancy shield method here
 		}
 
 		if (Input.GetAxis("Mouse ScrollWheel") > 0 && moveSpeed < maxSpeed){
