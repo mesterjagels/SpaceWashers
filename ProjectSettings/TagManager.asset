@@ -9,6 +9,7 @@ TagManager:
   - Obstacle
   - Spaceship
   - RopeLink
+  - SpaceshipCollider
   layers:
   - Default
   - TransparentFX

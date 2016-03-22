@@ -5,7 +5,7 @@ using System.Collections.Generic;
 
 public class PaintTest : MonoBehaviour {
 
-	public Texture2D tex, texDirty;
+	public Texture2D tex;
 	public GameObject spaceship;
 	Renderer rend;
 	Texture2D duplicate, dirty;
@@ -22,6 +22,7 @@ public class PaintTest : MonoBehaviour {
 	RectTransform barRect;
 	Vector3 barScale;
 	public KeyCode wash;
+	private Movement mvmt;
 	// Use this for initialization
 	void Start () 
 	{
@@ -31,15 +32,33 @@ public class PaintTest : MonoBehaviour {
 		totalPixels = alreadyWashed.Length;
 		barRect = barImg.rectTransform;
 		barScale = barImg.rectTransform.localScale;
+		mvmt = GetComponent<Movement>();
 	}
 	
 	// Update is called once per frame
 	void Update () 
 	{
-		// Only if we hit something, do we continue
+
+
+
+//		Vector2 ray = transform.forward;
+//		RaycastHit2D hit = Physics2D.Raycast (transform.position, ray);
+//		if (hit.collider != null) {
+////			Debug.Log (gameObject.transform.name + " hit " + hit.transform.gameObject.name);
+//			if (hit.transform.tag == "Dirt"){
+//				Vector2 localPos = new Vector2 (hit.transform.gameObject.transform.position.x-hit.point.x, hit.transform.gameObject.transform.position.y-hit.point.y);
+////				Vector2 pixelUV = hit.point
+////				Debug.Log ("localpos: " + hit.transform.gameObject.transform.position);
+//				Debug.Log ("hitpos: " + hit.point);
+////				Vector2 pixelUV = hit.textureCoord;
+////				hit.transform.GetComponent<DirtController>().Clean (brushSize, pixelUV);
+////				Debug.Log (gameObject.transform.name + " hit " + hit.transform.gameObject.name);
+//			}
+//		}
+
 		RaycastHit hit;
-		Vector3 ray = (-transform.up);
-		if (Physics.Raycast (transform.position, ray, out hit) && Input.GetKey(wash))
+		Vector3 ray = transform.forward;
+		if (Physics.Raycast (transform.position, ray, out hit) && mvmt.washing)
 		{			
 			if (hit.transform.tag == "Dirt") 
 			{
@@ -62,6 +81,7 @@ public class PaintTest : MonoBehaviour {
 //					duplicate.Apply ();
 //					CalculateStuff ();
 //				}
+				Debug.Log ("pixeluv: " + pixelUV);
 				hit.transform.GetComponent<DirtController>().Clean (brushSize, pixelUV);
 			}
 

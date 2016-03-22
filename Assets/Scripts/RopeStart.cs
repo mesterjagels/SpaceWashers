@@ -20,6 +20,7 @@ public class RopeStart : MonoBehaviour {
 	}
 
 	public void Detach (Vector3 pos) {
-		tf.position = pos;
+//		tf.position = pos;
+		tf.position = Vector3.Lerp (tf.position, pos, reelSpeed*Time.deltaTime);
 	}
 }

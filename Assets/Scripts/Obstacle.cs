@@ -3,6 +3,8 @@ using System.Collections;
 
 public class Obstacle : MonoBehaviour {
 
+	bool hit;
+
 	// Use this for initialization
 	void Start () {
 	
@@ -13,10 +15,15 @@ public class Obstacle : MonoBehaviour {
 	
 	}
 
-	void OnTriggerEnter (Collider other) {
+	void OnTriggerEnter2D (Collider2D other) {
 		Debug.Log ("triggered");
-		if (other.transform.tag == "Spaceship") {
+		if (other.transform.tag == "SpaceshipCollider" && !hit) {
 			Debug.Log (gameObject.name + " collided with " + other.transform.name);
+			other.transform.GetComponent<ShipCollider>().SpawnDirt();
+			hit = true;
+			Destroy (gameObject, 0.5f);
 		}
 	}
+
+
 }

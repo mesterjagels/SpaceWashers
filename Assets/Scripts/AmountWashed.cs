@@ -10,7 +10,7 @@ public class AmountWashed : MonoBehaviour {
 	public int totalPixels, pixelsWashedCount;
 	public float totalPrcntWashed;
 	public RawImage barImg;
-	public Text barText;
+	public Text barText, scoreText;
 	public GameObject [] dirtText;
 
 	RectTransform barRect;
@@ -49,8 +49,12 @@ public class AmountWashed : MonoBehaviour {
 		totalPrcntWashed = (((float)pixelsWashedCount) / ((float)totalPixels));
 		barScale.x = totalPrcntWashed;
 		barRect.localScale = barScale;
-		barImg.rectTransform.localScale = barRect.localScale;
+//		barImg.rectTransform.localScale = barRect.localScale;
 		barText.text = (totalPrcntWashed*100).ToString();
+		scoreText.text = pixelsWashedCount.ToString();
+	}
 
+	public void UpdateDirts () {
+		dirt = GameObject.FindGameObjectsWithTag ("Dirt");
 	}
 }
