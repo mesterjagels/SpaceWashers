@@ -1,6 +1,7 @@
 ﻿using UnityEngine;
 using UnityEngine.UI;
 using System.Collections;
+using Uniduino;
 
 public class SpaceshipController : MonoBehaviour {
 
@@ -34,9 +35,29 @@ public class SpaceshipController : MonoBehaviour {
 	public bool shieldActive, boostActive;
 	public GameObject shield;
 	float curBoostSpeed;
+
+	//Used for setting up the arduino
+	Arduino arduino;
+	private int pinUp = 2;
+	private int pinDown = 3;
+	private int pinLeft = 4;
+	private int pinRight = 5;
+	private int pinBtn1 = 6;
+	private int pinBtn2 = 7;
+	private int pinBtn1Light = 8;
+	private int pinBtn2Light = 9;
+
+	//Used to check state changes on the arduino. Technically to create a buttonDown/buttonUp method for the arduino
+	private int pinUpLast = 0
+		, pinDownLast = 0
+		, pinLeftLast = 0
+		, pinRightLast = 0
+		, pinBtn1Last = 0
+		, pinBtn2Last = 0;
+
 //	public float vibSpeed;
 //	public float timeToMove;
-	// Use this for initialization
+
 	void Start () {
 		tf = gameObject.transform;
 		startPos = tf.position;
@@ -52,26 +73,49 @@ public class SpaceshipController : MonoBehaviour {
 		curShield = maxShield;
 		curBoost = maxBoost;
 		shield.SetActive (false);
+
+		arduino = Arduino.global;
+		arduino.Setup(ConfigurePins);
 	}
 	
 	// Update is called once per frame
 	void Update () {
-		if (Input.GetMouseButton (0)) {
+
+		MovementControls ();
+		moveTo = (Time.deltaTime * moveSpeed);
+//		tf.position += Vector3.up * moveTo;
+//		moveSpeed += Time.deltaTime*0.1f;
+		rb.velocity = new Vector2 (rb.velocity.x,moveSpeed+curBoostSpeed);
+		velocity = GetComponent<Rigidbody2D> ().velocity;
+//		Quaternion vibRot = new Quaternion (tf.rotation.x, 0.5f+(Mathf.PingPong (Time.time * vibSpeed,1)), tf.rotation.z, tf.rotation.w);
+//		tf.rotation = vibRot;
+//		transform.rotation.x = Mathf.Sin (Time.time * vibSpeed);
+		distTravelled.text = (tf.position.y-startPos.y).ToString();
+		timeHasElapsed += Time.unscaledDeltaTime;
+		timeElapsed.text = timeHasElapsed.ToString("F2");
+
+	}
+	void MovementControls(){
+		if (Input.GetMouseButton (0) || arduino.digitalRead(pinLeft) == 1) {
 			GoLeft();
 			sideMove = true;
+			pinLeftLast = 1;
 		}
-		if (Input.GetMouseButtonUp(0) && !gridMovement && rb.velocity.x > 0){
+		if (Input.GetMouseButtonUp(0) || arduino.digitalRead(pinLeft) == 0 && pinLeftLast == 1 && !gridMovement && rb.velocity.x > 0){
 			decel = true;
 			sideMove = false;
+			pinLeftLast = 0;
 		}
-		if (Input.GetMouseButton (1)) {
+		if (Input.GetMouseButton (1)|| arduino.digitalRead(pinRight) == 1) {
 			GoRight ();
 			sideMove = true;
+			pinRightLast = 1;
 		}
-		if (Input.GetMouseButtonUp(1) && !gridMovement && rb.velocity.x < 0){
+		if (Input.GetMouseButtonUp(1) || arduino.digitalRead(pinRight) == 0 && pinRightLast == 1  && !gridMovement && rb.velocity.x < 0){
 			decel = true;
 			Debug.Log ("decelerate");
 			sideMove = false;
+			pinRightLast = 0;
 		}
 
 		if (Input.GetAxis("Mouse ScrollWheel") > 0 && moveSpeed < maxSpeed){
@@ -80,13 +124,15 @@ public class SpaceshipController : MonoBehaviour {
 			moveSpeed --;
 		}
 
-		if (Input.GetKey (shieldButton)){
+		if (Input.GetKey (shieldButton) || arduino.digitalRead(pinBtn1) == 1) {
 			shieldActive = true;
-		}else if (Input.GetKeyUp (shieldButton)){
+			pinBtn1Last = 1;
+		}else if (Input.GetKeyUp (shieldButton) || arduino.digitalRead(pinBtn1) == 0 && pinBtn1Last == 1){
 			shieldActive = false;
+			pinBtn1Last = 0;
 		}
 
-		if (Input.GetKeyDown (boostButton) && curBoost > 0){
+		if (Input.GetKeyDown (boostButton) || arduino.digitalRead(pinBtn2) == 1 && curBoost > 0){
 			boostActive = true;
 		}
 
@@ -130,19 +176,6 @@ public class SpaceshipController : MonoBehaviour {
 		if (!boostActive && curBoost < maxBoost){
 			BoostRegen();
 		}
-
-		moveTo = (Time.deltaTime * moveSpeed);
-//		tf.position += Vector3.up * moveTo;
-//		moveSpeed += Time.deltaTime*0.1f;
-		rb.velocity = new Vector2 (rb.velocity.x,moveSpeed+curBoostSpeed);
-		velocity = GetComponent<Rigidbody2D> ().velocity;
-//		Quaternion vibRot = new Quaternion (tf.rotation.x, 0.5f+(Mathf.PingPong (Time.time * vibSpeed,1)), tf.rotation.z, tf.rotation.w);
-//		tf.rotation = vibRot;
-//		transform.rotation.x = Mathf.Sin (Time.time * vibSpeed);
-		distTravelled.text = (tf.position.y-startPos.y).ToString();
-		timeHasElapsed += Time.unscaledDeltaTime;
-		timeElapsed.text = timeHasElapsed.ToString("F2");
-
 	}
 
 	void Decelerate () {
@@ -243,5 +276,18 @@ public class SpaceshipController : MonoBehaviour {
 
 	}
 
+	void ConfigurePins()
+	{
+		arduino.pinMode(pinUp, PinMode.INPUT);
+		arduino.pinMode(pinDown, PinMode.INPUT);
+		arduino.pinMode(pinLeft, PinMode.INPUT);
+		arduino.pinMode(pinRight, PinMode.INPUT);
+		arduino.pinMode(pinBtn1, PinMode.INPUT);
+		arduino.pinMode(pinBtn2, PinMode.INPUT);
+
+		//Only need to activate once for one pin, becuase all pins are on the same Port
+		arduino.reportDigital((byte)(pinUp / 8), 1);
+
+	}
 
 }

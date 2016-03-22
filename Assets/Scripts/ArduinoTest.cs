@@ -30,6 +30,7 @@ public class ArduinoTest : MonoBehaviour {
         arduino.pinMode(pinLeft, PinMode.INPUT);
         arduino.pinMode(pinRight, PinMode.INPUT);
 		arduino.pinMode(pinBtn1, PinMode.INPUT);
+		arduino.pinMode(pinBtn2, PinMode.INPUT);
 
 		arduino.pinMode(pinBtn1Light, PinMode.OUTPUT);
 
@@ -56,8 +57,10 @@ public class ArduinoTest : MonoBehaviour {
 			GetComponent<Rigidbody2D> ().AddForce (new Vector2 (1, 0));
 		} else if (arduino.digitalRead (pinBtn1) == 1) {
 			//TODO: Insert boost controls here
+			Debug.Log("Button 1 says click");
 		} else if (arduino.digitalRead (pinBtn2) == 1) {
 			//TODO: Insert shield controls here
+			Debug.Log("Button 2 says click");
 		}
 
     }
