@@ -6,9 +6,11 @@ public class RagdollTest : MonoBehaviour {
 	public float force = 10;
 	private Rigidbody2D rb;
 
+
 	void Awake () {
 
 		rb = GetComponent<Rigidbody2D>();
+
 	}
 
 	// Use this for initialization
@@ -34,5 +36,6 @@ public class RagdollTest : MonoBehaviour {
 		if (Input.GetKey ("s")) {
 			rb.velocity = new Vector2(rb.velocity.x, -force);
 		}
+
 	}
 }
