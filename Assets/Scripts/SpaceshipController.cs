@@ -1,20 +1,8 @@
 ﻿using UnityEngine;
 using UnityEngine.UI;
 using System.Collections;
-using Uniduino;
 
 public class SpaceshipController : MonoBehaviour {
-
-	public Arduino arduino;
-	public int pinUp = 2;
-	public int pinDown = 3;
-	public int pinLeft = 4;
-	public int pinRight = 5;
-	public int pinBtn1 = 6;
-	public int pinBtn2 = 7;
-
-	public int pinBtn1Light = 8;
-	public int pinBtn2Light = 9;
 
 	public Vector2 startPos, lPos, rPos;
 	public Vector3 targetPos;
@@ -35,10 +23,20 @@ public class SpaceshipController : MonoBehaviour {
 	float sideAccTimer;
 	public bool sideMove;
 	public Text distTravelled, timeElapsed;
+	float timeHasElapsed, shieldRegenTimer;
+	public float maxShield, shieldRegenTime, shieldDepleteTime, minShieldNeeded, curShield;
+	public float maxBoost, boostRegenTime, boostDepleteTime, curBoost, boostSpeed;
+	public KeyCode shieldButton, boostButton;
+	public RawImage shieldBar, boostBar;
+	float shieldBarScaleStart, boostBarScaleStart;
+	RectTransform shieldBarRect, boostBarRect;
+	Vector3 shieldBarScale, boostBarScale;
+	public bool shieldActive, boostActive;
+	public GameObject shield;
+	float curBoostSpeed;
 //	public float vibSpeed;
 //	public float timeToMove;
 	// Use this for initialization
-
 	void Start () {
 		tf = gameObject.transform;
 		startPos = tf.position;
@@ -48,39 +46,32 @@ public class SpaceshipController : MonoBehaviour {
 		anim = GetComponent<Animation>();
 		rb = GetComponent<Rigidbody2D> ();
 		sideAccTimer = 0;
-
-		arduino = Arduino.global;
-		arduino.Setup(ConfigurePins);
+		shieldBarRect = shieldBar.rectTransform;
+		shieldBarScale = shieldBarRect.localScale;
+		shieldBarScaleStart = shieldBarScale.x;
+		curShield = maxShield;
+		curBoost = maxBoost;
+		shield.SetActive (false);
 	}
 	
 	// Update is called once per frame
 	void Update () {
-		if (Input.GetMouseButton (0) | arduino.digitalRead (pinLeft) == 1) {
+		if (Input.GetMouseButton (0)) {
 			GoLeft();
 			sideMove = true;
 		}
 		if (Input.GetMouseButtonUp(0) && !gridMovement && rb.velocity.x > 0){
-			//TODO: Insert controller support by using arduino.digitalRead() 
 			decel = true;
 			sideMove = false;
 		}
-		if (Input.GetMouseButton (1) | arduino.digitalRead (pinRight) == 1) {
+		if (Input.GetMouseButton (1)) {
 			GoRight ();
 			sideMove = true;
 		}
 		if (Input.GetMouseButtonUp(1) && !gridMovement && rb.velocity.x < 0){
-		 	//TODO: Insert controller support by using arduino.digitalRead() 
 			decel = true;
 			Debug.Log ("decelerate");
 			sideMove = false;
-		}
-		if(arduino.digitalRead(pinBtn1) == 1 ){
-			Debug.Log("You are pressing button 1");
-			//TODO: Insert fancy boost method here
-		}
-		if(arduino.digitalRead(pinBtn2) == 1 ){
-			Debug.Log("You are pressing button 2");
-			//TODO: Insert fancy shield method here
 		}
 
 		if (Input.GetAxis("Mouse ScrollWheel") > 0 && moveSpeed < maxSpeed){
@@ -89,20 +80,22 @@ public class SpaceshipController : MonoBehaviour {
 			moveSpeed --;
 		}
 
+		if (Input.GetKey (shieldButton)){
+			shieldActive = true;
+		}else if (Input.GetKeyUp (shieldButton)){
+			shieldActive = false;
+		}
+
+		if (Input.GetKeyDown (boostButton) && curBoost > 0){
+			boostActive = true;
+		}
+
 
 		if (move && gridMovement) {
 			moveTime += Time.deltaTime*0.25f;
 			rotTime = moveTime*2;
 			if (tf.position.x != targetPos.x) {
 				tf.position = Vector3.Lerp (tf.position, new Vector3 (targetPos.x, tf.position.y, tf.position.z), moveTime*laneSwitchSpeed);
-//				if (moveTime < 0.5f){
-////					targetRot = new Quaternion (startRot.x, startRot.y-25, startRot.z, startRot.w);
-////					tf.rotation = Quaternion.Lerp (tf.rotation, targetRot, rotTime);
-////					tf.Rotate (Vector3.up, 25);
-//				}else {
-////					targetRot = startRot;
-////					tf.rotation = Quaternion.Lerp (tf.rotation, targetRot, rotTime);
-//				}
 			}else {
 				moveTime = 0;
 				move = false;
@@ -118,16 +111,37 @@ public class SpaceshipController : MonoBehaviour {
 			sideAccTimer = 0;
 		}
 
+		if (shieldActive && curShield > 0) {
+			Shield ();
+			if (!shield.activeInHierarchy){
+				shield.SetActive (true);
+			}
+		}
+		if (!shieldActive && curShield < maxShield) {
+			ShieldRegen ();
+			if (shield.activeInHierarchy){
+				shield.SetActive (false);
+			}
+		}
+
+		if (boostActive && curBoost > 0){
+			Boost ();
+		}
+		if (!boostActive && curBoost < maxBoost){
+			BoostRegen();
+		}
+
 		moveTo = (Time.deltaTime * moveSpeed);
 //		tf.position += Vector3.up * moveTo;
 //		moveSpeed += Time.deltaTime*0.1f;
-		rb.velocity = new Vector2 (rb.velocity.x,moveSpeed);
+		rb.velocity = new Vector2 (rb.velocity.x,moveSpeed+curBoostSpeed);
 		velocity = GetComponent<Rigidbody2D> ().velocity;
 //		Quaternion vibRot = new Quaternion (tf.rotation.x, 0.5f+(Mathf.PingPong (Time.time * vibSpeed,1)), tf.rotation.z, tf.rotation.w);
 //		tf.rotation = vibRot;
 //		transform.rotation.x = Mathf.Sin (Time.time * vibSpeed);
 		distTravelled.text = (tf.position.y-startPos.y).ToString();
-		timeElapsed.text += Time.unscaledDeltaTime.ToString();
+		timeHasElapsed += Time.unscaledDeltaTime;
+		timeElapsed.text = timeHasElapsed.ToString("F2");
 
 	}
 
@@ -141,23 +155,7 @@ public class SpaceshipController : MonoBehaviour {
 			decel = false;
 		}
 	}
-
-	//Method for setting up the different pins
-	void ConfigurePins()
-	{
-		arduino.pinMode(pinUp, PinMode.INPUT);
-		arduino.pinMode(pinDown, PinMode.INPUT);
-		arduino.pinMode(pinLeft, PinMode.INPUT);
-		arduino.pinMode(pinRight, PinMode.INPUT);
-		arduino.pinMode(pinBtn1, PinMode.INPUT);
-
-		arduino.pinMode(pinBtn1Light, PinMode.OUTPUT);
-
-		//Only need to activate once for one pin, becuase all pins are on the same Port
-		arduino.reportDigital((byte)(pinUp / 8), 1);
-
-	}
-
+	
 	void GoLeft () {
 		if (tf.position.x != lPos.x && !move) {
 			if (tf.position.x == startPos.x) {
@@ -206,6 +204,43 @@ public class SpaceshipController : MonoBehaviour {
 			}
 			rb.velocity = new Vector2 (sideVel.x, rb.velocity.y);
 		}
+	}
+
+	void Shield () {
+		curShield -= Time.deltaTime*shieldDepleteTime;
+		float prcntg = curShield/maxShield;
+		shieldBarScale.x = prcntg;
+		shieldBar.rectTransform.localScale = shieldBarScale;
+	}
+
+	void ShieldRegen () {
+		curShield += Time.deltaTime*shieldRegenTime;
+		float prcntg = curShield/maxShield;
+		shieldBarScale.x = prcntg;
+		shieldBar.rectTransform.localScale = shieldBarScale;
+	}
+
+	void Boost () {
+		if (curBoost > 0){
+			curBoost -= Time.deltaTime*boostDepleteTime;
+			float prcntg = curBoost/maxBoost;
+			boostBarScale.x = prcntg;
+			boostBar.rectTransform.localScale = boostBarScale;
+		}else {
+			StopBoost();
+			boostActive = false;
+		}
+	}
+
+	void StopBoost () {
+		curBoost += Time.deltaTime*boostRegenTime;
+		float prcntg = curBoost/maxBoost;
+		boostBarScale.x = prcntg;
+		boostBar.rectTransform.localScale = boostBarScale;
+	}
+
+	void BoostRegen () {
+
 	}
 
 

@@ -48,7 +48,7 @@ public class AmountWashed : MonoBehaviour {
 
 		totalPrcntWashed = (((float)pixelsWashedCount) / ((float)totalPixels));
 		barScale.x = totalPrcntWashed;
-//		barRect.localScale = barScale;
+		barRect.localScale = barScale;
 //		barImg.rectTransform.localScale = barRect.localScale;
 		barText.text = (totalPrcntWashed*100).ToString();
 		scoreText.text = pixelsWashedCount.ToString();
