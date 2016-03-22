@@ -59,20 +59,24 @@ public class SpaceshipController : MonoBehaviour {
 //	public float timeToMove;
 
 	void Start () {
+		anim = GetComponent<Animation>();
+		rb = GetComponent<Rigidbody2D> ();
+
 		tf = gameObject.transform;
 		startPos = tf.position;
 		startRot = tf.rotation;
 		lPos = new Vector3 (startPos.x-10, startPos.y);
 		rPos = new Vector3 (startPos.x+10, startPos.y);
-		anim = GetComponent<Animation>();
-		rb = GetComponent<Rigidbody2D> ();
+
 		sideAccTimer = 0;
+
 		shieldBarRect = shieldBar.rectTransform;
 		shieldBarScale = shieldBarRect.localScale;
 		shieldBarScaleStart = shieldBarScale.x;
 		curShield = maxShield;
-		curBoost = maxBoost;
 		shield.SetActive (false);
+
+		curBoost = maxBoost;
 
 		arduino = Arduino.global;
 		arduino.Setup(ConfigurePins);
@@ -80,8 +84,9 @@ public class SpaceshipController : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
-
+		//Moved the movement into a seperate method to clean update a bit up
 		MovementControls ();
+
 		moveTo = (Time.deltaTime * moveSpeed);
 //		tf.position += Vector3.up * moveTo;
 //		moveSpeed += Time.deltaTime*0.1f;
@@ -218,14 +223,14 @@ public class SpaceshipController : MonoBehaviour {
 	void GoRight () {
 		if (tf.position.x != rPos.x && !move) {
 			if (tf.position.x == startPos.x) {
-//				rPos = new Vector3 (rPos.x, rPos.y, tf.position.z);
+				//				rPos = new Vector3 (rPos.x, rPos.y, tf.position.z);
 				targetPos = new Vector3 (rPos.x, tf.position.y, tf.position.z);
 			}else if (tf.position.x == lPos.x) {
-//				startPos = new Vector3 (startPos.x, startPos.y, tf.position.z);
+				//				startPos = new Vector3 (startPos.x, startPos.y, tf.position.z);
 				targetPos = new Vector3 (startPos.x, tf.position.y, tf.position.z);
 			}
-//			anim.clip = right;
-//			anim.Play ();
+			//			anim.clip = right;
+			//			anim.Play ();
 			move = true;
 		}
 		if (!gridMovement) {
