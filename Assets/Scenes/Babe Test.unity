@@ -3980,6 +3980,14 @@ Prefab:
       propertyPath: m_ConnectedAnchor.y
       value: -.0450000092
       objectReference: {fileID: 0}
+    - target: {fileID: 485944, guid: c22360838ab1b400fa7441a4ede7c4d8, type: 2}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 485944, guid: c22360838ab1b400fa7441a4ede7c4d8, type: 2}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents:
     - {fileID: 6051230, guid: c22360838ab1b400fa7441a4ede7c4d8, type: 2}
   m_ParentPrefab: {fileID: 100100000, guid: c22360838ab1b400fa7441a4ede7c4d8, type: 2}

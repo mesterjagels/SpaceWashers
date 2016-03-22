@@ -21,19 +21,19 @@ public class RagdollTest : MonoBehaviour {
 	// Update is called once per frame
 	void Update () {
 	
-		if (Input.GetKeyDown ("w")) {
+		if (Input.GetKey ("w")) {
 			rb.velocity = new Vector2(rb.velocity.x, force);
 		}
 
-		if (Input.GetKeyDown ("a")) {
+		if (Input.GetKey ("a")) {
 			rb.velocity = new Vector2(-force, rb.velocity.y);
 		}
 
-		if (Input.GetKeyDown ("d")) {
+		if (Input.GetKey ("d")) {
 			rb.velocity = new Vector2(force, rb.velocity.y);
 		}
 
-		if (Input.GetKeyDown ("s")) {
+		if (Input.GetKey ("s")) {
 			rb.velocity = new Vector2(rb.velocity.x, -force);
 		}
 
