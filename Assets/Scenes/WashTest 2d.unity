@@ -4114,7 +4114,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b941cdbf914145a4e8a3ff695b201e2a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  link: {fileID: 68132258}
+  link: {fileID: 0}
 --- !u!120 &1166156618
 LineRenderer:
   m_ObjectHideFlags: 0

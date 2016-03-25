@@ -10,6 +10,7 @@ TagManager:
   - Spaceship
   - RopeLink
   - SpaceshipCollider
+  - CleaningArm
   layers:
   - Default
   - TransparentFX

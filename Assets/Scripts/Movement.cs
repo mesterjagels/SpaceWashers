@@ -19,7 +19,8 @@ public class Movement : MonoBehaviour {
 	public bool moving;
 	public float normalDrag, magnetDrag;
 //	GameObject spaceship;
-	// Use this for initialization
+
+
 	void Start () {
 		tf = gameObject.transform;
 		movePos = new Vector3 (tf.position.x, 2.5f, tf.position.z);

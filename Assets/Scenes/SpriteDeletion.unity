@@ -540,13 +540,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 119d813dec1433642aa08c255ce0d4c5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Layers:
-    serializedVersion: 2
-    m_Bits: 4294967295
-  StampTex: {fileID: 2800000, guid: 0b5edf69f7b92466bb06bddc43fe39a7, type: 3}
-  Size: {x: 1, y: 1}
-  Angle: 0
-  Hardness: 1
 --- !u!4 &431725531
 Transform:
   m_ObjectHideFlags: 0
@@ -847,90 +840,6 @@ Prefab:
     - target: {fileID: 421700, guid: 6d267d08a8254fc49bb484bab1f272d6, type: 2}
       propertyPath: m_RootOrder
       value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 421700, guid: 6d267d08a8254fc49bb484bab1f272d6, type: 2}
-      propertyPath: m_LocalScale.x
-      value: 5.805443
-      objectReference: {fileID: 0}
-    - target: {fileID: 421700, guid: 6d267d08a8254fc49bb484bab1f272d6, type: 2}
-      propertyPath: m_LocalScale.y
-      value: 5.805439
-      objectReference: {fileID: 0}
-    - target: {fileID: 421700, guid: 6d267d08a8254fc49bb484bab1f272d6, type: 2}
-      propertyPath: m_LocalScale.z
-      value: 5.805439
-      objectReference: {fileID: 0}
-    - target: {fileID: 134150, guid: 6d267d08a8254fc49bb484bab1f272d6, type: 2}
-      propertyPath: m_Layer
-      value: 9
-      objectReference: {fileID: 0}
-    - target: {fileID: 147616, guid: 6d267d08a8254fc49bb484bab1f272d6, type: 2}
-      propertyPath: m_Layer
-      value: 9
-      objectReference: {fileID: 0}
-    - target: {fileID: 162498, guid: 6d267d08a8254fc49bb484bab1f272d6, type: 2}
-      propertyPath: m_Layer
-      value: 9
-      objectReference: {fileID: 0}
-    - target: {fileID: 198654, guid: 6d267d08a8254fc49bb484bab1f272d6, type: 2}
-      propertyPath: m_Layer
-      value: 9
-      objectReference: {fileID: 0}
-    - target: {fileID: 113144, guid: 6d267d08a8254fc49bb484bab1f272d6, type: 2}
-      propertyPath: m_Layer
-      value: 9
-      objectReference: {fileID: 0}
-    - target: {fileID: 173846, guid: 6d267d08a8254fc49bb484bab1f272d6, type: 2}
-      propertyPath: m_Layer
-      value: 9
-      objectReference: {fileID: 0}
-    - target: {fileID: 109934, guid: 6d267d08a8254fc49bb484bab1f272d6, type: 2}
-      propertyPath: m_Layer
-      value: 9
-      objectReference: {fileID: 0}
-    - target: {fileID: 134234, guid: 6d267d08a8254fc49bb484bab1f272d6, type: 2}
-      propertyPath: m_Layer
-      value: 9
-      objectReference: {fileID: 0}
-    - target: {fileID: 148934, guid: 6d267d08a8254fc49bb484bab1f272d6, type: 2}
-      propertyPath: m_Layer
-      value: 9
-      objectReference: {fileID: 0}
-    - target: {fileID: 181044, guid: 6d267d08a8254fc49bb484bab1f272d6, type: 2}
-      propertyPath: m_Layer
-      value: 9
-      objectReference: {fileID: 0}
-    - target: {fileID: 104750, guid: 6d267d08a8254fc49bb484bab1f272d6, type: 2}
-      propertyPath: m_Layer
-      value: 9
-      objectReference: {fileID: 0}
-    - target: {fileID: 189792, guid: 6d267d08a8254fc49bb484bab1f272d6, type: 2}
-      propertyPath: m_Layer
-      value: 9
-      objectReference: {fileID: 0}
-    - target: {fileID: 198764, guid: 6d267d08a8254fc49bb484bab1f272d6, type: 2}
-      propertyPath: m_Layer
-      value: 9
-      objectReference: {fileID: 0}
-    - target: {fileID: 167764, guid: 6d267d08a8254fc49bb484bab1f272d6, type: 2}
-      propertyPath: m_Layer
-      value: 9
-      objectReference: {fileID: 0}
-    - target: {fileID: 105982, guid: 6d267d08a8254fc49bb484bab1f272d6, type: 2}
-      propertyPath: m_Layer
-      value: 9
-      objectReference: {fileID: 0}
-    - target: {fileID: 136266, guid: 6d267d08a8254fc49bb484bab1f272d6, type: 2}
-      propertyPath: m_Layer
-      value: 9
-      objectReference: {fileID: 0}
-    - target: {fileID: 5042494, guid: 6d267d08a8254fc49bb484bab1f272d6, type: 2}
-      propertyPath: m_Mass
-      value: 5
-      objectReference: {fileID: 0}
-    - target: {fileID: 181044, guid: 6d267d08a8254fc49bb484bab1f272d6, type: 2}
-      propertyPath: m_TagString
-      value: Player
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 6d267d08a8254fc49bb484bab1f272d6, type: 2}
@@ -3649,7 +3558,7 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1390763841}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 2.27, y: 0.5056678, z: 0}
+  m_LocalPosition: {x: 2.27, y: 0.5056678, z: 20.77}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 1439552733}
