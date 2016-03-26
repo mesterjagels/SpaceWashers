@@ -10,21 +10,6 @@ public class Movement : MonoBehaviour {
 	bool magnet;
 	float slow;
 	Rigidbody2D rb, spaceshipRb;
-<<<<<<< .merge_file_a06408
-	public Vector3 curVelocity;
-	Vector2 velX, velZ;
-	public Transform cord;
-	LineRenderer line;
-	public float distToCord;
-<<<<<<< HEAD
-	public bool washing;
-	bool moving;
-//	GameObject spaceship;
-=======
-
->>>>>>> origin/master
-	// Use this for initialization
-=======
 	public Vector3 curVelocity, curShipVel;
 	public Vector2 velX, velZ;
 	public Transform cord;
@@ -34,9 +19,7 @@ public class Movement : MonoBehaviour {
 	public bool moving;
 	public float normalDrag, magnetDrag;
 //	GameObject spaceship;
-
-
->>>>>>> .merge_file_a07320
+	// Use this for initialization
 	void Start () {
 		tf = gameObject.transform;
 		movePos = new Vector3 (tf.position.x, 2.5f, tf.position.z);
@@ -45,22 +28,15 @@ public class Movement : MonoBehaviour {
 		magnet = false;
 //		spaceship = GameObject.FindGameObjectWithTag("Spaceship");
 		spaceshipRb = GameObject.FindGameObjectWithTag("Spaceship").GetComponent<Rigidbody2D>();
-<<<<<<< .merge_file_a06408
-=======
 		rb.drag = normalDrag;
->>>>>>> .merge_file_a07320
 //		line = gameObject.GetComponent<LineRenderer>();
 	}
 	
 	// Update is called once per frame
 	void Update () {
-<<<<<<< .merge_file_a06408
-		if (Input.GetKey (left) || Input.GetAxis("Horizontal") < 0) {
-=======
 		if (Input.GetKey (left)
 //		    || Input.GetAxis("Horizontal") < 0
 		    ) {
->>>>>>> .merge_file_a07320
 			if (!magnet) {
 //				rb.AddForce (Vector2.left * moveSpeed * slow * Time.deltaTime);
 				velX += (Vector2.left * moveSpeed * slow * Time.deltaTime * 0.2f);
@@ -71,26 +47,17 @@ public class Movement : MonoBehaviour {
 				velX += (Vector2.left * moveSpeedWBoots * slow * Time.deltaTime * 0.2f);
 				MoveRB ();
 			}
-<<<<<<< .merge_file_a06408
-		} else if (Input.GetKeyUp (left) || Input.GetAxis("Horizontal") == 0) {
-=======
 		} else if (Input.GetKeyUp (left)
 //		           || Input.GetAxis("Horizontal") == 0
 		           ) {
->>>>>>> .merge_file_a07320
 			velX = Vector2.zero;
 			if (moving)
 				moving = false;
 		}
 
-<<<<<<< .merge_file_a06408
-		if (Input.GetKey (right) || Input.GetAxis("Horizontal") > 0) 
-		{
-=======
 		if (Input.GetKey (right)
 //		    || Input.GetAxis("Horizontal") > 0
 		    ) {
->>>>>>> .merge_file_a07320
 			if (!magnet) 
 			{
 //				rb.AddForce (Vector2.right * moveSpeed * slow * Time.deltaTime);
@@ -105,26 +72,17 @@ public class Movement : MonoBehaviour {
 			}
 
 
-<<<<<<< .merge_file_a06408
-		}else if (Input.GetKeyUp (right) || Input.GetAxis("Horizontal") == 0) {
-=======
 		}else if (Input.GetKeyUp (right)
 //		          || Input.GetAxis("Horizontal") == 0
 		          ) {
->>>>>>> .merge_file_a07320
 			velX = Vector2.zero;
 			if (moving)
 				moving = false;
 		}
 
-<<<<<<< .merge_file_a06408
-		if (Input.GetKey (up) || Input.GetAxis("Vertical") > 0) 
-		{
-=======
 		if (Input.GetKey (up)
 //		    || Input.GetAxis("Vertical") > 0
 		    ) {
->>>>>>> .merge_file_a07320
 			if (!magnet) 
 			{
 //				rb.AddForce (Vector3.forward * moveSpeed * slow * Time.deltaTime);
@@ -137,27 +95,18 @@ public class Movement : MonoBehaviour {
 //				movePos.z += (moveSpeedWBoots * slow * Time.deltaTime);
 //				Move ();
 			}
-<<<<<<< .merge_file_a06408
-		}else if (Input.GetKeyUp (up) || Input.GetAxis("Vertical") == 0) {
-=======
 		}else if (Input.GetKeyUp (up)
 //		          || Input.GetAxis("Vertical") == 0
 		          ) {
->>>>>>> .merge_file_a07320
 			velZ = Vector2.zero;
 			if (moving)
 				moving = false;
 		}
 
-<<<<<<< .merge_file_a06408
-		if (Input.GetKey (down) || Input.GetAxis("Vertical") < 0) 
-		{
-=======
 		if (Input.GetKey (down)
 //		    || Input.GetAxis("Vertical") < 0
 		    ) {
 
->>>>>>> .merge_file_a07320
 			if (!magnet) 
 			{
 //				rb.AddForce (Vector3.back * moveSpeed * slow * Time.deltaTime);
@@ -170,13 +119,9 @@ public class Movement : MonoBehaviour {
 //				movePos.z -= (moveSpeedWBoots * slow * Time.deltaTime);
 //				Move ();
 			}
-<<<<<<< .merge_file_a06408
-		}else if (Input.GetKeyUp (down) || Input.GetAxis("Vertical") == 0) {
-=======
 		}else if (Input.GetKeyUp (down)
 //		          || Input.GetAxis("Vertical") == 0
 		          ) {
->>>>>>> .merge_file_a07320
 			velZ = Vector2.zero;
 			if (moving)
 				moving = false;
@@ -191,11 +136,7 @@ public class Movement : MonoBehaviour {
 			Invoke ("Boots", 1.5f);
 		}
 
-<<<<<<< .merge_file_a06408
-		if (Input.GetAxis ("HorizontalR") != 0 && Input.GetAxis("VerticalR") != 0) {
-=======
 		if (Input.GetAxis ("HorizontalR") != 0 || Input.GetAxis("VerticalR") != 0) {
->>>>>>> .merge_file_a07320
 			washing = true;
 		}else{
 			washing = false;
@@ -207,14 +148,9 @@ public class Movement : MonoBehaviour {
 //		line.SetPosition (0, tf.position);
 //		line.SetPosition (1, cord.position);
 		distToCord = Vector3.Distance (tf.position, cord.position);
-<<<<<<< .merge_file_a06408
-//		curVelocity = rb.velocity;
-		if (!moving && !magnet){
-=======
 		curShipVel = spaceshipRb.velocity;
 		curVelocity = rb.velocity;
 		if (!moving){
->>>>>>> .merge_file_a07320
 			rb.velocity = spaceshipRb.velocity;
 		}
 	}
