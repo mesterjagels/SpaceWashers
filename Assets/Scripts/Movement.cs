@@ -15,9 +15,13 @@ public class Movement : MonoBehaviour {
 	public Transform cord;
 	LineRenderer line;
 	public float distToCord;
+<<<<<<< HEAD
 	public bool washing;
 	bool moving;
 //	GameObject spaceship;
+=======
+
+>>>>>>> origin/master
 	// Use this for initialization
 	void Start () {
 		tf = gameObject.transform;
