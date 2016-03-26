@@ -27,13 +27,13 @@ public class SpaceshipController : MonoBehaviour {
 	public float maxShield, shieldRegenTime, shieldDepleteTime, minShieldNeeded;
 	public float maxBoost, boostRegenTime, boostDepleteTime, boostSpeed, minBoostNeeded;
 	public KeyCode shieldButton, boostButton;
-	public RawImage shieldBar, boostBar;
-	float shieldBarScaleStart, boostBarScaleStart;
-	RectTransform shieldBarRect, boostBarRect;
-	Vector3 shieldBarScale, boostBarScale;
+	public RawImage shieldBar, boostBar, distBar;
+	float shieldBarScaleStart, boostBarScaleStart, distBarScaleStart;
+	RectTransform shieldBarRect, boostBarRect, distBarRect;
+	Vector3 shieldBarScale, boostBarScale, distBarScale;
 	bool shieldActive, boostActive;
 	public GameObject shield;
-	float curBoostSpeed;
+	float curBoostSpeed, distPrcntg;
 //	public float vibSpeed;
 //	public float timeToMove;
 	// Use this for initialization
@@ -52,6 +52,9 @@ public class SpaceshipController : MonoBehaviour {
 		boostBarRect = shieldBar.rectTransform;
 		boostBarScale = shieldBarRect.localScale;
 		boostBarScaleStart = shieldBarScale.x;
+		distBarRect = shieldBar.rectTransform;
+		distBarScale = shieldBarRect.localScale;
+		distBarScaleStart = shieldBarScale.x;
 		curShield = maxShield;
 		curBoost = maxBoost;
 		shield.SetActive (false);
@@ -162,10 +165,12 @@ public class SpaceshipController : MonoBehaviour {
 //		Quaternion vibRot = new Quaternion (tf.rotation.x, 0.5f+(Mathf.PingPong (Time.time * vibSpeed,1)), tf.rotation.z, tf.rotation.w);
 //		tf.rotation = vibRot;
 //		transform.rotation.x = Mathf.Sin (Time.time * vibSpeed);
-		distTravelled.text = (tf.position.y-startPos.y).ToString();
+		distTravelled.text = "Dist: " + (tf.position.y-startPos.y).ToString();
 		timeHasElapsed += Time.unscaledDeltaTime;
 		timeElapsed.text = timeHasElapsed.ToString("F2");
-
+		distPrcntg = (tf.position.y - startPos.y) / GameObject.FindGameObjectWithTag ("ObstacleController").GetComponent<ObstacleSpawner> ().distToTravel;
+		distBarScale.x = distPrcntg;
+		distBar.rectTransform.localScale = distBarScale;
 	}
 
 	void Decelerate () {

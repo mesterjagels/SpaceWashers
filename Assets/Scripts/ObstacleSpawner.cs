@@ -12,6 +12,7 @@ public class ObstacleSpawner : MonoBehaviour {
 	[Header ("Read only, don't change")]
 	public int numberOfZones;
 	int numberSpawned;
+	public float distToTravel;
 //	GameObject spaceship;
 	float spaceYSize;
 	int curEz, curMed, curHard;

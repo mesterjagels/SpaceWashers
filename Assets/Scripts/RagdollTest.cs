@@ -3,13 +3,13 @@ using System.Collections;
 
 public class RagdollTest : MonoBehaviour {
 
-<<<<<<< .merge_file_a08728
-<<<<<<< HEAD
-=======
-	public float force = 10;
->>>>>>> origin/master
-=======
->>>>>>> .merge_file_a04608
+//<<<<<<< .merge_file_a08728
+//<<<<<<< HEAD
+//=======
+//	public float force = 10;
+//>>>>>>> origin/master
+//=======
+//>>>>>>> .merge_file_a04608
 	private Rigidbody2D rb;
 	public float force = 1;
 
@@ -28,7 +28,7 @@ public class RagdollTest : MonoBehaviour {
 	// Update is called once per frame
 	void Update () {
 	
-<<<<<<< HEAD
+//<<<<<<< HEAD
 		if (Input.GetKeyDown ("w")) {
 			rb.velocity = new Vector2(rb.velocity.x, 20);
 		}
@@ -38,8 +38,9 @@ public class RagdollTest : MonoBehaviour {
 		}
 
 		if (Input.GetKeyDown ("d")) {
-			rb.velocity = new Vector2(20, rb.velocity.y);
-=======
+			rb.velocity = new Vector2 (20, rb.velocity.y);
+		}
+//=======
 		if (Input.GetKey ("w")) {
 			rb.velocity = new Vector2(rb.velocity.x, force);
 		}
@@ -54,8 +55,10 @@ public class RagdollTest : MonoBehaviour {
 
 		if (Input.GetKey ("s")) {
 			rb.velocity = new Vector2(rb.velocity.x, -force);
->>>>>>> origin/master
+//>>>>>>> origin/master
 		}
 
+		
 	}
+
 }
