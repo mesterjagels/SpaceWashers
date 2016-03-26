@@ -10,6 +10,10 @@ TagManager:
   - Spaceship
   - RopeLink
   - SpaceshipCollider
+<<<<<<< HEAD
+=======
+  - CleaningArm
+>>>>>>> 5dd8b22bf7d9f2fd979bd617be42d2e396c1831d
   layers:
   - Default
   - TransparentFX
@@ -19,8 +23,8 @@ TagManager:
   - UI
   - 
   - 
-  - 
-  - 
+  - Spaceship
+  - Player
   - 
   - 
   - 

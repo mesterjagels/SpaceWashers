@@ -17,13 +17,19 @@ public class PaintTest : MonoBehaviour {
 	float pixelsPrcntWashed;
 	int washCount;
 	int totalPixels;
+
 	public RawImage barImg;
 	public Text barText;
 	RectTransform barRect;
 	Vector3 barScale;
+
 	public KeyCode wash;
 	private Movement mvmt;
+<<<<<<< HEAD
 	// Use this for initialization
+=======
+
+>>>>>>> 5dd8b22bf7d9f2fd979bd617be42d2e396c1831d
 	void Start () 
 	{
 		rend = spaceship.GetComponent<Renderer> ();
@@ -33,14 +39,21 @@ public class PaintTest : MonoBehaviour {
 		barRect = barImg.rectTransform;
 		barScale = barImg.rectTransform.localScale;
 		mvmt = GetComponent<Movement>();
+<<<<<<< HEAD
+=======
+		spaceship = GameObject.FindGameObjectWithTag ("Spaceship");
+>>>>>>> 5dd8b22bf7d9f2fd979bd617be42d2e396c1831d
 	}
 	
 	// Update is called once per frame
 	void Update () 
 	{
+<<<<<<< HEAD
 
 
 
+=======
+>>>>>>> 5dd8b22bf7d9f2fd979bd617be42d2e396c1831d
 //		Vector2 ray = transform.forward;
 //		RaycastHit2D hit = Physics2D.Raycast (transform.position, ray);
 //		if (hit.collider != null) {

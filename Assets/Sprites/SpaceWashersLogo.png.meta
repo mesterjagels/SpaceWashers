@@ -1,4 +1,5 @@
 fileFormatVersion: 2
+<<<<<<< .merge_file_a09676
 <<<<<<< HEAD
 guid: bf9cf21a4ace1e44b9328eeb1bf867db
 timeCreated: 1457434632
@@ -11,6 +12,10 @@ guid: 57d4458ad743e04408bd61707c9b214c
 timeCreated: 1457435025
 >>>>>>> cceca18ef6038bb104b137306b357bd85a9cc1b8
 >>>>>>> origin/master
+=======
+guid: bf9cf21a4ace1e44b9328eeb1bf867db
+timeCreated: 1457434632
+>>>>>>> .merge_file_a06612
 licenseType: Free
 TextureImporter:
   fileIDToRecycleName: {}
@@ -27,21 +32,29 @@ TextureImporter:
   bumpmap:
     convertToNormalMap: 0
     externalNormalMap: 0
+<<<<<<< .merge_file_a09676
 <<<<<<< HEAD
     heightScale: .25
 =======
     heightScale: 0.25
 >>>>>>> origin/master
+=======
+    heightScale: .25
+>>>>>>> .merge_file_a06612
     normalMapFilter: 0
   isReadable: 0
   grayScaleToAlpha: 0
   generateCubemap: 0
   cubemapConvolution: 0
+<<<<<<< .merge_file_a09676
 <<<<<<< HEAD
   cubemapConvolutionSteps: 8
 =======
   cubemapConvolutionSteps: 7
 >>>>>>> origin/master
+=======
+  cubemapConvolutionSteps: 8
+>>>>>>> .merge_file_a06612
   cubemapConvolutionExponent: 1.5
   seamlessCubemap: 0
   textureFormat: -1
@@ -60,11 +73,15 @@ TextureImporter:
   spriteExtrude: 1
   spriteMeshType: 1
   alignment: 0
+<<<<<<< .merge_file_a09676
 <<<<<<< HEAD
   spritePivot: {x: .5, y: .5}
 =======
   spritePivot: {x: 0.5, y: 0.5}
 >>>>>>> origin/master
+=======
+  spritePivot: {x: .5, y: .5}
+>>>>>>> .merge_file_a06612
   spriteBorder: {x: 0, y: 0, z: 0, w: 0}
   spritePixelsToUnits: 100
   alphaIsTransparency: 0
@@ -72,10 +89,13 @@ TextureImporter:
   buildTargetSettings: []
   spriteSheet:
     sprites: []
+<<<<<<< .merge_file_a09676
 <<<<<<< HEAD
 =======
     outline: []
 >>>>>>> origin/master
+=======
+>>>>>>> .merge_file_a06612
   spritePackingTag: 
   userData: 
   assetBundleName: 

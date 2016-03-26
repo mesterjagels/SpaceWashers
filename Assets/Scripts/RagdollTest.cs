@@ -3,15 +3,21 @@ using System.Collections;
 
 public class RagdollTest : MonoBehaviour {
 
+<<<<<<< .merge_file_a08728
 <<<<<<< HEAD
 =======
 	public float force = 10;
 >>>>>>> origin/master
+=======
+>>>>>>> .merge_file_a04608
 	private Rigidbody2D rb;
+	public float force = 1;
+
 
 	void Awake () {
 
 		rb = GetComponent<Rigidbody2D>();
+
 	}
 
 	// Use this for initialization
@@ -50,5 +56,6 @@ public class RagdollTest : MonoBehaviour {
 			rb.velocity = new Vector2(rb.velocity.x, -force);
 >>>>>>> origin/master
 		}
+
 	}
 }
