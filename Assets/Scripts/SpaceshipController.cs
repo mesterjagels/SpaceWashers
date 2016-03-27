@@ -34,6 +34,7 @@ public class SpaceshipController : MonoBehaviour {
 	bool shieldActive, boostActive;
 	public GameObject shield;
 	float curBoostSpeed, distPrcntg;
+	public float maxXPos;
 //	public float vibSpeed;
 //	public float timeToMove;
 	// Use this for initialization
@@ -171,6 +172,14 @@ public class SpaceshipController : MonoBehaviour {
 		distPrcntg = (tf.position.y - startPos.y) / GameObject.FindGameObjectWithTag ("ObstacleController").GetComponent<ObstacleSpawner> ().distToTravel;
 		distBarScale.x = distPrcntg;
 		distBar.rectTransform.localScale = distBarScale;
+
+		if (tf.position.x < (-maxXPos)) {
+			tf.position = new Vector3 ((maxXPos - 2), tf.position.y, tf.position.z);
+		}
+
+		if (tf.position.x > (maxXPos)) {
+			tf.position = new Vector3 (((-maxXPos) + 2), tf.position.y, tf.position.z);
+		}
 	}
 
 	void Decelerate () {

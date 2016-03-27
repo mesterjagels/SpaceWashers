@@ -1560,6 +1560,7 @@ MonoBehaviour:
   boostBar: {fileID: 1697887368}
   distBar: {fileID: 689002214}
   shield: {fileID: 818158138}
+  maxXPos: 100
 --- !u!111 &464006297
 Animation:
   m_ObjectHideFlags: 0
