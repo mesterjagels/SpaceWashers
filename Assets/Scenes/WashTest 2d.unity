@@ -6877,6 +6877,7 @@ GameObject:
   m_Component:
   - 4: {fileID: 1602244817}
   - 114: {fileID: 1602244816}
+  - 114: {fileID: 1602244818}
   m_Layer: 0
   m_Name: GameController
   m_TagString: GameController
@@ -6920,6 +6921,19 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 7
+--- !u!114 &1602244818
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1602244815}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 822eb4f17ea9ca7439398fb5181fb316, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  cleanPrcntg: 0
+  speed: 0
 --- !u!1 &1684254385
 GameObject:
   m_ObjectHideFlags: 0
