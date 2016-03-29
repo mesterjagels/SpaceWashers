@@ -162,7 +162,7 @@ public class Movement : MonoBehaviour {
 			Invoke ("Boots", 1.5f);
 		}
 
-		if (Input.GetAxis (rHorAxis) != 0 || Input.GetAxis(rVerAxis) != 0) {
+		if (Input.GetAxis (rHorAxis) != 0 || Input.GetAxis(rVerAxis) != 0  || Input.GetKey(KeyCode.Space)) {
 			washing = true;
 		}else{
 			washing = false;
