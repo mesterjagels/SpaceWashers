@@ -308,7 +308,7 @@ InputManager:
     invert: 0
     type: 0
     axis: 3
-    joyNum: 1
+    joyNum: 0
   - serializedVersion: 3
     m_Name: VerticalR1
     descriptiveName: 
@@ -324,7 +324,7 @@ InputManager:
     invert: 0
     type: 0
     axis: 4
-    joyNum: 1
+    joyNum: 0
   - serializedVersion: 3
     m_Name: HorizontalR2
     descriptiveName: 

@@ -1,0 +1,260 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!21 &2100000
+Material:
+  serializedVersion: 6
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_Name: StarsBGMat
+  m_Shader: {fileID: 4800000, guid: 79f034ba95c2c35428e76c0bced1d371, type: 3}
+  m_ShaderKeywords: 
+  m_LightmapFlags: 5
+  m_CustomRenderQueue: 3000
+  stringTagMap: {}
+  m_SavedProperties:
+    serializedVersion: 2
+    m_TexEnvs:
+      data:
+        first:
+          name: _MainTex
+        second:
+          m_Texture: {fileID: 0}
+          m_Scale: {x: 1, y: 1}
+          m_Offset: {x: 0, y: 0}
+      data:
+        first:
+          name: _BumpMap
+        second:
+          m_Texture: {fileID: 0}
+          m_Scale: {x: 1, y: 1}
+          m_Offset: {x: 0, y: 0}
+      data:
+        first:
+          name: _DetailNormalMap
+        second:
+          m_Texture: {fileID: 0}
+          m_Scale: {x: 1, y: 1}
+          m_Offset: {x: 0, y: 0}
+      data:
+        first:
+          name: _ParallaxMap
+        second:
+          m_Texture: {fileID: 0}
+          m_Scale: {x: 1, y: 1}
+          m_Offset: {x: 0, y: 0}
+      data:
+        first:
+          name: _OcclusionMap
+        second:
+          m_Texture: {fileID: 0}
+          m_Scale: {x: 1, y: 1}
+          m_Offset: {x: 0, y: 0}
+      data:
+        first:
+          name: _EmissionMap
+        second:
+          m_Texture: {fileID: 0}
+          m_Scale: {x: 1, y: 1}
+          m_Offset: {x: 0, y: 0}
+      data:
+        first:
+          name: _DetailMask
+        second:
+          m_Texture: {fileID: 0}
+          m_Scale: {x: 1, y: 1}
+          m_Offset: {x: 0, y: 0}
+      data:
+        first:
+          name: _DetailAlbedoMap
+        second:
+          m_Texture: {fileID: 0}
+          m_Scale: {x: 1, y: 1}
+          m_Offset: {x: 0, y: 0}
+      data:
+        first:
+          name: _MetallicGlossMap
+        second:
+          m_Texture: {fileID: 0}
+          m_Scale: {x: 1, y: 1}
+          m_Offset: {x: 0, y: 0}
+      data:
+        first:
+          name: _NebulaClouds1
+        second:
+          m_Texture: {fileID: 0}
+          m_Scale: {x: 1, y: 1}
+          m_Offset: {x: 0, y: 0}
+      data:
+        first:
+          name: _TextureMG
+        second:
+          m_Texture: {fileID: 2800000, guid: 9e3202924e483e448b8b783cdf975215, type: 3}
+          m_Scale: {x: 0.005, y: 0.005}
+          m_Offset: {x: 0, y: 0}
+      data:
+        first:
+          name: _TextureBG
+        second:
+          m_Texture: {fileID: 2800000, guid: bbf2c695f72a3e7498f405757d4ac0f3, type: 3}
+          m_Scale: {x: 0.001, y: 0.001}
+          m_Offset: {x: 0, y: 0}
+      data:
+        first:
+          name: _StarTexture
+        second:
+          m_Texture: {fileID: 2800000, guid: 5535889ab92c8424483d2b48f923bc84, type: 3}
+          m_Scale: {x: 0.01, y: 0.01}
+          m_Offset: {x: 0, y: 0}
+      data:
+        first:
+          name: _StarsBG
+        second:
+          m_Texture: {fileID: 2800000, guid: 5535889ab92c8424483d2b48f923bc84, type: 3}
+          m_Scale: {x: 0.05, y: 0.05}
+          m_Offset: {x: 0, y: 0}
+      data:
+        first:
+          name: _StarsMG
+        second:
+          m_Texture: {fileID: 2800000, guid: e64bcc94bc0442241b10995ef2167488, type: 3}
+          m_Scale: {x: 0.05, y: 0.05}
+          m_Offset: {x: 0, y: 0}
+      data:
+        first:
+          name: _StarsFG
+        second:
+          m_Texture: {fileID: 2800000, guid: 5535889ab92c8424483d2b48f923bc84, type: 3}
+          m_Scale: {x: 0.05, y: 0.05}
+          m_Offset: {x: 0, y: 0}
+      data:
+        first:
+          name: _node_265
+        second:
+          m_Texture: {fileID: 0}
+          m_Scale: {x: 1, y: 1}
+          m_Offset: {x: 0, y: 0}
+      data:
+        first:
+          name: _node_300
+        second:
+          m_Texture: {fileID: 0}
+          m_Scale: {x: 1, y: 1}
+          m_Offset: {x: 0, y: 0}
+      data:
+        first:
+          name: _TextureFG
+        second:
+          m_Texture: {fileID: 2800000, guid: b6c96aea5b97d8546aca9cd8393bfc1b, type: 3}
+          m_Scale: {x: 0.03, y: 0.03}
+          m_Offset: {x: 0, y: 0}
+    m_Floats:
+      data:
+        first:
+          name: _SrcBlend
+        second: 1
+      data:
+        first:
+          name: _DstBlend
+        second: 0
+      data:
+        first:
+          name: _Cutoff
+        second: 0.5
+      data:
+        first:
+          name: _Parallax
+        second: 0.02
+      data:
+        first:
+          name: _ZWrite
+        second: 1
+      data:
+        first:
+          name: _Glossiness
+        second: 0.5
+      data:
+        first:
+          name: _BumpScale
+        second: 1
+      data:
+        first:
+          name: _OcclusionStrength
+        second: 1
+      data:
+        first:
+          name: _DetailNormalMapScale
+        second: 1
+      data:
+        first:
+          name: _UVSec
+        second: 0
+      data:
+        first:
+          name: _Mode
+        second: 0
+      data:
+        first:
+          name: _Metallic
+        second: 0
+      data:
+        first:
+          name: _Nebula1XOffsetModifier
+        second: 0.1
+      data:
+        first:
+          name: _Nebula1YOffsetModifier
+        second: 0.2
+      data:
+        first:
+          name: _Nebula2XOffsetModifier
+        second: 0.3
+      data:
+        first:
+          name: _Nebula2YOffsetModifier
+        second: 0.4
+      data:
+        first:
+          name: _TransparencyModifier
+        second: 0
+      data:
+        first:
+          name: _BGParaMod
+        second: 0.1
+      data:
+        first:
+          name: _MGParaMod
+        second: 0.2
+      data:
+        first:
+          name: _FGParaMod
+        second: 0.3
+      data:
+        first:
+          name: _BGScrollSpeed
+        second: 0.8
+      data:
+        first:
+          name: _MGScrollSpeed
+        second: 0.6
+      data:
+        first:
+          name: _FGScrollSpeed
+        second: 0.4
+    m_Colors:
+      data:
+        first:
+          name: _EmissionColor
+        second: {r: 0, g: 0, b: 0, a: 1}
+      data:
+        first:
+          name: _Color
+        second: {r: 1, g: 1, b: 1, a: 1}
+      data:
+        first:
+          name: _NebColor1
+        second: {r: 0.4411765, g: 0.178417, b: 0.178417, a: 1}
+      data:
+        first:
+          name: _NebColor2
+        second: {r: 0.2975778, g: 0.4799726, b: 0.6323529, a: 1}
