@@ -23,6 +23,10 @@ public class PaintTest : MonoBehaviour {
 	Vector3 barScale;
 	public KeyCode wash;
 	private Movement mvmt;
+	public GameObject head;
+	public Transform washHandWithoutBoots;
+	[HideInInspector]
+	public Transform washHand, washHandWithBoots;
 	// Use this for initialization
 	void Start () 
 	{
@@ -32,7 +36,8 @@ public class PaintTest : MonoBehaviour {
 		totalPixels = alreadyWashed.Length;
 		barRect = barImg.rectTransform;
 		barScale = barImg.rectTransform.localScale;
-		mvmt = GetComponent<Movement>();
+		mvmt = head.GetComponent<Movement>();
+		washHandWithBoots = transform;
 	}
 	
 	// Update is called once per frame
@@ -58,7 +63,7 @@ public class PaintTest : MonoBehaviour {
 
 		RaycastHit hit;
 		Vector3 ray = transform.forward;
-		if (Physics.Raycast (transform.position, ray, out hit) && mvmt.washing)
+		if (Physics.Raycast (washHand.position, ray, out hit) && mvmt.washing)
 		{			
 			if (hit.transform.tag == "Dirt") 
 			{

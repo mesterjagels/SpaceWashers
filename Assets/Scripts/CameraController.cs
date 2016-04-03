@@ -30,10 +30,10 @@ public class CameraController : MonoBehaviour {
 //			tf.position = Vector3.Lerp (tf.position, targetPos, Time.deltaTime*5);
 			tf.position = targetPos;
 		}
-		distBetweenPlayers = Mathf.Abs (Vector3.Distance(players[0].transform.position, players[1].transform.position));
-		if (cam.orthographicSize + distBetweenPlayers < 15) {
+//		distBetweenPlayers = Mathf.Abs (Vector3.Distance(players[0].transform.position, players[1].transform.position));
+//		if (cam.orthographicSize + distBetweenPlayers < 15) {
 //			tf.position = new Vector3 (tf.position.x, startPos.y + distBetweenPlayers, startPos.z);
-			cam.orthographicSize = startSize+distBetweenPlayers;
-		}
+//			cam.orthographicSize = startSize+distBetweenPlayers;
+//		}
 	}
 }

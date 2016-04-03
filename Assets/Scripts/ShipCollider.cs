@@ -29,7 +29,7 @@ public class ShipCollider : MonoBehaviour {
 		randomX = Random.Range (startPos.x, test.x);
 		randomY = Random.Range (startPos.y, test.y);
 		posToSpawn = new Vector3 (randomX, randomY, -5);
-		GameObject dirty = Instantiate (dirt, transform.position, Quaternion.identity) as GameObject;
+		GameObject dirty = Instantiate (dirt, new Vector3 (transform.position.x, transform.position.y, 0), Quaternion.identity) as GameObject;
 		dirty.transform.parent = GameObject.FindGameObjectWithTag("Spaceship").transform;
 	}
 

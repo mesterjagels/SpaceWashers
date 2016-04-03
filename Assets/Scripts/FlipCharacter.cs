@@ -18,12 +18,12 @@ public class FlipCharacter : MonoBehaviour {
 
 	}
 
-	void SetFront(){
+	public void SetFront(){
 		front = gameObject.GetComponent<SpriteRenderer>().sprite = front;
 		order = frontOrder;
 	}
 
-	void SetBack(){
+	public void SetBack(){
 		back = gameObject.GetComponent<SpriteRenderer>().sprite = back;
 		order = backOrder;
 

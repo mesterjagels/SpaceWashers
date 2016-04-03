@@ -52,7 +52,7 @@ public class DirtController : MonoBehaviour {
 		}
 
 		duplicate.SetPixels32 (Mathf.FloorToInt (pixelUV.x), Mathf.FloorToInt (pixelUV.y), brushSize, brushSize, colors);
-		Debug.Log (Mathf.FloorToInt (pixelUV.x) + " " + Mathf.FloorToInt (pixelUV.y) + " " + brushSize + " " + brushSize + " " + colors);
+//		Debug.Log (Mathf.FloorToInt (pixelUV.x) + " " + Mathf.FloorToInt (pixelUV.y) + " " + brushSize + " " + brushSize + " " + colors);
 		duplicate.Apply ();
 		CalculateStuff ();
 
