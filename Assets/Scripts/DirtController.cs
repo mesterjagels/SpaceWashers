@@ -15,6 +15,8 @@ public class DirtController : MonoBehaviour {
 //	float pixelsPrcntWashed;
 	public int washCount;
 	public int totalPixels;
+	public float curPrcnt;
+	public float minPrcntCleaned;
 
 //	public int brushSize;
 	// Use this for initialization
@@ -30,11 +32,7 @@ public class DirtController : MonoBehaviour {
 		GameObject.FindGameObjectWithTag("GameController").GetComponent<AmountWashed>().UpdateDirts();
 	}
 
-	// Update is called once per frame
-	void Update () {
 	
-	}
-
 	public void Clean (int brushSize, Vector2 pixelUV) {
 		rend.material.mainTexture = duplicate;
 //		pixelUV = hit.textureCoord;
@@ -76,7 +74,17 @@ public class DirtController : MonoBehaviour {
 //			pixelsPrcntWashed = ((float)pixelsWashedCount) / ((float)totalPixels);
 		}
 
+		curPrcnt = ((float)pixelsWashedCount / (float)totalPixels)*100;
 
+		if (curPrcnt > minPrcntCleaned) {
+			Cleaned ();
+		}
 
+	}
+
+	void Cleaned () {
+		//Something happens when the dirt is cleaned
+
+		Destroy (this.gameObject, 0.5f);
 	}
 }

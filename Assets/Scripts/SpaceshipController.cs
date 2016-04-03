@@ -90,7 +90,7 @@ public class SpaceshipController : MonoBehaviour {
             pinDownLast = 0,
             pinBtn1Last = 0,
             pinBtn2Last = 0;
-        if (Input.GetMouseButton(0) | arduino.digitalRead(pinLeft) == 1)
+		if (Input.GetMouseButton(0) | arduino.digitalRead(pinLeft) == 1)
         {
             GoLeft();
             sideMove = true;

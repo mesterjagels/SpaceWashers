@@ -85,11 +85,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f86fbe04b325fe9449ee2a3f56c02d50, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  original: {fileID: 2800000, guid: e2546a78a33ee1e4ca0cd982d85aaa5a, type: 3}
+  original: {fileID: 2800000, guid: a23041248845aa541b1b233a37245087, type: 3}
   duplicate: {fileID: 0}
   pixelsWashedCount: 0
   washCount: 0
   totalPixels: 0
+  curPrcnt: 0
+  minPrcntCleaned: 98
 --- !u!1001 &100100000
 Prefab:
   m_ObjectHideFlags: 1
@@ -108,6 +110,14 @@ Prefab:
     - target: {fileID: 0}
       propertyPath: m_LocalScale.z
       value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 0}
+      propertyPath: original
+      value: 
+      objectReference: {fileID: 2800000, guid: a23041248845aa541b1b233a37245087, type: 3}
+    - target: {fileID: 0}
+      propertyPath: minPrcntCleaned
+      value: 98
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 0}

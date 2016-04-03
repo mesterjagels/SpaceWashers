@@ -30,6 +30,9 @@ public class Movement : MonoBehaviour {
 	float magnetMass = 10;
 	public Rigidbody2D [] childRbs;
 	public GameObject washHand;
+	public GameObject ragdollHand;
+	Rigidbody2D ragdollHandRb;
+	Vector2 ragdollHandVel;
 //	public GameObject [] childSprites;
 //	GameObject spaceship;
 	// Use this for initialization
@@ -71,7 +74,7 @@ public class Movement : MonoBehaviour {
 		thisSprite = GetComponent<SpriteRenderer>();
 		playerHolder = transform.parent.parent.gameObject;
 		childRbs = tf.parent.GetComponentsInChildren<Rigidbody2D>();
-
+		ragdollHandRb = ragdollHand.GetComponent<Rigidbody2D> ();
 	}
 	
 	// Update is called once per frame
@@ -138,7 +141,7 @@ public class Movement : MonoBehaviour {
 //				Move ();
 			}
 		}else if (Input.GetKeyUp (up)
-//		          || Input.GetAxis(lVerAxis) == 0
+		          || Input.GetAxis(lVerAxis) == 0
 		          ) {
 			velZ = Vector2.zero;
 			if (moving)
@@ -162,7 +165,7 @@ public class Movement : MonoBehaviour {
 //				Move ();
 			}
 		}else if (Input.GetKeyUp (down)
-//		          || Input.GetAxis(lVerAxis) == 0
+		          || Input.GetAxis(lVerAxis) == 0
 		          ) {
 			velZ = Vector2.zero;
 			if (moving)
@@ -173,13 +176,14 @@ public class Movement : MonoBehaviour {
 //			rb.velocity = Vector2.zero+spaceshipRb.velocity;
 //		}
 
-		if (Input.GetKeyDown (magnetBoots) )
+		if (Input.GetKeyDown (magnetBoots) || Input.GetButtonDown ("ControllerL1"))
 		{
 			Invoke ("Boots", 1.5f);
 		}
 
 		if (Input.GetAxis (rHorAxis) != 0 || Input.GetAxis(rVerAxis) != 0  || Input.GetKey(KeyCode.Space)) {
 			washing = true;
+
 		}else{
 			washing = false;
 		}
@@ -197,7 +201,7 @@ public class Movement : MonoBehaviour {
 			}
 		}
 
-		if (Input.GetKey (detach)) {
+		if (Input.GetKey (detach) || Input.GetButton ("ControllerR1")) {
 			cord.gameObject.GetComponent<RopeStart> ().Detach (tf.position);
 		}
 //		line.SetPosition (0, tf.position);
@@ -215,6 +219,22 @@ public class Movement : MonoBehaviour {
 		if (magnet){
 			rb.velocity = spaceshipRb.velocity + new Vector2 (velX.x, velZ.y);
 		}
+
+		if (Input.GetAxis (rHorAxis) > 0) {
+			ragdollHandVel.x = 5;
+			ragdollHandRb.velocity = ragdollHandVel;
+		}if (Input.GetAxis (rHorAxis) < 0) {
+			ragdollHandVel.x = (-5);
+			ragdollHandRb.velocity = ragdollHandVel;
+		}if (Input.GetAxis (rVerAxis) < 0) {
+			ragdollHandVel.y = 5;
+			ragdollHandRb.velocity = ragdollHandVel;
+		}if (Input.GetAxis (rVerAxis) > 0) {
+			ragdollHandVel.y = (-5);
+			ragdollHandRb.velocity = ragdollHandVel;
+		}
+		//Debug.Log (Input.GetJoystickNames ());
+
 	}
 
 	void Move () {
