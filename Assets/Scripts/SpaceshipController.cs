@@ -116,10 +116,10 @@ public class SpaceshipController : MonoBehaviour {
             pinRightLast = 0;
         }
 
-        if (Input.GetAxis("Mouse ScrollWheel") > 0 && moveSpeed < maxSpeed){
+        if (Input.GetAxis("Mouse ScrollWheel") > 0 | arduino.digitalRead(pinUp) == 1 && moveSpeed < maxSpeed){
 			moveSpeed += speedPerAcceleration;
 
-		}else if (Input.GetAxis("Mouse ScrollWheel") < 0 && moveSpeed > minSpeed){
+		}else if (Input.GetAxis("Mouse ScrollWheel") < 0 | arduino.digitalRead(pinDown) == 1 && moveSpeed > minSpeed){
 			moveSpeed -= speedPerAcceleration;
 
 		}
