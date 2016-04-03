@@ -235,6 +235,10 @@ public class Movement : MonoBehaviour {
 		}
 		//Debug.Log (Input.GetJoystickNames ());
 
+		if ((spaceshipRb.velocity.x > 5 || spaceshipRb.velocity.x < 5) && !GameObject.FindGameObjectWithTag("Spaceship").GetComponent<SpaceshipController>().boostActive) {
+			rb.velocity = new Vector2 (spaceshipRb.velocity.x/2, rb.velocity.y);
+		}
+
 	}
 
 	void Move () {

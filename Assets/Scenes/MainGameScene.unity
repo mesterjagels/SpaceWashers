@@ -1687,7 +1687,7 @@ MonoBehaviour:
   left: {fileID: 7400000, guid: bf137e476dea6b142b0d5bb88a278c91, type: 2}
   right: {fileID: 7400000, guid: 46efb0235ac294b45a189fbf225ef6fa, type: 2}
   minSpeed: 5
-  maxSpeed: 30
+  maxSpeed: 50
   speedPerAcceleration: 5
   moveSpeed: 5
   laneSwitchSpeed: 5
@@ -1718,8 +1718,17 @@ MonoBehaviour:
   shieldBar: {fileID: 1707712331}
   boostBar: {fileID: 1697887368}
   distBar: {fileID: 689002214}
+  boostActive: 0
   shield: {fileID: 818158138}
   maxXPos: 100
+  curSpeed: 0
+  maxAccSpeed: 0
+  speeds:
+  - 5
+  - 15
+  - 25
+  - 35
+  - 45
 --- !u!111 &464006297
 Animation:
   m_ObjectHideFlags: 0
@@ -2053,7 +2062,7 @@ MonoBehaviour:
   washCount: 0
   totalPixels: 0
   curPrcnt: 0
-  minPrcntCleaned: 0
+  minPrcntCleaned: 98
 --- !u!1001 &521346428
 Prefab:
   m_ObjectHideFlags: 0
@@ -2354,7 +2363,7 @@ MonoBehaviour:
   washCount: 0
   totalPixels: 0
   curPrcnt: 0
-  minPrcntCleaned: 0
+  minPrcntCleaned: 98
 --- !u!1 &547954524
 GameObject:
   m_ObjectHideFlags: 0
@@ -3295,7 +3304,7 @@ MonoBehaviour:
   washCount: 0
   totalPixels: 0
   curPrcnt: 0
-  minPrcntCleaned: 0
+  minPrcntCleaned: 98
 --- !u!23 &740651837
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -6270,7 +6279,7 @@ MonoBehaviour:
   washCount: 0
   totalPixels: 0
   curPrcnt: 0
-  minPrcntCleaned: 0
+  minPrcntCleaned: 98
 --- !u!23 &1445326932
 MeshRenderer:
   m_ObjectHideFlags: 0

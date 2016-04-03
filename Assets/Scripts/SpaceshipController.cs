@@ -1,6 +1,7 @@
 ﻿using UnityEngine;
 using UnityEngine.UI;
 using System.Collections;
+using System.Collections.Generic;
 using Uniduino;
 
 public class SpaceshipController : MonoBehaviour {
@@ -33,11 +34,15 @@ public class SpaceshipController : MonoBehaviour {
 	float shieldBarScaleStart, boostBarScaleStart, distBarScaleStart;
 	RectTransform shieldBarRect, boostBarRect, distBarRect;
 	Vector3 shieldBarScale, boostBarScale, distBarScale;
-	bool boostActive;
+	public bool boostActive;
 	public GameObject shield;
-	float curBoostSpeed, distPrcntg;
+	float curBoostSpeed, distPrcntg, prevMoveSpeed;
 	public float maxXPos;
 	GameObject [] players;
+	bool canAccel;
+	float accelTimer;
+	public int curSpeed, maxAccSpeed;
+	public List <float> speeds = new List<float> ();
 
     private Arduino arduino;
     private int pinUp = 2;
@@ -72,6 +77,7 @@ public class SpaceshipController : MonoBehaviour {
 		distBarScaleStart = shieldBarScale.x;
 		curShield = maxShield;
 		curBoost = maxBoost;
+		decel = true;
 		shield.SetActive (false);
 		players = GameObject.FindGameObjectsWithTag("Player");
         //		GoLeft ();
@@ -79,6 +85,10 @@ public class SpaceshipController : MonoBehaviour {
 
         arduino = Arduino.global;
         arduino.Setup(ConfigurePins);
+		prevMoveSpeed = moveSpeed;
+		moveSpeed = speeds [0];
+		curSpeed = 0;
+		maxAccSpeed = speeds.Count;
     }
 	
 	// Update is called once per frame
@@ -117,11 +127,16 @@ public class SpaceshipController : MonoBehaviour {
         }
 
         if (Input.GetAxis("Mouse ScrollWheel") > 0 | arduino.digitalRead(pinUp) == 1 && moveSpeed < maxSpeed){
-			moveSpeed += speedPerAcceleration;
+			//moveSpeed += speedPerAcceleration;
 
+			if (curSpeed < speeds.Count-1 && moveSpeed == speeds[curSpeed]){
+				curSpeed += 1;
+			}
 		}else if (Input.GetAxis("Mouse ScrollWheel") < 0 | arduino.digitalRead(pinDown) == 1 && moveSpeed > minSpeed){
-			moveSpeed -= speedPerAcceleration;
-
+			//moveSpeed -= speedPerAcceleration;
+			if (curSpeed+1 >= 0 && moveSpeed == speeds[curSpeed]){
+				curSpeed -= 1;
+			}
 		}
 		if (moveSpeed > maxSpeed){
 			moveSpeed = maxSpeed;
@@ -130,16 +145,18 @@ public class SpaceshipController : MonoBehaviour {
 			moveSpeed = minSpeed;
 		}
 
-        if (Input.GetKey(shieldButton) | arduino.digitalRead(pinBtn1) == 1 && shieldActivatable && curShield > 0)
-        {
-            shieldActive = true;
-            pinBtn1Last = 1;
-        }
-        else if (Input.GetKeyUp(shieldButton) | arduino.digitalRead(pinBtn1) == 0 && pinBtn1Last == 1)
-        {
-            shieldActive = false;
-            pinBtn1Last = 0;
-        }
+        if ((Input.GetKey (shieldButton) | arduino.digitalRead (pinBtn1) == 1) && shieldActivatable && curShield > 0) {
+			shieldActive = true;
+			pinBtn1Last = 1;
+		} else {
+			shieldActive = false;
+		}
+
+        //if (Input.GetKeyUp(shieldButton) | (arduino.digitalRead(pinBtn1) == 0 && pinBtn1Last == 1))
+        //{
+        //    shieldActive = false;
+        //    pinBtn1Last = 0;
+        //}
         if (curShield <= 0 && shieldActive)
         {
             shieldActive = false;
@@ -160,7 +177,8 @@ public class SpaceshipController : MonoBehaviour {
 			moveTime += Time.deltaTime*0.25f;
 			rotTime = moveTime*2;
 			if (tf.position.x != targetPos.x) {
-				tf.position = Vector3.Lerp (tf.position, new Vector3 (targetPos.x, tf.position.y, tf.position.z), moveTime*laneSwitchSpeed);
+				tf.position = Vector3.MoveTowards (tf.position, new Vector3 (targetPos.x, tf.position.y, tf.position.z), moveTime*laneSwitchSpeed);
+				//tf.position = Vector3.Lerp (tf.position, new Vector3 (targetPos.x, tf.position.y, tf.position.z), moveTime*laneSwitchSpeed);
 			}else {
 				moveTime = 0;
 				move = false;
@@ -210,6 +228,10 @@ public class SpaceshipController : MonoBehaviour {
 			BoostRegen();
 		}
 
+		if (moveSpeed != speeds [curSpeed]) {
+			Accelerate (curSpeed);
+		}
+
 		moveTo = (Time.deltaTime * moveSpeed);
 //		tf.position += Vector3.up * moveTo;
 //		moveSpeed += Time.deltaTime*0.1f;
@@ -224,13 +246,41 @@ public class SpaceshipController : MonoBehaviour {
 		distPrcntg = (tf.position.y - startPos.y) / GameObject.FindGameObjectWithTag ("ObstacleController").GetComponent<ObstacleSpawner> ().distToTravel;
 		distBarScale.x = distPrcntg;
 		distBar.rectTransform.localScale = distBarScale;
-
+		/*
 		if (tf.position.x < (-maxXPos)) {
 			tf.position = new Vector3 ((maxXPos - 2), tf.position.y, tf.position.z);
 		}
 
 		if (tf.position.x > (maxXPos)) {
 			tf.position = new Vector3 (((-maxXPos) + 2), tf.position.y, tf.position.z);
+		}
+		*/
+
+		if (prevMoveSpeed != moveSpeed) {
+			prevMoveSpeed = moveSpeed;
+			for (int i = 0; i < players.Length; i++) {
+				if (players[i].GetComponent<PlayerHead>().head.GetComponent<Movement>().rb.velocity != rb.velocity){
+					players[i].GetComponent<PlayerHead>().head.GetComponent<Movement>().rb.velocity = rb.velocity;		
+				}
+			}
+		}
+
+		//if (moveSpeed != speeds [curSpeed]) {
+			Accelerate (curSpeed);
+		//}
+		if (moveSpeed < speeds[curSpeed] && Mathf.Abs(speeds [curSpeed] - moveSpeed) <= 0.1f && !boostActive) {
+			moveSpeed = speeds[curSpeed];
+		}
+
+		if (moveSpeed < speeds [curSpeed] && Mathf.Abs(moveSpeed - speeds [curSpeed]) <= 0.1f && !boostActive) {
+			moveSpeed = speeds[curSpeed];
+		}
+
+		if (curSpeed >= speeds.Count - 1) {
+			curSpeed = speeds.Count-1;
+		}
+		if (curSpeed <= 0) {
+			curSpeed = 0;
 		}
 	}
 
@@ -262,12 +312,13 @@ public class SpaceshipController : MonoBehaviour {
 		}
 		if (!gridMovement) {
 			Debug.Log ("left");
-			if (sideVel.x > (-sideThrustSpeed)){
+			if (sideVel.x < (-sideThrustSpeed)){
 				sideVel = Vector2.left*sideThrustSpeed*sideAccTimer;
 			}else {
 				sideVel = Vector2.left*sideThrustSpeed;
 			}
 			rb.velocity = new Vector2 (sideVel.x, rb.velocity.y);
+
 		}
 	}
 
@@ -292,6 +343,7 @@ public class SpaceshipController : MonoBehaviour {
 				sideVel = Vector2.right*sideThrustSpeed;
 			}
 			rb.velocity = new Vector2 (sideVel.x, rb.velocity.y);
+
 		}
 	}
 
@@ -365,4 +417,25 @@ public class SpaceshipController : MonoBehaviour {
         //Only need to activate once for one pin, becuase all pins are on the same Port
         arduino.reportDigital((byte)(pinUp / 8), 1);
     }
+
+	void Accelerate (int speedToGo) {
+		if (speedToGo <= maxAccSpeed-1 && moveSpeed < speeds[speedToGo]) {
+			if (moveSpeed <= speeds[speedToGo]) {
+				moveSpeed += (Time.deltaTime*2);
+			}
+//			else if (moveSpeed-speeds[speedToGo] >= 0.25f){
+//				moveSpeed = speeds[speedToGo];
+//			}
+
+		}
+
+		if (speedToGo >= 0  && moveSpeed > speeds[speedToGo]) {
+			if (moveSpeed >= speeds[speedToGo]) {
+				moveSpeed -= (Time.deltaTime*2);
+			}
+//			else if (moveSpeed-speeds[speedToGo] >= 0.25f){
+//				moveSpeed = speeds[speedToGo];
+//			}
+		}
+	}
 }
