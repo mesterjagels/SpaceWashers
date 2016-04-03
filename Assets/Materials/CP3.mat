@@ -8,10 +8,11 @@ Material:
   m_PrefabInternal: {fileID: 0}
   m_Name: CP3
   m_Shader: {fileID: 200, guid: 0000000000000000f000000000000000, type: 0}
-  m_ShaderKeywords: _EMISSION _NORMALMAP
+  m_ShaderKeywords: _ALPHABLEND_ON _EMISSION _NORMALMAP
   m_LightmapFlags: 0
   m_CustomRenderQueue: 3000
-  stringTagMap: {}
+  stringTagMap:
+    RenderType: Transparent
   m_SavedProperties:
     serializedVersion: 2
     m_TexEnvs:
@@ -96,11 +97,11 @@ Material:
       data:
         first:
           name: _SrcBlend
-        second: 1
+        second: 5
       data:
         first:
           name: _DstBlend
-        second: 0
+        second: 10
       data:
         first:
           name: _Cutoff
@@ -115,12 +116,28 @@ Material:
         second: 0
       data:
         first:
+          name: _AlphaSharpness
+        second: 1
+      data:
+        first:
+          name: _OutlineThreshold
+        second: 0.35
+      data:
+        first:
+          name: _AlphaThreshold
+        second: 0.65
+      data:
+        first:
+          name: _Metallic
+        second: 0
+      data:
+        first:
           name: _Parallax
         second: 0.02
       data:
         first:
           name: _ZWrite
-        second: 1
+        second: 0
       data:
         first:
           name: _Glossiness
@@ -144,27 +161,11 @@ Material:
       data:
         first:
           name: _Mode
-        second: 0
-      data:
-        first:
-          name: _Metallic
-        second: 0
+        second: 2
       data:
         first:
           name: _InvFade
         second: 1
-      data:
-        first:
-          name: _AlphaThreshold
-        second: 0.65
-      data:
-        first:
-          name: _AlphaSharpness
-        second: 1
-      data:
-        first:
-          name: _OutlineThreshold
-        second: 0.35
     m_Colors:
       data:
         first:
@@ -180,10 +181,6 @@ Material:
         second: {r: 0.2, g: 0.2, b: 0.2, a: 1}
       data:
         first:
-          name: _TintColor
-        second: {r: 0.94482756, g: 0, b: 1, a: 0.5}
-      data:
-        first:
           name: _AlphaScale
         second: {r: 1, g: 1, b: 0, a: 0}
       data:
@@ -194,3 +191,7 @@ Material:
         first:
           name: _OutlineColor
         second: {r: 0, g: 0, b: 0, a: 1}
+      data:
+        first:
+          name: _TintColor
+        second: {r: 0.2827587, g: 0, b: 1, a: 0.463}

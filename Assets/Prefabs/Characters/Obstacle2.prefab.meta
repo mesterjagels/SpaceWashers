@@ -1,5 +1,9 @@
 fileFormatVersion: 2
+<<<<<<< HEAD
 guid: c2b127d71a6a6404db75ce1d60b9ea39
+=======
+guid: dcd0b4a67d74a7740892da7630b6b887
+>>>>>>> Thruster Particles
 timeCreated: 1457272125
 licenseType: Free
 NativeFormatImporter:
