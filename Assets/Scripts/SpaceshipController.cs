@@ -1,6 +1,7 @@
 ﻿using UnityEngine;
 using UnityEngine.UI;
 using System.Collections;
+using Uniduino;
 
 public class SpaceshipController : MonoBehaviour {
 
@@ -37,10 +38,21 @@ public class SpaceshipController : MonoBehaviour {
 	float curBoostSpeed, distPrcntg;
 	public float maxXPos;
 	GameObject [] players;
-//	public float vibSpeed;
-//	public float timeToMove;
-	// Use this for initialization
-	void Start () {
+
+    private Arduino arduino;
+    private int pinUp = 2;
+    private int pinDown = 3;
+    private int pinLeft = 4;
+    private int pinRight = 5;
+    private int pinBtn1 = 6;
+    private int pinBtn2 = 7;
+    private int pinBtn1Light = 8;
+    private int pinBtn2Light = 9;
+
+    //	public float vibSpeed;
+    //	public float timeToMove;
+    // Use this for initialization
+    void Start () {
 		tf = gameObject.transform;
 		startPos = tf.position;
 		startRot = tf.rotation;
@@ -62,31 +74,49 @@ public class SpaceshipController : MonoBehaviour {
 		curBoost = maxBoost;
 		shield.SetActive (false);
 		players = GameObject.FindGameObjectsWithTag("Player");
-//		GoLeft ();
-//		GoRight();
-	}
+        //		GoLeft ();
+        //		GoRight();
+
+        arduino = Arduino.global;
+        arduino.Setup(ConfigurePins);
+    }
 	
 	// Update is called once per frame
 	void Update () {
-		if (Input.GetMouseButton (0)) {
-			GoLeft();
-			sideMove = true;
-		}
-		if (Input.GetMouseButtonUp(0) && !gridMovement && rb.velocity.x > 0){
-			decel = true;
-			sideMove = false;
-		}
-		if (Input.GetMouseButton (1)) {
-			GoRight ();
-			sideMove = true;
-		}
-		if (Input.GetMouseButtonUp(1) && !gridMovement && rb.velocity.x < 0){
-			decel = true;
-			Debug.Log ("decelerate");
-			sideMove = false;
-		}
+        // Arduino needed to get a similar effect as ButtonUp
+        int pinLeftLast = 0,
+            pinRightLast = 0,
+            pinUpLast = 0,
+            pinDownLast = 0,
+            pinBtn1Last = 0,
+            pinBtn2Last = 0;
+        if (Input.GetMouseButton(0) | arduino.digitalRead(pinLeft) == 1)
+        {
+            GoLeft();
+            sideMove = true;
+            pinLeftLast = 1;
+        }
+        if (Input.GetMouseButtonUp(0) | arduino.digitalRead(pinLeft) == 0 && !gridMovement && rb.velocity.x > 0 && pinLeftLast == 1)
+        {
+            decel = true;
+            sideMove = false;
+            pinLeftLast = 0;
+        }
+        if (Input.GetMouseButton(1) | arduino.digitalRead(pinRight) == 1)
+        {
+            GoRight();
+            sideMove = true;
+            pinRightLast = 1;
+        }
+        if (Input.GetMouseButtonUp(1) | arduino.digitalRead(pinRight) == 0 && !gridMovement && rb.velocity.x < 0 && pinRightLast == 1)
+        {
+            decel = true;
+            Debug.Log("decelerate");
+            sideMove = false;
+            pinRightLast = 0;
+        }
 
-		if (Input.GetAxis("Mouse ScrollWheel") > 0 && moveSpeed < maxSpeed){
+        if (Input.GetAxis("Mouse ScrollWheel") > 0 && moveSpeed < maxSpeed){
 			moveSpeed += speedPerAcceleration;
 
 		}else if (Input.GetAxis("Mouse ScrollWheel") < 0 && moveSpeed > minSpeed){
@@ -100,24 +130,33 @@ public class SpaceshipController : MonoBehaviour {
 			moveSpeed = minSpeed;
 		}
 
-		if (Input.GetKey (shieldButton) && shieldActivatable && curShield > 0){
-			shieldActive = true;
-		}else if (Input.GetKeyUp (shieldButton)){
-			shieldActive = false;
-		}
-		if (curShield <= 0 && shieldActive) {
-			shieldActive = false;
-		}
+        if (Input.GetKey(shieldButton) | arduino.digitalRead(pinBtn1) == 1 && shieldActivatable && curShield > 0)
+        {
+            shieldActive = true;
+            pinBtn1Last = 1;
+        }
+        else if (Input.GetKeyUp(shieldButton) | arduino.digitalRead(pinBtn1) == 0 && pinBtn1Last == 1)
+        {
+            shieldActive = false;
+            pinBtn1Last = 0;
+        }
+        if (curShield <= 0 && shieldActive)
+        {
+            shieldActive = false;
+        }
 
-		if (Input.GetKeyDown (boostButton) && boostActivatable){
-			boostActive = true;
-		}
-		if (boostActive && curBoost <= 0) {
-			boostActive = false;
-		}
+        if (Input.GetKeyDown(boostButton) | arduino.digitalRead(pinBtn2) == 1 && boostActivatable)
+        {
+            boostActive = true;
+        }
+        if (boostActive && curBoost <= 0)
+        {
+            boostActive = false;
+        }
 
 
-		if (move && gridMovement) {
+
+        if (move && gridMovement) {
 			moveTime += Time.deltaTime*0.25f;
 			rotTime = moveTime*2;
 			if (tf.position.x != targetPos.x) {
@@ -312,5 +351,18 @@ public class SpaceshipController : MonoBehaviour {
 		boostBar.rectTransform.localScale = boostBarScale;
 	}
 
+    void ConfigurePins()
+    {
+        arduino.pinMode(pinUp, PinMode.INPUT);
+        arduino.pinMode(pinDown, PinMode.INPUT);
+        arduino.pinMode(pinLeft, PinMode.INPUT);
+        arduino.pinMode(pinRight, PinMode.INPUT);
+        arduino.pinMode(pinBtn1, PinMode.INPUT);
+        arduino.pinMode(pinBtn2, PinMode.INPUT);
 
+        arduino.pinMode(pinBtn1Light, PinMode.OUTPUT);
+
+        //Only need to activate once for one pin, becuase all pins are on the same Port
+        arduino.reportDigital((byte)(pinUp / 8), 1);
+    }
 }
