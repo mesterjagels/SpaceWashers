@@ -375,6 +375,8 @@ MonoBehaviour:
   moveSpeed: 15
   moveSpeedWBoots: 5
   bracingSlow: 0.5
+  rb: {fileID: 0}
+  spaceshipRb: {fileID: 0}
   curVelocity: {x: 0, y: 0, z: 0}
   curShipVel: {x: 0, y: 0, z: 0}
   velX: {x: 0, y: 0}
@@ -385,6 +387,11 @@ MonoBehaviour:
   moving: 0
   normalDrag: 0
   magnetDrag: 3
+  topDownChar: {fileID: 0}
+  childrenNotThis: []
+  childRbs: []
+  washHand: {fileID: 0}
+  ragdollHand: {fileID: 0}
 --- !u!1 &89735529
 GameObject:
   m_ObjectHideFlags: 0
@@ -1039,6 +1046,8 @@ MonoBehaviour:
   pixelsWashedCount: 0
   washCount: 0
   totalPixels: 0
+  curPrcnt: 0
+  minPrcntCleaned: 0
 --- !u!1 &314045180
 GameObject:
   m_ObjectHideFlags: 0
@@ -1723,6 +1732,7 @@ MonoBehaviour:
   right: {fileID: 7400000, guid: 46efb0235ac294b45a189fbf225ef6fa, type: 2}
   minSpeed: 2.5
   maxSpeed: 50
+  speedPerAcceleration: 0
   moveSpeed: 5
   laneSwitchSpeed: 5
   sideThrustSpeed: 25
@@ -1732,6 +1742,7 @@ MonoBehaviour:
   velocity: {x: 0, y: 0}
   gridMovement: 0
   decel: 0
+  shieldActive: 0
   sideMove: 0
   boostActivatable: 0
   shieldActivatable: 0
@@ -2097,6 +2108,8 @@ MonoBehaviour:
   pixelsWashedCount: 0
   washCount: 0
   totalPixels: 0
+  curPrcnt: 0
+  minPrcntCleaned: 0
 --- !u!1 &523534173
 GameObject:
   m_ObjectHideFlags: 0
@@ -2361,6 +2374,8 @@ MonoBehaviour:
   pixelsWashedCount: 0
   washCount: 0
   totalPixels: 0
+  curPrcnt: 0
+  minPrcntCleaned: 0
 --- !u!1 &547954524
 GameObject:
   m_ObjectHideFlags: 0
@@ -2476,6 +2491,8 @@ MonoBehaviour:
   moveSpeed: 15
   moveSpeedWBoots: 0
   bracingSlow: 0.5
+  rb: {fileID: 0}
+  spaceshipRb: {fileID: 0}
   curVelocity: {x: 0, y: 0, z: 0}
   curShipVel: {x: 0, y: 0, z: 0}
   velX: {x: 0, y: 0}
@@ -2486,6 +2503,11 @@ MonoBehaviour:
   moving: 0
   normalDrag: 0
   magnetDrag: 0
+  topDownChar: {fileID: 0}
+  childrenNotThis: []
+  childRbs: []
+  washHand: {fileID: 0}
+  ragdollHand: {fileID: 0}
 --- !u!114 &547954530
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2506,6 +2528,10 @@ MonoBehaviour:
   barImg: {fileID: 231105331}
   barText: {fileID: 1930290297}
   wash: 32
+  head: {fileID: 0}
+  washHandWithoutBoots: {fileID: 0}
+  washHand: {fileID: 0}
+  washHandWithBoots: {fileID: 0}
 --- !u!23 &547954531
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -2927,6 +2953,8 @@ MonoBehaviour:
   moveSpeed: 15
   moveSpeedWBoots: 5
   bracingSlow: 0.5
+  rb: {fileID: 0}
+  spaceshipRb: {fileID: 0}
   curVelocity: {x: 0, y: 0, z: 0}
   curShipVel: {x: 0, y: 0, z: 0}
   velX: {x: 0, y: 0}
@@ -2937,6 +2965,11 @@ MonoBehaviour:
   moving: 0
   normalDrag: 0
   magnetDrag: 3
+  topDownChar: {fileID: 0}
+  childrenNotThis: []
+  childRbs: []
+  washHand: {fileID: 0}
+  ragdollHand: {fileID: 0}
 --- !u!232 &671869407
 DistanceJoint2D:
   m_ObjectHideFlags: 0
@@ -3298,6 +3331,8 @@ MonoBehaviour:
   pixelsWashedCount: 0
   washCount: 0
   totalPixels: 0
+  curPrcnt: 0
+  minPrcntCleaned: 0
 --- !u!23 &740651837
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -3583,6 +3618,8 @@ MonoBehaviour:
   moveSpeed: 15
   moveSpeedWBoots: 0
   bracingSlow: 0.5
+  rb: {fileID: 0}
+  spaceshipRb: {fileID: 0}
   curVelocity: {x: 0, y: 0, z: 0}
   curShipVel: {x: 0, y: 0, z: 0}
   velX: {x: 0, y: 0}
@@ -3593,6 +3630,11 @@ MonoBehaviour:
   moving: 0
   normalDrag: 0
   magnetDrag: 0
+  topDownChar: {fileID: 0}
+  childrenNotThis: []
+  childRbs: []
+  washHand: {fileID: 0}
+  ragdollHand: {fileID: 0}
 --- !u!114 &792488308
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3613,6 +3655,10 @@ MonoBehaviour:
   barImg: {fileID: 231105331}
   barText: {fileID: 1930290297}
   wash: 32
+  head: {fileID: 0}
+  washHandWithoutBoots: {fileID: 0}
+  washHand: {fileID: 0}
+  washHandWithBoots: {fileID: 0}
 --- !u!23 &792488309
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -5062,6 +5108,8 @@ MonoBehaviour:
   pixelsWashedCount: 0
   washCount: 0
   totalPixels: 0
+  curPrcnt: 0
+  minPrcntCleaned: 0
 --- !u!50 &1232425840
 Rigidbody2D:
   serializedVersion: 2
@@ -5160,6 +5208,8 @@ MonoBehaviour:
   moveSpeed: 15
   moveSpeedWBoots: 5
   bracingSlow: 0.5
+  rb: {fileID: 0}
+  spaceshipRb: {fileID: 0}
   curVelocity: {x: 0, y: 0, z: 0}
   curShipVel: {x: 0, y: 0, z: 0}
   velX: {x: 0, y: 0}
@@ -5170,6 +5220,11 @@ MonoBehaviour:
   moving: 0
   normalDrag: 0
   magnetDrag: 3
+  topDownChar: {fileID: 0}
+  childrenNotThis: []
+  childRbs: []
+  washHand: {fileID: 0}
+  ragdollHand: {fileID: 0}
 --- !u!232 &1239387264
 DistanceJoint2D:
   m_ObjectHideFlags: 0
@@ -6007,6 +6062,10 @@ MonoBehaviour:
   barImg: {fileID: 231105331}
   barText: {fileID: 1930290297}
   wash: 32
+  head: {fileID: 0}
+  washHandWithoutBoots: {fileID: 0}
+  washHand: {fileID: 0}
+  washHandWithBoots: {fileID: 0}
 --- !u!23 &1425296728
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -6187,6 +6246,8 @@ MonoBehaviour:
   pixelsWashedCount: 0
   washCount: 0
   totalPixels: 0
+  curPrcnt: 0
+  minPrcntCleaned: 0
 --- !u!23 &1445326932
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -6662,6 +6723,10 @@ MonoBehaviour:
   barImg: {fileID: 231105331}
   barText: {fileID: 1930290297}
   wash: 32
+  head: {fileID: 0}
+  washHandWithoutBoots: {fileID: 0}
+  washHand: {fileID: 0}
+  washHandWithBoots: {fileID: 0}
 --- !u!23 &1557698750
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -7921,6 +7986,10 @@ MonoBehaviour:
   barImg: {fileID: 231105331}
   barText: {fileID: 1930290297}
   wash: 32
+  head: {fileID: 0}
+  washHandWithoutBoots: {fileID: 0}
+  washHand: {fileID: 0}
+  washHandWithBoots: {fileID: 0}
 --- !u!23 &1886668887
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -8473,6 +8542,10 @@ MonoBehaviour:
   barImg: {fileID: 231105331}
   barText: {fileID: 1930290297}
   wash: 32
+  head: {fileID: 0}
+  washHandWithoutBoots: {fileID: 0}
+  washHand: {fileID: 0}
+  washHandWithBoots: {fileID: 0}
 --- !u!23 &1932995250
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -8553,6 +8626,8 @@ MonoBehaviour:
   moveSpeed: 15
   moveSpeedWBoots: 0
   bracingSlow: 0.5
+  rb: {fileID: 0}
+  spaceshipRb: {fileID: 0}
   curVelocity: {x: 0, y: 0, z: 0}
   curShipVel: {x: 0, y: 0, z: 0}
   velX: {x: 0, y: 0}
@@ -8563,6 +8638,11 @@ MonoBehaviour:
   moving: 0
   normalDrag: 0
   magnetDrag: 0
+  topDownChar: {fileID: 0}
+  childrenNotThis: []
+  childRbs: []
+  washHand: {fileID: 0}
+  ragdollHand: {fileID: 0}
 --- !u!50 &1932995255
 Rigidbody2D:
   serializedVersion: 2
