@@ -52,8 +52,8 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 154074}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -2.1333334, y: -2.1333334, z: 0}
-  m_LocalScale: {x: 0.033333335, y: 0.033333335, z: 0}
+  m_LocalPosition: {x: -2.13333344, y: -2.13333344, z: 0}
+  m_LocalScale: {x: .0333333351, y: .0333333351, z: 0}
   m_Children: []
   m_Father: {fileID: 487844}
   m_RootOrder: 0
@@ -65,7 +65,7 @@ Transform:
   m_GameObject: {fileID: 111390}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 0.5, y: 0.5, z: 1}
+  m_LocalScale: {x: .5, y: .5, z: 1}
   m_Children:
   - {fileID: 479490}
   m_Father: {fileID: 0}
@@ -88,10 +88,8 @@ MeshRenderer:
   m_ProbeAnchor: {fileID: 0}
   m_ScaleInLightmap: 1
   m_PreserveUVs: 0
-  m_IgnoreNormalsForChartDetection: 0
   m_ImportantGI: 0
-  m_MinimumChartSize: 4
-  m_AutoUVMaxDistance: 0.5
+  m_AutoUVMaxDistance: .5
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
@@ -110,10 +108,9 @@ Rigidbody2D:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 111390}
-  m_UseAutoMass: 0
   m_Mass: 1
   m_LinearDrag: 0
-  m_AngularDrag: 0.05
+  m_AngularDrag: .0500000007
   m_GravityScale: 1
   m_IsKinematic: 0
   m_Interpolate: 0
@@ -127,21 +124,20 @@ PolygonCollider2D:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 154074}
   m_Enabled: 1
-  m_Density: 1
   m_Material: {fileID: 0}
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_Offset: {x: 0, y: 0}
   m_Points:
     m_Paths:
-    - - {x: 64.00196, y: 0.5}
-      - {x: 64.5, y: 0.0019607844}
-      - {x: 116.5, y: 0.30503145}
-      - {x: 124.91146, y: 5.5}
-      - {x: 127.99804, y: 63.5}
-      - {x: 127.5, y: 63.99804}
-      - {x: 64.5, y: 63.99804}
-      - {x: 64.00196, y: 63.5}
+    - - {x: 64.0019608, y: .5}
+      - {x: 64.5, y: .00196078443}
+      - {x: 116.5, y: .305031449}
+      - {x: 124.911461, y: 5.5}
+      - {x: 127.998039, y: 63.5}
+      - {x: 127.5, y: 63.9980392}
+      - {x: 64.5, y: 63.9980392}
+      - {x: 64.0019608, y: 63.5}
 --- !u!60 &6052218
 PolygonCollider2D:
   m_ObjectHideFlags: 1
@@ -149,21 +145,20 @@ PolygonCollider2D:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 154074}
   m_Enabled: 1
-  m_Density: 1
   m_Material: {fileID: 0}
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_Offset: {x: 0, y: 0}
   m_Points:
     m_Paths:
-    - - {x: 64.00196, y: 64.5}
-      - {x: 64.5, y: 64.00196}
-      - {x: 127.5, y: 64.00196}
-      - {x: 127.99804, y: 64.5}
+    - - {x: 64.0019608, y: 64.5}
+      - {x: 64.5, y: 64.0019608}
+      - {x: 127.5, y: 64.0019608}
+      - {x: 127.998039, y: 64.5}
       - {x: 126.5, y: 119.15625}
       - {x: 122.5, y: 124.76857}
-      - {x: 64.5, y: 127.99804}
-      - {x: 64.00196, y: 127.5}
+      - {x: 64.5, y: 127.998039}
+      - {x: 64.0019608, y: 127.5}
 --- !u!60 &6053234
 PolygonCollider2D:
   m_ObjectHideFlags: 1
@@ -171,22 +166,21 @@ PolygonCollider2D:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 154074}
   m_Enabled: 1
-  m_Density: 1
   m_Material: {fileID: 0}
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_Offset: {x: 0, y: 0}
   m_Points:
     m_Paths:
-    - - {x: 0.0019607844, y: 64.5}
-      - {x: 0.5, y: 64.00196}
-      - {x: 63.5, y: 64.00196}
-      - {x: 63.99804, y: 64.5}
-      - {x: 63.99804, y: 127.5}
-      - {x: 63.5, y: 127.99804}
+    - - {x: .00196078443, y: 64.5}
+      - {x: .5, y: 64.0019608}
+      - {x: 63.5, y: 64.0019608}
+      - {x: 63.9980392, y: 64.5}
+      - {x: 63.9980392, y: 127.5}
+      - {x: 63.5, y: 127.998039}
       - {x: 9.5, y: 126.76857}
-      - {x: 3.3050315, y: 122.5}
-      - {x: 0.17015707, y: 113.5}
+      - {x: 3.30503154, y: 122.5}
+      - {x: .170157075, y: 113.5}
 --- !u!60 &6062374
 PolygonCollider2D:
   m_ObjectHideFlags: 1
@@ -194,23 +188,22 @@ PolygonCollider2D:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 154074}
   m_Enabled: 1
-  m_Density: 1
   m_Material: {fileID: 0}
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_Offset: {x: 0, y: 0}
   m_Points:
     m_Paths:
-    - - {x: 11.515625, y: 0.5}
-      - {x: 63.5, y: 0.0019607844}
-      - {x: 63.99804, y: 0.5}
-      - {x: 63.99804, y: 63.5}
-      - {x: 63.5, y: 63.99804}
-      - {x: 0.5, y: 63.99804}
-      - {x: 0.0019607844, y: 63.5}
-      - {x: 0.5, y: 12.515625}
-      - {x: 4.5, y: 4.0885415}
-      - {x: 11.5, y: 0.5078125}
+    - - {x: 11.515625, y: .5}
+      - {x: 63.5, y: .00196078443}
+      - {x: 63.9980392, y: .5}
+      - {x: 63.9980392, y: 63.5}
+      - {x: 63.5, y: 63.9980392}
+      - {x: .5, y: 63.9980392}
+      - {x: .00196078443, y: 63.5}
+      - {x: .5, y: 12.515625}
+      - {x: 4.5, y: 4.08854151}
+      - {x: 11.5, y: .5078125}
 --- !u!114 &11413350
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -227,7 +220,7 @@ MonoBehaviour:
   child: {fileID: 154074}
   awoken: 1
   CellSize: 64
-  Detail: 0.9
+  Detail: .899999976
   width: 2
   height: 2
   cells:
@@ -275,9 +268,9 @@ MonoBehaviour:
   RequiredDamage: 10
   RequiredDamageMultiplier: 2
   FractureCount: 5
-  FractureCountMultiplier: 0.75
+  FractureCountMultiplier: .75
   BlurSteps: 1
-  Irregularity: 0.25
+  Irregularity: .25
 --- !u!114 &11435984
 MonoBehaviour:
   m_ObjectHideFlags: 1
