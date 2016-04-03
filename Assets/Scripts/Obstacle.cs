@@ -16,7 +16,7 @@ public class Obstacle : MonoBehaviour {
 	}
 
 	void OnTriggerEnter2D (Collider2D other) {
-		Debug.Log ("triggered");
+		//Debug.Log ("triggered");
 		if (other.transform.tag == "SpaceshipCollider" && !hit) {
 			Debug.Log (gameObject.name + " collided with " + other.transform.name);
 			if (!other.transform.parent.parent.GetComponent<SpaceshipController>().shieldActive){

@@ -38,6 +38,7 @@ public class PaintTest : MonoBehaviour {
 		barScale = barImg.rectTransform.localScale;
 		mvmt = head.GetComponent<Movement>();
 		washHandWithBoots = transform;
+		washHand = washHandWithBoots;
 	}
 	
 	// Update is called once per frame

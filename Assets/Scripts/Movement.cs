@@ -77,7 +77,7 @@ public class Movement : MonoBehaviour {
 	// Update is called once per frame
 	void Update () {
 		if (Input.GetKey (left)
-//		    || Input.GetAxis(lHorAxis) < 0
+		    || Input.GetAxis(lHorAxis) < 0
 		    ) {
 			if (!magnet) {
 //				rb.AddForce (Vector2.left * moveSpeed * slow * Time.deltaTime);
@@ -90,7 +90,7 @@ public class Movement : MonoBehaviour {
 				MoveRB (velX, velZ);
 			}
 		} else if (Input.GetKeyUp (left)
-//		           || Input.GetAxis(lHorAxis) == 0
+		           || Input.GetAxis(lHorAxis) == 0
 		           ) {
 			velX = Vector2.zero;
 			if (moving)
@@ -98,11 +98,11 @@ public class Movement : MonoBehaviour {
 		}
 
 		if (Input.GetKey (right)
-//		    || Input.GetAxis(lHorAxis) > 0
+		    || Input.GetAxis(lHorAxis) > 0
 		    ) {
 			if (!magnet) 
 			{
-//				rb.AddForce (Vector2.right * moveSpeed * slow * Time.deltaTime);
+				rb.AddForce (Vector2.right * moveSpeed * slow * Time.deltaTime);
 				velX += (Vector2.right * moveSpeed * slow * Time.deltaTime*0.2f);
 				MoveRB (velX, velZ);
 			} else 
@@ -115,7 +115,7 @@ public class Movement : MonoBehaviour {
 
 
 		}else if (Input.GetKeyUp (right)
-//		          || Input.GetAxis(lHorAxis) == 0
+		          || Input.GetAxis(lHorAxis) == 0
 		          ) {
 			velX = Vector2.zero;
 			if (moving)
@@ -123,7 +123,7 @@ public class Movement : MonoBehaviour {
 		}
 
 		if (Input.GetKey (up)
-//		    || Input.GetAxis(lVerAxis) > 0
+		    || Input.GetAxis(lVerAxis) > 0
 		    ) {
 			if (!magnet) 
 			{
@@ -146,7 +146,7 @@ public class Movement : MonoBehaviour {
 		}
 
 		if (Input.GetKey (down)
-//		    || Input.GetAxis(lVerAxis) < 0
+		    || Input.GetAxis(lVerAxis) < 0
 		    ) {
 
 			if (!magnet) 
