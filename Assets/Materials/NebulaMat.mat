@@ -225,11 +225,11 @@ Material:
       data:
         first:
           name: _NebColor1
-        second: {r: 0.01838237, g: 0.625, b: 0.42418867, a: 1}
+        second: {r: 0.030655269, g: 0.5955882, b: 0.40857595, a: 1}
       data:
         first:
           name: _NebColor2
-        second: {r: 0.12905492, g: 0.25868407, b: 0.5661765, a: 1}
+        second: {r: 0.5661765, g: 0.12905492, b: 0.12905492, a: 1}
       data:
         first:
           name: _NebColor
