@@ -356,32 +356,31 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 03d97bee5843a0b4286ae77656a2507e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  moveSpeed: 15
+  moveSpeedWBoots: 5
+  bracingSlow: .5
+  normalDrag: 0
+  magnetDrag: 3
+  magnetDelay: 0
+  washHandSpeed: 0
   left: 276
   right: 275
   up: 273
   down: 274
   magnetBoots: 104
   detach: 113
-  moveSpeed: 15
-  moveSpeedWBoots: 5
-  bracingSlow: .5
-  rb: {fileID: 0}
-  spaceshipRb: {fileID: 0}
-  curVelocity: {x: 0, y: 0, z: 0}
-  curShipVel: {x: 0, y: 0, z: 0}
-  velX: {x: 0, y: 0}
-  velZ: {x: 0, y: 0}
-  cord: {fileID: 1124338100}
-  distToCord: 0
-  washing: 0
-  moving: 0
-  normalDrag: 0
-  magnetDrag: 3
   topDownChar: {fileID: 0}
-  childrenNotThis: []
-  childRbs: []
   washHand: {fileID: 0}
   ragdollHand: {fileID: 0}
+  cord: {fileID: 1124338100}
+  moving: 0
+  distToCord: 0
+  washing: 0
+  childrenNotThis: []
+  childRbs: []
+  rb: {fileID: 0}
+  spaceshipRb: {fileID: 0}
+  magnet: 0
 --- !u!1 &89735529
 GameObject:
   m_ObjectHideFlags: 0
@@ -670,10 +669,6 @@ MeshFilter:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 233949180}
   m_Mesh: {fileID: 10210, guid: 0000000000000000e000000000000000, type: 0}
---- !u!1 &237715763 stripped
-GameObject:
-  m_PrefabParentObject: {fileID: 138480, guid: 8d83e267b4b848d44a4a7b24bdc4c8f4, type: 2}
-  m_PrefabInternal: {fileID: 1436189943}
 --- !u!1 &278559449
 GameObject:
   m_ObjectHideFlags: 0
@@ -946,7 +941,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!64 &311058761
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -1093,6 +1088,116 @@ MeshFilter:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 314045180}
+  m_Mesh: {fileID: 10210, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!1 &315547630
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 4
+  m_Component:
+  - 4: {fileID: 315547631}
+  - 33: {fileID: 315547636}
+  - 23: {fileID: 315547635}
+  - 61: {fileID: 315547634}
+  - 114: {fileID: 315547633}
+  - 60: {fileID: 315547632}
+  m_Layer: 0
+  m_Name: topright
+  m_TagString: SpaceshipCollider
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &315547631
+Transform:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 315547630}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -0, y: 8.26000023, z: -10.2300005}
+  m_LocalScale: {x: 3.06021738, y: 2.86723113, z: 4.77287531}
+  m_Children: []
+  m_Father: {fileID: 866621762}
+  m_RootOrder: 1
+--- !u!60 &315547632
+PolygonCollider2D:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 315547630}
+  m_Enabled: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_Offset: {x: 0, y: 0}
+  m_Points:
+    m_Paths:
+    - - {x: .000432378496, y: .56505686}
+      - {x: .0950241685, y: .467937946}
+      - {x: .484939367, y: -.484764427}
+      - {x: .00185469899, y: -.442078054}
+      - {x: -.000682180515, y: .461535513}
+--- !u!114 &315547633
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 315547630}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 77e4673a9ebe4e44aa3b5b790c46fd54, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  oilDirt: {fileID: 168586, guid: f3275ceba17c38f4bb4daf676e43282f, type: 2}
+  pizzaDirt: {fileID: 168586, guid: 3a97f76fde255dd45832d8daa46feaee, type: 2}
+  toxicDirt: {fileID: 168586, guid: 1782964e061b6224783605083d291dc5, type: 2}
+  sodaDirt: {fileID: 168586, guid: 8d8c60bc68870e1489dab6f911fc5b46, type: 2}
+  spawnPosOffset: {x: 0, y: 0}
+--- !u!61 &315547634
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 315547630}
+  m_Enabled: 0
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_UsedByEffector: 0
+  m_Offset: {x: 0, y: 0}
+  serializedVersion: 2
+  m_Size: {x: 1, y: 1}
+--- !u!23 &315547635
+MeshRenderer:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 315547630}
+  m_Enabled: 0
+  m_CastShadows: 1
+  m_ReceiveShadows: 1
+  m_Materials:
+  - {fileID: 10303, guid: 0000000000000000f000000000000000, type: 0}
+  m_SubsetIndices: 
+  m_StaticBatchRoot: {fileID: 0}
+  m_UseLightProbes: 1
+  m_ReflectionProbeUsage: 1
+  m_ProbeAnchor: {fileID: 0}
+  m_ScaleInLightmap: 1
+  m_PreserveUVs: 1
+  m_ImportantGI: 0
+  m_AutoUVMaxDistance: .5
+  m_AutoUVMaxAngle: 89
+  m_LightmapParameters: {fileID: 0}
+  m_SortingLayerID: 0
+  m_SortingOrder: 0
+--- !u!33 &315547636
+MeshFilter:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 315547630}
   m_Mesh: {fileID: 10210, guid: 0000000000000000e000000000000000, type: 0}
 --- !u!1 &358408648
 GameObject:
@@ -1465,7 +1570,7 @@ Transform:
   m_LocalScale: {x: 2.31806374, y: 4.77545166, z: 4.77287531}
   m_Children: []
   m_Father: {fileID: 866621762}
-  m_RootOrder: 2
+  m_RootOrder: 4
 --- !u!61 &412674897
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -1521,11 +1626,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 77e4673a9ebe4e44aa3b5b790c46fd54, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  pos: {x: 0, y: 0, z: 0}
-  size: {x: 0, y: 0, z: 0}
-  test: {x: 0, y: 0, z: 0}
-  startPos: {x: 0, y: 0, z: 0}
-  dirt: {fileID: 168586, guid: 1782964e061b6224783605083d291dc5, type: 2}
+  oilDirt: {fileID: 168586, guid: f3275ceba17c38f4bb4daf676e43282f, type: 2}
+  pizzaDirt: {fileID: 168586, guid: 3a97f76fde255dd45832d8daa46feaee, type: 2}
+  toxicDirt: {fileID: 168586, guid: 1782964e061b6224783605083d291dc5, type: 2}
+  sodaDirt: {fileID: 168586, guid: 8d8c60bc68870e1489dab6f911fc5b46, type: 2}
+  spawnPosOffset: {x: 0, y: 0}
 --- !u!60 &412674901
 PolygonCollider2D:
   m_ObjectHideFlags: 0
@@ -1629,7 +1734,7 @@ Transform:
   m_GameObject: {fileID: 464006291}
   m_LocalRotation: {x: 0, y: 1, z: 0, w: 7.90753631e-07}
   m_LocalPosition: {x: 0, y: -0, z: 0}
-  m_LocalScale: {x: 11.1790304, y: 19.6933308, z: 19.6933308}
+  m_LocalScale: {x: 20, y: 19.6933308, z: 19.6933308}
   m_Children:
   - {fileID: 311058764}
   - {fileID: 521157023}
@@ -1721,6 +1826,8 @@ MonoBehaviour:
   boostActive: 0
   shield: {fileID: 818158138}
   maxXPos: 100
+  curBoostSpeed: 0
+  changingSpeed: 0
   curSpeed: 0
   maxAccSpeed: 0
   speeds:
@@ -1989,7 +2096,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!64 &521157020
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -2290,7 +2397,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!64 &547733941
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -2461,32 +2568,31 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 03d97bee5843a0b4286ae77656a2507e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  moveSpeed: 15
+  moveSpeedWBoots: 0
+  bracingSlow: .5
+  normalDrag: 0
+  magnetDrag: 0
+  magnetDelay: 0
+  washHandSpeed: 0
   left: 276
   right: 275
   up: 273
   down: 274
   magnetBoots: 104
   detach: 113
-  moveSpeed: 15
-  moveSpeedWBoots: 0
-  bracingSlow: .5
-  rb: {fileID: 0}
-  spaceshipRb: {fileID: 0}
-  curVelocity: {x: 0, y: 0, z: 0}
-  curShipVel: {x: 0, y: 0, z: 0}
-  velX: {x: 0, y: 0}
-  velZ: {x: 0, y: 0}
-  cord: {fileID: 1124338100}
-  distToCord: 0
-  washing: 0
-  moving: 0
-  normalDrag: 0
-  magnetDrag: 0
   topDownChar: {fileID: 0}
-  childrenNotThis: []
-  childRbs: []
   washHand: {fileID: 0}
   ragdollHand: {fileID: 0}
+  cord: {fileID: 1124338100}
+  moving: 0
+  distToCord: 0
+  washing: 0
+  childrenNotThis: []
+  childRbs: []
+  rb: {fileID: 0}
+  spaceshipRb: {fileID: 0}
+  magnet: 0
 --- !u!114 &547954530
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2805,10 +2911,6 @@ CanvasRenderer:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 582849553}
---- !u!4 &607209244 stripped
-Transform:
-  m_PrefabParentObject: {fileID: 427774, guid: 8d83e267b4b848d44a4a7b24bdc4c8f4, type: 2}
-  m_PrefabInternal: {fileID: 1436189943}
 --- !u!1 &634698474
 GameObject:
   m_ObjectHideFlags: 0
@@ -2907,32 +3009,31 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 03d97bee5843a0b4286ae77656a2507e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  moveSpeed: 15
+  moveSpeedWBoots: 5
+  bracingSlow: .5
+  normalDrag: 0
+  magnetDrag: 3
+  magnetDelay: 0
+  washHandSpeed: 0
   left: 276
   right: 275
   up: 273
   down: 274
   magnetBoots: 104
   detach: 113
-  moveSpeed: 15
-  moveSpeedWBoots: 5
-  bracingSlow: .5
-  rb: {fileID: 0}
-  spaceshipRb: {fileID: 0}
-  curVelocity: {x: 0, y: 0, z: 0}
-  curShipVel: {x: 0, y: 0, z: 0}
-  velX: {x: 0, y: 0}
-  velZ: {x: 0, y: 0}
-  cord: {fileID: 1124338100}
-  distToCord: 0
-  washing: 0
-  moving: 0
-  normalDrag: 0
-  magnetDrag: 3
   topDownChar: {fileID: 0}
-  childrenNotThis: []
-  childRbs: []
   washHand: {fileID: 0}
   ragdollHand: {fileID: 0}
+  cord: {fileID: 1124338100}
+  moving: 0
+  distToCord: 0
+  washing: 0
+  childrenNotThis: []
+  childRbs: []
+  rb: {fileID: 0}
+  spaceshipRb: {fileID: 0}
+  magnet: 0
 --- !u!232 &671869407
 DistanceJoint2D:
   m_ObjectHideFlags: 0
@@ -3056,6 +3157,115 @@ CanvasRenderer:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 689002212}
+--- !u!1 &694870035
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 4
+  m_Component:
+  - 4: {fileID: 694870036}
+  - 33: {fileID: 694870041}
+  - 23: {fileID: 694870040}
+  - 61: {fileID: 694870039}
+  - 114: {fileID: 694870038}
+  - 60: {fileID: 694870037}
+  m_Layer: 0
+  m_Name: top2right
+  m_TagString: SpaceshipCollider
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &694870036
+Transform:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 694870035}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -0, y: 5.92999983, z: -10.2300005}
+  m_LocalScale: {x: 4.81736231, y: 2.194911, z: 4.77287531}
+  m_Children: []
+  m_Father: {fileID: 866621762}
+  m_RootOrder: 3
+--- !u!60 &694870037
+PolygonCollider2D:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 694870035}
+  m_Enabled: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_Offset: {x: 0, y: 0}
+  m_Points:
+    m_Paths:
+    - - {x: -3.41060513e-13, y: .5}
+      - {x: .304193199, y: .475306451}
+      - {x: .452484518, y: -.491241038}
+      - {x: -.00273408508, y: -.480939209}
+--- !u!114 &694870038
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 694870035}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 77e4673a9ebe4e44aa3b5b790c46fd54, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  oilDirt: {fileID: 168586, guid: f3275ceba17c38f4bb4daf676e43282f, type: 2}
+  pizzaDirt: {fileID: 168586, guid: 3a97f76fde255dd45832d8daa46feaee, type: 2}
+  toxicDirt: {fileID: 168586, guid: 1782964e061b6224783605083d291dc5, type: 2}
+  sodaDirt: {fileID: 168586, guid: 8d8c60bc68870e1489dab6f911fc5b46, type: 2}
+  spawnPosOffset: {x: 0, y: 0}
+--- !u!61 &694870039
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 694870035}
+  m_Enabled: 0
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_UsedByEffector: 0
+  m_Offset: {x: 0, y: 0}
+  serializedVersion: 2
+  m_Size: {x: 1, y: 1}
+--- !u!23 &694870040
+MeshRenderer:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 694870035}
+  m_Enabled: 0
+  m_CastShadows: 1
+  m_ReceiveShadows: 1
+  m_Materials:
+  - {fileID: 10303, guid: 0000000000000000f000000000000000, type: 0}
+  m_SubsetIndices: 
+  m_StaticBatchRoot: {fileID: 0}
+  m_UseLightProbes: 1
+  m_ReflectionProbeUsage: 1
+  m_ProbeAnchor: {fileID: 0}
+  m_ScaleInLightmap: 1
+  m_PreserveUVs: 1
+  m_ImportantGI: 0
+  m_AutoUVMaxDistance: .5
+  m_AutoUVMaxAngle: 89
+  m_LightmapParameters: {fileID: 0}
+  m_SortingLayerID: 0
+  m_SortingOrder: 0
+--- !u!33 &694870041
+MeshFilter:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 694870035}
+  m_Mesh: {fileID: 10210, guid: 0000000000000000e000000000000000, type: 0}
 --- !u!1 &724276778
 GameObject:
   m_ObjectHideFlags: 0
@@ -3161,7 +3371,7 @@ Transform:
   m_LocalScale: {x: 4.61131573, y: 7.66903114, z: 4.77287531}
   m_Children: []
   m_Father: {fileID: 866621762}
-  m_RootOrder: 5
+  m_RootOrder: 7
 --- !u!61 &728772653
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -3217,11 +3427,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 77e4673a9ebe4e44aa3b5b790c46fd54, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  pos: {x: 0, y: 0, z: 0}
-  size: {x: 0, y: 0, z: 0}
-  test: {x: 0, y: 0, z: 0}
-  startPos: {x: 0, y: 0, z: 0}
-  dirt: {fileID: 168586, guid: 1782964e061b6224783605083d291dc5, type: 2}
+  oilDirt: {fileID: 168586, guid: f3275ceba17c38f4bb4daf676e43282f, type: 2}
+  pizzaDirt: {fileID: 168586, guid: 3a97f76fde255dd45832d8daa46feaee, type: 2}
+  toxicDirt: {fileID: 168586, guid: 1782964e061b6224783605083d291dc5, type: 2}
+  sodaDirt: {fileID: 168586, guid: 8d8c60bc68870e1489dab6f911fc5b46, type: 2}
+  spawnPosOffset: {x: 0, y: 0}
 --- !u!60 &728772657
 PolygonCollider2D:
   m_ObjectHideFlags: 0
@@ -3262,7 +3472,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &740651834
 Transform:
   m_ObjectHideFlags: 0
@@ -3569,32 +3779,31 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 03d97bee5843a0b4286ae77656a2507e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  moveSpeed: 15
+  moveSpeedWBoots: 0
+  bracingSlow: .5
+  normalDrag: 0
+  magnetDrag: 0
+  magnetDelay: 0
+  washHandSpeed: 0
   left: 276
   right: 275
   up: 273
   down: 274
   magnetBoots: 104
   detach: 113
-  moveSpeed: 15
-  moveSpeedWBoots: 0
-  bracingSlow: .5
-  rb: {fileID: 0}
-  spaceshipRb: {fileID: 0}
-  curVelocity: {x: 0, y: 0, z: 0}
-  curShipVel: {x: 0, y: 0, z: 0}
-  velX: {x: 0, y: 0}
-  velZ: {x: 0, y: 0}
-  cord: {fileID: 1124338100}
-  distToCord: 0
-  washing: 0
-  moving: 0
-  normalDrag: 0
-  magnetDrag: 0
   topDownChar: {fileID: 0}
-  childrenNotThis: []
-  childRbs: []
   washHand: {fileID: 0}
   ragdollHand: {fileID: 0}
+  cord: {fileID: 1124338100}
+  moving: 0
+  distToCord: 0
+  washing: 0
+  childrenNotThis: []
+  childRbs: []
+  rb: {fileID: 0}
+  spaceshipRb: {fileID: 0}
+  magnet: 0
 --- !u!114 &792488308
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3754,7 +3963,7 @@ Transform:
   m_GameObject: {fileID: 818158138}
   m_LocalRotation: {x: 0, y: -1, z: 0, w: 7.90753631e-07}
   m_LocalPosition: {x: -0, y: 0, z: .411000013}
-  m_LocalScale: {x: 1.81147468, y: 1.02829349, z: 1.02829349}
+  m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 464006294}
   m_RootOrder: 20
@@ -3873,7 +4082,9 @@ Transform:
   m_LocalScale: {x: .089453198, y: .0507786125, z: .0507786125}
   m_Children:
   - {fileID: 2073007829}
+  - {fileID: 315547631}
   - {fileID: 1961714842}
+  - {fileID: 694870036}
   - {fileID: 412674896}
   - {fileID: 1064329241}
   - {fileID: 1203980574}
@@ -4431,7 +4642,7 @@ Transform:
   m_LocalScale: {x: 2.31806374, y: 4.77545166, z: 4.77287531}
   m_Children: []
   m_Father: {fileID: 866621762}
-  m_RootOrder: 3
+  m_RootOrder: 5
 --- !u!61 &1064329242
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -4487,11 +4698,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 77e4673a9ebe4e44aa3b5b790c46fd54, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  pos: {x: 0, y: 0, z: 0}
-  size: {x: 0, y: 0, z: 0}
-  test: {x: 0, y: 0, z: 0}
-  startPos: {x: 0, y: 0, z: 0}
-  dirt: {fileID: 168586, guid: 1782964e061b6224783605083d291dc5, type: 2}
+  oilDirt: {fileID: 168586, guid: f3275ceba17c38f4bb4daf676e43282f, type: 2}
+  pizzaDirt: {fileID: 168586, guid: 3a97f76fde255dd45832d8daa46feaee, type: 2}
+  toxicDirt: {fileID: 168586, guid: 1782964e061b6224783605083d291dc5, type: 2}
+  sodaDirt: {fileID: 168586, guid: 8d8c60bc68870e1489dab6f911fc5b46, type: 2}
+  spawnPosOffset: {x: 0, y: 0}
 --- !u!60 &1064329246
 PolygonCollider2D:
   m_ObjectHideFlags: 0
@@ -4948,7 +5159,7 @@ Transform:
   m_LocalScale: {x: 4.61131573, y: 7.66903114, z: 4.77287531}
   m_Children: []
   m_Father: {fileID: 866621762}
-  m_RootOrder: 4
+  m_RootOrder: 6
 --- !u!61 &1203980575
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -5004,11 +5215,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 77e4673a9ebe4e44aa3b5b790c46fd54, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  pos: {x: 0, y: 0, z: 0}
-  size: {x: 0, y: 0, z: 0}
-  test: {x: 0, y: 0, z: 0}
-  startPos: {x: 0, y: 0, z: 0}
-  dirt: {fileID: 168586, guid: 1782964e061b6224783605083d291dc5, type: 2}
+  oilDirt: {fileID: 168586, guid: f3275ceba17c38f4bb4daf676e43282f, type: 2}
+  pizzaDirt: {fileID: 168586, guid: 3a97f76fde255dd45832d8daa46feaee, type: 2}
+  toxicDirt: {fileID: 168586, guid: 1782964e061b6224783605083d291dc5, type: 2}
+  sodaDirt: {fileID: 168586, guid: 8d8c60bc68870e1489dab6f911fc5b46, type: 2}
+  spawnPosOffset: {x: 0, y: 0}
 --- !u!60 &1203980579
 PolygonCollider2D:
   m_ObjectHideFlags: 0
@@ -5177,32 +5388,31 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 03d97bee5843a0b4286ae77656a2507e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  moveSpeed: 15
+  moveSpeedWBoots: 5
+  bracingSlow: .5
+  normalDrag: 0
+  magnetDrag: 3
+  magnetDelay: 0
+  washHandSpeed: 0
   left: 276
   right: 275
   up: 273
   down: 274
   magnetBoots: 104
   detach: 113
-  moveSpeed: 15
-  moveSpeedWBoots: 5
-  bracingSlow: .5
-  rb: {fileID: 0}
-  spaceshipRb: {fileID: 0}
-  curVelocity: {x: 0, y: 0, z: 0}
-  curShipVel: {x: 0, y: 0, z: 0}
-  velX: {x: 0, y: 0}
-  velZ: {x: 0, y: 0}
-  cord: {fileID: 1124338100}
-  distToCord: 0
-  washing: 0
-  moving: 0
-  normalDrag: 0
-  magnetDrag: 3
   topDownChar: {fileID: 0}
-  childrenNotThis: []
-  childRbs: []
   washHand: {fileID: 0}
   ragdollHand: {fileID: 0}
+  cord: {fileID: 1124338100}
+  moving: 0
+  distToCord: 0
+  washing: 0
+  childrenNotThis: []
+  childRbs: []
+  rb: {fileID: 0}
+  spaceshipRb: {fileID: 0}
+  magnet: 0
 --- !u!232 &1239387264
 DistanceJoint2D:
   m_ObjectHideFlags: 0
@@ -5866,10 +6076,6 @@ MonoBehaviour:
   - {fileID: 146498, guid: eb1c5482474d62a49a474d6145bb679e, type: 2}
   - {fileID: 130520, guid: afddb1a0b2df5c446b4703695f8825b4, type: 2}
   - {fileID: 147300, guid: 68ec2890d5871e44ebb520078c55e234, type: 2}
-  - {fileID: 154378, guid: 2762dfdfe1eb54a6aac8600eb91b61f5, type: 2}
-  - {fileID: 114888, guid: e740c11dcd84545308e0586a2373dc2b, type: 2}
-  - {fileID: 120604, guid: 6fc14b60b6e134862b80c4c67f932508, type: 2}
-  - {fileID: 125412, guid: 146aa7d560ef243278e77d0f3a6a66f6, type: 2}
   easyZones: 25
   mediumZones: 25
   hardZones: 25
@@ -6102,10 +6308,6 @@ Prefab:
       propertyPath: m_ConnectedRigidBody
       value: 
       objectReference: {fileID: 1124338102}
-    - target: {fileID: 11456652, guid: 8d83e267b4b848d44a4a7b24bdc4c8f4, type: 2}
-      propertyPath: cord
-      value: 
-      objectReference: {fileID: 1124338100}
     - target: {fileID: 11459708, guid: 8d83e267b4b848d44a4a7b24bdc4c8f4, type: 2}
       propertyPath: spaceship
       value: 
@@ -6118,30 +6320,10 @@ Prefab:
       propertyPath: barText
       value: 
       objectReference: {fileID: 1930290297}
-    - target: {fileID: 11459708, guid: 8d83e267b4b848d44a4a7b24bdc4c8f4, type: 2}
-      propertyPath: washHandWithoutBoots
-      value: 
-      objectReference: {fileID: 607209244}
     - target: {fileID: 11456652, guid: 8d83e267b4b848d44a4a7b24bdc4c8f4, type: 2}
-      propertyPath: washHand
+      propertyPath: cord
       value: 
-      objectReference: {fileID: 237715763}
-    - target: {fileID: 23340318, guid: 8d83e267b4b848d44a4a7b24bdc4c8f4, type: 2}
-      propertyPath: m_Enabled
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 23344638, guid: 8d83e267b4b848d44a4a7b24bdc4c8f4, type: 2}
-      propertyPath: m_Anchor.y
-      value: -.0799999982
-      objectReference: {fileID: 0}
-    - target: {fileID: 23344638, guid: 8d83e267b4b848d44a4a7b24bdc4c8f4, type: 2}
-      propertyPath: m_ConnectedAnchor.y
-      value: .1107895
-      objectReference: {fileID: 0}
-    - target: {fileID: 11456652, guid: 8d83e267b4b848d44a4a7b24bdc4c8f4, type: 2}
-      propertyPath: ragdollHand
-      value: 
-      objectReference: {fileID: 1679902341}
+      objectReference: {fileID: 1124338100}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 8d83e267b4b848d44a4a7b24bdc4c8f4, type: 2}
   m_IsPrefabParent: 0
@@ -6237,7 +6419,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &1445326929
 Transform:
   m_ObjectHideFlags: 0
@@ -7011,10 +7193,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   cleanPrcntg: 0
   speed: 0
---- !u!1 &1679902341 stripped
-GameObject:
-  m_PrefabParentObject: {fileID: 166812, guid: 8d83e267b4b848d44a4a7b24bdc4c8f4, type: 2}
-  m_PrefabInternal: {fileID: 1436189943}
 --- !u!1 &1684254385
 GameObject:
   m_ObjectHideFlags: 0
@@ -8685,32 +8863,31 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 03d97bee5843a0b4286ae77656a2507e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  moveSpeed: 15
+  moveSpeedWBoots: 0
+  bracingSlow: .5
+  normalDrag: 0
+  magnetDrag: 0
+  magnetDelay: 0
+  washHandSpeed: 0
   left: 276
   right: 275
   up: 273
   down: 274
   magnetBoots: 104
   detach: 113
-  moveSpeed: 15
-  moveSpeedWBoots: 0
-  bracingSlow: .5
-  rb: {fileID: 0}
-  spaceshipRb: {fileID: 0}
-  curVelocity: {x: 0, y: 0, z: 0}
-  curShipVel: {x: 0, y: 0, z: 0}
-  velX: {x: 0, y: 0}
-  velZ: {x: 0, y: 0}
-  cord: {fileID: 1124338100}
-  distToCord: 0
-  washing: 0
-  moving: 0
-  normalDrag: 0
-  magnetDrag: 0
   topDownChar: {fileID: 0}
-  childrenNotThis: []
-  childRbs: []
   washHand: {fileID: 0}
   ragdollHand: {fileID: 0}
+  cord: {fileID: 1124338100}
+  moving: 0
+  distToCord: 0
+  washing: 0
+  childrenNotThis: []
+  childRbs: []
+  rb: {fileID: 0}
+  spaceshipRb: {fileID: 0}
+  magnet: 0
 --- !u!50 &1932995255
 Rigidbody2D:
   serializedVersion: 2
@@ -9010,7 +9187,7 @@ GameObject:
   - 114: {fileID: 1961714846}
   - 60: {fileID: 1961714847}
   m_Layer: 0
-  m_Name: top2
+  m_Name: top2left
   m_TagString: SpaceshipCollider
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -9027,7 +9204,7 @@ Transform:
   m_LocalScale: {x: 4.81736231, y: 2.194911, z: 4.77287531}
   m_Children: []
   m_Father: {fileID: 866621762}
-  m_RootOrder: 1
+  m_RootOrder: 2
 --- !u!61 &1961714843
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -9083,11 +9260,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 77e4673a9ebe4e44aa3b5b790c46fd54, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  pos: {x: 0, y: 0, z: 0}
-  size: {x: 0, y: 0, z: 0}
-  test: {x: 0, y: 0, z: 0}
-  startPos: {x: 0, y: 0, z: 0}
-  dirt: {fileID: 168586, guid: 1782964e061b6224783605083d291dc5, type: 2}
+  oilDirt: {fileID: 168586, guid: f3275ceba17c38f4bb4daf676e43282f, type: 2}
+  pizzaDirt: {fileID: 168586, guid: 3a97f76fde255dd45832d8daa46feaee, type: 2}
+  toxicDirt: {fileID: 168586, guid: 1782964e061b6224783605083d291dc5, type: 2}
+  sodaDirt: {fileID: 168586, guid: 8d8c60bc68870e1489dab6f911fc5b46, type: 2}
+  spawnPosOffset: {x: 0, y: 0}
 --- !u!60 &1961714847
 PolygonCollider2D:
   m_ObjectHideFlags: 0
@@ -9102,8 +9279,7 @@ PolygonCollider2D:
   m_Points:
     m_Paths:
     - - {x: -3.41060513e-13, y: .5}
-      - {x: .304193199, y: .475306451}
-      - {x: .452484518, y: -.491241038}
+      - {x: -.00272013806, y: -.507490218}
       - {x: -.445524037, y: -.480939209}
       - {x: -.289891332, y: .489848047}
 --- !u!1 &1994213631
@@ -9360,7 +9536,7 @@ GameObject:
   - 114: {fileID: 2073007833}
   - 60: {fileID: 2073007834}
   m_Layer: 0
-  m_Name: top
+  m_Name: topleft
   m_TagString: SpaceshipCollider
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -9433,11 +9609,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 77e4673a9ebe4e44aa3b5b790c46fd54, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  pos: {x: 0, y: 0, z: 0}
-  size: {x: 0, y: 0, z: 0}
-  test: {x: 0, y: 0, z: 0}
-  startPos: {x: 0, y: 0, z: 0}
-  dirt: {fileID: 168586, guid: 1782964e061b6224783605083d291dc5, type: 2}
+  oilDirt: {fileID: 168586, guid: f3275ceba17c38f4bb4daf676e43282f, type: 2}
+  pizzaDirt: {fileID: 168586, guid: 3a97f76fde255dd45832d8daa46feaee, type: 2}
+  toxicDirt: {fileID: 168586, guid: 1782964e061b6224783605083d291dc5, type: 2}
+  sodaDirt: {fileID: 168586, guid: 8d8c60bc68870e1489dab6f911fc5b46, type: 2}
+  spawnPosOffset: {x: 0, y: 0}
 --- !u!60 &2073007834
 PolygonCollider2D:
   m_ObjectHideFlags: 0
@@ -9451,9 +9627,9 @@ PolygonCollider2D:
   m_Offset: {x: 0, y: 0}
   m_Points:
     m_Paths:
-    - - {x: .00436737388, y: .56505686}
-      - {x: .0950241685, y: .467937946}
-      - {x: .484939367, y: -.484764427}
+    - - {x: .000627685746, y: .572197378}
+      - {x: .00127809367, y: .43064487}
+      - {x: .00449109497, y: -.477306128}
       - {x: -.488301963, y: -.492006063}
       - {x: -.100025132, y: .442566007}
 --- !u!1 &2113969495

@@ -36,10 +36,11 @@ public class SpaceshipController : MonoBehaviour {
 	Vector3 shieldBarScale, boostBarScale, distBarScale;
 	public bool boostActive;
 	public GameObject shield;
-	float curBoostSpeed, distPrcntg, prevMoveSpeed;
-	public float maxXPos;
+	float distPrcntg, prevMoveSpeed;
+	public float maxXPos, curBoostSpeed;
 	GameObject [] players;
 	bool canAccel;
+	public bool changingSpeed;
 	float accelTimer;
 	public int curSpeed, maxAccSpeed;
 	public List <float> speeds = new List<float> ();
@@ -89,6 +90,7 @@ public class SpaceshipController : MonoBehaviour {
 		moveSpeed = speeds [0];
 		curSpeed = 0;
 		maxAccSpeed = speeds.Count;
+		changingSpeed = false;
     }
 	
 	// Update is called once per frame
@@ -100,6 +102,8 @@ public class SpaceshipController : MonoBehaviour {
             pinDownLast = 0,
             pinBtn1Last = 0,
             pinBtn2Last = 0;
+
+
 		if (Input.GetMouseButton(0) | arduino.digitalRead(pinLeft) == 1)
         {
             GoLeft();
@@ -256,7 +260,15 @@ public class SpaceshipController : MonoBehaviour {
 		}
 		*/
 
-		if (prevMoveSpeed != moveSpeed) {
+		if (moveSpeed - prevMoveSpeed > 1) {
+			prevMoveSpeed = moveSpeed;
+			for (int i = 0; i < players.Length; i++) {
+				if (players[i].GetComponent<PlayerHead>().head.GetComponent<Movement>().rb.velocity != rb.velocity){
+					players[i].GetComponent<PlayerHead>().head.GetComponent<Movement>().rb.velocity = rb.velocity;		
+				}
+			}
+		}
+		if (prevMoveSpeed - moveSpeed > 1) {
 			prevMoveSpeed = moveSpeed;
 			for (int i = 0; i < players.Length; i++) {
 				if (players[i].GetComponent<PlayerHead>().head.GetComponent<Movement>().rb.velocity != rb.velocity){
@@ -281,6 +293,10 @@ public class SpaceshipController : MonoBehaviour {
 		}
 		if (curSpeed <= 0) {
 			curSpeed = 0;
+		}
+
+		if (!boostActive && curBoostSpeed > 0){
+			curBoostSpeed -= Time.deltaTime*30;
 		}
 	}
 
@@ -368,9 +384,10 @@ public class SpaceshipController : MonoBehaviour {
 			boostBarScale.x = prcntg;
 			boostBar.rectTransform.localScale = boostBarScale;
 			for (int i = 0; i < players.Length; i++) {
-				if (players[i].GetComponent<PlayerHead>().head.GetComponent<Movement>().rb.velocity != rb.velocity){
+				if (players[i].GetComponent<PlayerHead>().head.GetComponent<Movement>().rb.velocity != rb.velocity && !players[i].GetComponent<PlayerHead>().head.GetComponent<Movement>().magnet){
 					players[i].GetComponent<PlayerHead>().head.GetComponent<Movement>().rb.velocity = rb.velocity;		
 				}
+
 			}
 			if (curBoostSpeed < boostSpeed) {
 				curBoostSpeed += Time.deltaTime * boostSpeed;
@@ -381,13 +398,14 @@ public class SpaceshipController : MonoBehaviour {
 			StopBoost();
 			boostActive = false;
 		}
+
 	}
 
 	void StopBoost () {
 		curBoost += Time.deltaTime*boostRegenTime;
 		float prcntg = curBoost/maxBoost;
 		boostBarScale.x = prcntg;
-		curBoostSpeed = 0;
+//		curBoostSpeed = 0;
 		boostBar.rectTransform.localScale = boostBarScale;
 		if (curBoostSpeed > 0) {
 			curBoostSpeed -= Time.deltaTime * (boostSpeed*0.5f);
@@ -426,16 +444,17 @@ public class SpaceshipController : MonoBehaviour {
 //			else if (moveSpeed-speeds[speedToGo] >= 0.25f){
 //				moveSpeed = speeds[speedToGo];
 //			}
-
-		}
-
-		if (speedToGo >= 0  && moveSpeed > speeds[speedToGo]) {
+			changingSpeed = true;
+		}else if (speedToGo >= 0  && moveSpeed > speeds[speedToGo]) {
 			if (moveSpeed >= speeds[speedToGo]) {
 				moveSpeed -= (Time.deltaTime*2);
 			}
 //			else if (moveSpeed-speeds[speedToGo] >= 0.25f){
 //				moveSpeed = speeds[speedToGo];
 //			}
+			changingSpeed = true;
+		}else {
+			changingSpeed = false;
 		}
 	}
 }

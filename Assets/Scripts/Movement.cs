@@ -4,35 +4,50 @@ using System.Collections.Generic;
 
 public class Movement : MonoBehaviour {
 
-	public KeyCode left, right, up, down, magnetBoots, detach;
+
+
 	public float moveSpeed, moveSpeedWBoots, bracingSlow;
 	Transform tf;
 	Vector3 movePos;
-	bool magnet;
 	float slow;
-
-	public Rigidbody2D rb, spaceshipRb;
-	public Vector3 curVelocity, curShipVel;
-	public Vector2 velX, velZ;
-	public Transform cord;
+	Vector3 curVelocity, curShipVel;
+	Vector2 velX, velZ;
 	LineRenderer line;
-	public float distToCord;
-	public bool washing;
-	public bool moving;
+
 	public float normalDrag, magnetDrag;
 	int playerNr;
 	string lHorAxis, rHorAxis, lVerAxis, rVerAxis;
-	public GameObject topDownChar;
+
 	GameObject playerHolder;
 	SpriteRenderer thisSprite;
 	List <GameObject> topDownSprites = new List<GameObject>();
-	public List <GameObject> childrenNotThis = new List<GameObject>();
 	float magnetMass = 10;
-	public Rigidbody2D [] childRbs;
-	public GameObject washHand;
-	public GameObject ragdollHand;
 	Rigidbody2D ragdollHandRb;
 	Vector2 ragdollHandVel;
+	public float magnetDelay;
+	public float washHandSpeed;
+
+	[Header ("Movement without controllers")]
+	public KeyCode left; 
+	public KeyCode right, up, down, magnetBoots, detach;
+	[Header ("Public fields for gameobjects needed")]
+	public GameObject topDownChar;
+	public GameObject washHand;
+	public GameObject ragdollHand;
+	public Transform cord;
+	[Header ("Public only for debugging")]
+	public bool moving;
+	public float distToCord;
+	public bool washing;
+
+	[HideInInspector]
+	public List <GameObject> childrenNotThis = new List<GameObject>();
+	[HideInInspector]
+	public Rigidbody2D [] childRbs;
+	[HideInInspector]
+	public Rigidbody2D rb, spaceshipRb;
+	[HideInInspector]
+	public bool magnet;
 //	public GameObject [] childSprites;
 //	GameObject spaceship;
 	// Use this for initialization
@@ -176,14 +191,13 @@ public class Movement : MonoBehaviour {
 //			rb.velocity = Vector2.zero+spaceshipRb.velocity;
 //		}
 
-		if (Input.GetKeyDown (magnetBoots) || Input.GetButtonDown ("ControllerL1"))
+		if (Input.GetKeyDown (magnetBoots) || Input.GetButtonDown ("ControllerR1"))
 		{
-			Invoke ("Boots", 1.5f);
+			Invoke ("Boots", magnetDelay);
 		}
 
 		if (Input.GetAxis (rHorAxis) != 0 || Input.GetAxis(rVerAxis) != 0  || Input.GetKey(KeyCode.Space)) {
 			washing = true;
-
 		}else{
 			washing = false;
 		}
@@ -201,7 +215,7 @@ public class Movement : MonoBehaviour {
 			}
 		}
 
-		if (Input.GetKey (detach) || Input.GetButton ("ControllerR1")) {
+		if (Input.GetKey (detach) || Input.GetButton ("ControllerL1")) {
 			cord.gameObject.GetComponent<RopeStart> ().Detach (tf.position);
 		}
 //		line.SetPosition (0, tf.position);
@@ -216,27 +230,29 @@ public class Movement : MonoBehaviour {
 //		if (!moving && rb.velocity.y <= spaceshipRb.velocity.y){
 //			rb.velocity = new Vector2 (rb.velocity.x, spaceshipRb.velocity.x*Time.deltaTime);
 //		}
-		if (magnet){
-			rb.velocity = spaceshipRb.velocity + new Vector2 (velX.x, velZ.y);
-		}
+
 
 		if (Input.GetAxis (rHorAxis) > 0) {
-			ragdollHandVel.x = 5;
+			ragdollHandVel.x = washHandSpeed;
 			ragdollHandRb.velocity = ragdollHandVel;
 		}if (Input.GetAxis (rHorAxis) < 0) {
-			ragdollHandVel.x = (-5);
+			ragdollHandVel.x = (-washHandSpeed);
 			ragdollHandRb.velocity = ragdollHandVel;
 		}if (Input.GetAxis (rVerAxis) < 0) {
-			ragdollHandVel.y = 5;
+			ragdollHandVel.y = washHandSpeed;
 			ragdollHandRb.velocity = ragdollHandVel;
 		}if (Input.GetAxis (rVerAxis) > 0) {
-			ragdollHandVel.y = (-5);
+			ragdollHandVel.y = (-washHandSpeed);
 			ragdollHandRb.velocity = ragdollHandVel;
 		}
 		//Debug.Log (Input.GetJoystickNames ());
 
-		if ((spaceshipRb.velocity.x > 5 || spaceshipRb.velocity.x < 5) && !GameObject.FindGameObjectWithTag("Spaceship").GetComponent<SpaceshipController>().boostActive) {
-			rb.velocity = new Vector2 (spaceshipRb.velocity.x/2, rb.velocity.y);
+		if ((spaceshipRb.velocity.x > 5 || spaceshipRb.velocity.x < 5) && spaceshipRb.velocity.x != 0 && !GameObject.FindGameObjectWithTag("Spaceship").GetComponent<SpaceshipController>().boostActive) {
+			rb.velocity = new Vector2 ((spaceshipRb.velocity.x/2)+rb.velocity.x, rb.velocity.y);
+		}
+
+		if (magnet) {
+			rb.velocity = spaceshipRb.velocity+new Vector2 (velX.x, velZ.y);
 		}
 
 	}
