@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<WwiseDocument Type="WorkUnit" ID="{1EC8FF26-FD5B-4639-92A0-D63C2341B432}" SchemaVersion="70">
+	<SoundBanks>
+		<WorkUnit Name="Default Work Unit" ID="{1EC8FF26-FD5B-4639-92A0-D63C2341B432}" PersistMode="Standalone">
+			<ChildrenList>
+				<SoundBank Name="MainSoundbank" ID="{CD29F0E0-9C99-4807-8670-2B021A7E7CD7}">
+					<ObjectInclusionList>
+						<ObjectRef Name="spaceshipBoost" ID="{E8EB2E09-B1C8-4DE7-BD0F-2EDED170461A}" WorkUnitID="{B0CEAF43-BBC5-4227-A71F-F166445AE05A}" Filter="7" Origin="Manual"/>
+						<ObjectRef Name="spaceshipBoostStatus" ID="{B3BC9411-5B30-4E61-A6C5-1F870D36041F}" WorkUnitID="{B0CEAF43-BBC5-4227-A71F-F166445AE05A}" Filter="7" Origin="Manual"/>
+						<ObjectRef Name="spaceshipShield" ID="{CD1EDD4C-81FB-46D9-9E6B-86E209D98B3B}" WorkUnitID="{B0CEAF43-BBC5-4227-A71F-F166445AE05A}" Filter="7" Origin="Manual"/>
+					</ObjectInclusionList>
+					<ObjectExclusionList/>
+					<GameSyncExclusionList/>
+				</SoundBank>
+			</ChildrenList>
+		</WorkUnit>
+	</SoundBanks>
+</WwiseDocument>

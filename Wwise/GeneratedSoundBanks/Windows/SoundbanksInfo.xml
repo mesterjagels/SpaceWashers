@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="utf-8"?>
+<SoundBanksInfo Platform="Windows" BasePlatform="Windows" SchemaVersion="10" SoundbankVersion="113">
+	<RootPaths>
+		<ProjectRoot>/Users/AndreasLagerstedt/Library/Application Support/Wwise/Bottles/wwise/dosdevices/y:/Spiludvikling/Game Developments/Wwise/</ProjectRoot>
+		<SourceFilesRoot>/Users/AndreasLagerstedt/Library/Application Support/Wwise/Bottles/wwise/dosdevices/y:/Spiludvikling/Game Developments/Wwise/.cache/Windows/</SourceFilesRoot>
+		<SoundBanksRoot>/Users/AndreasLagerstedt/Library/Application Support/Wwise/Bottles/wwise/dosdevices/y:/Spiludvikling/Game Developments/Wwise/GeneratedSoundBanks/Windows/</SoundBanksRoot>
+		<ExternalSourcesInputFile></ExternalSourcesInputFile>
+		<ExternalSourcesOutputRoot>/Users/AndreasLagerstedt/Library/Application Support/Wwise/Bottles/wwise/dosdevices/y:/Spiludvikling/Game Developments/Wwise/GeneratedSoundBanks/Windows/</ExternalSourcesOutputRoot>
+	</RootPaths>
+	<DialogueEvents/>
+	<StreamedFiles/>
+	<MediaFilesNotInAnyBank/>
+	<SoundBanks>
+		<SoundBank Id="534561221" Language="SFX">
+			<ShortName>MainSoundbank</ShortName>
+			<Path>MainSoundbank.bnk</Path>
+			<IncludedEvents>
+				<Event Id="2504043352" Name="spaceshipBoost"/>
+				<Event Id="3424209326" Name="spaceshipBoostStatus"/>
+				<Event Id="3978528892" Name="spaceshipShield"/>
+				<Event Id="3011798751" Name="spaceshipShieldDry"/>
+				<Event Id="4148269026" Name="spaceshipShieldImpact"/>
+				<Event Id="1017248145" Name="spaceshipShieldUnable"/>
+				<Event Id="3030433551" Name="spaceshipThrusters"/>
+			</IncludedEvents>
+			<IncludedMemoryFiles>
+				<File Id="36554443" Language="SFX">
+					<ShortName>thrusters.wav</ShortName>
+					<Path>SFX/thrusters_4B8CC0C5.wem</Path>
+				</File>
+				<File Id="292275680" Language="SFX">
+					<ShortName>shield_unable.wav</ShortName>
+					<Path>SFX/shield_unable_9E69E797.wem</Path>
+				</File>
+				<File Id="341881403" Language="SFX">
+					<ShortName>shield_off.wav</ShortName>
+					<Path>SFX/shield_off_9E69E797.wem</Path>
+				</File>
+				<File Id="450443388" Language="SFX">
+					<ShortName>shield_dry.wav</ShortName>
+					<Path>SFX/shield_dry_93929E17.wem</Path>
+				</File>
+				<File Id="578150549" Language="SFX">
+					<ShortName>boost_full.wav</ShortName>
+					<Path>SFX/boost_full_42A4DA44.wem</Path>
+				</File>
+				<File Id="812466626" Language="SFX">
+					<ShortName>boost_start.wav</ShortName>
+					<Path>SFX/boost_start_9E69E797.wem</Path>
+				</File>
+				<File Id="822492927" Language="SFX">
+					<ShortName>shield_loop.wav</ShortName>
+					<Path>SFX/shield_loop_4B8CC0C5.wem</Path>
+				</File>
+				<File Id="825375094" Language="SFX">
+					<ShortName>boost_end.wav</ShortName>
+					<Path>SFX/boost_end_9E69E797.wem</Path>
+				</File>
+				<File Id="856839015" Language="SFX">
+					<ShortName>boost_loop.wav</ShortName>
+					<Path>SFX/boost_loop_4B8CC0C5.wem</Path>
+				</File>
+				<File Id="881683486" Language="SFX">
+					<ShortName>shield_impact.wav</ShortName>
+					<Path>SFX/shield_impact_9E69E797.wem</Path>
+				</File>
+				<File Id="931558804" Language="SFX">
+					<ShortName>shield_on.wav</ShortName>
+					<Path>SFX/shield_on_9E69E797.wem</Path>
+				</File>
+				<File Id="964095035" Language="SFX">
+					<ShortName>boost_unable.wav</ShortName>
+					<Path>SFX/boost_unable_2C050C84.wem</Path>
+				</File>
+			</IncludedMemoryFiles>
+		</SoundBank>
+		<SoundBank Id="1355168291" Language="SFX">
+			<ShortName>Init</ShortName>
+			<Path>Init.bnk</Path>
+		</SoundBank>
+	</SoundBanks>
+</SoundBanksInfo>
