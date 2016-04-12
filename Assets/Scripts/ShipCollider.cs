@@ -38,14 +38,14 @@ public class ShipCollider : MonoBehaviour {
 		posToSpawn = new Vector3 (posToSpawn.x, randomY, posToSpawn.z);
 		if (!isTop){
 			GameObject dirty = Instantiate (dirt, new Vector3 (posToSpawn.x+offset.x, posToSpawn.y, posToSpawn.z), Quaternion.identity) as GameObject;
-			part = Instantiate (particle, new Vector3 (posToSpawn.x+offset.x, posToSpawn.y, posToSpawn.z-5), Quaternion.identity) as GameObject;
+		//	part = Instantiate (particle, new Vector3 (posToSpawn.x+offset.x, posToSpawn.y, posToSpawn.z-5), Quaternion.identity) as GameObject;
 			dirty.transform.gameObject.name = "DIRT!";
 			dirty.transform.parent = GameObject.FindGameObjectWithTag("Spaceship").transform;
 		}else {
 			randomTopPos = Random.Range (0, 3);
 			GameObject dirty = Instantiate (dirt, transform.position+topPos, Quaternion.identity) as GameObject;
-			part = Instantiate (particle, transform.position+topPos, Quaternion.identity) as GameObject;
-			part.transform.position = new Vector3 (part.transform.position.x, part.transform.position.y, part.transform.position.z-5);
+		//	part = Instantiate (particle, transform.position+topPos, Quaternion.identity) as GameObject;
+		//  part.transform.position = new Vector3 (part.transform.position.x, part.transform.position.y, part.transform.position.z-5);
 			dirty.transform.gameObject.name = "DIRT!";
 			dirty.transform.parent = GameObject.FindGameObjectWithTag("Spaceship").transform;
 		}
