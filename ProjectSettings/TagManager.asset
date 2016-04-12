@@ -7,6 +7,13 @@ TagManager:
   - Audiomanager
   - Dirt
   - ObstacleController
+  - Background
+  - SpaceshipCollider
+  - Spaceship
+  - RopeLink
+  - Obstacle
+  - CleaningArm
+  - Planet
   layers:
   - Default
   - TransparentFX
@@ -16,8 +23,8 @@ TagManager:
   - UI
   - 
   - 
-  - 
-  - 
+  - Planet
+  - Shredder
   - 
   - 
   - 

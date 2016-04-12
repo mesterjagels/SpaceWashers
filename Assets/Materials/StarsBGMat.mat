@@ -9,7 +9,7 @@ Material:
   m_Name: StarsBGMat
   m_Shader: {fileID: 4800000, guid: 79f034ba95c2c35428e76c0bced1d371, type: 3}
   m_ShaderKeywords: 
-  m_LightmapFlags: 5
+  m_LightmapFlags: 1
   m_CustomRenderQueue: 3000
   stringTagMap: {}
   m_SavedProperties:
