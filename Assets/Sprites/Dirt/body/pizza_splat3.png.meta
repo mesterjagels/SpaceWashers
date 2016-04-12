@@ -1,6 +1,11 @@
 fileFormatVersion: 2
+<<<<<<< HEAD
 guid: 57ef6377d94852b4ca58dad32ec1f38a
 timeCreated: 1460033231
+=======
+guid: 18f39acc55705ef4283679b479372602
+timeCreated: 1460460465
+>>>>>>> Updated import settings for dirt sprites
 licenseType: Free
 TextureImporter:
   fileIDToRecycleName: {}
@@ -19,14 +24,22 @@ TextureImporter:
     externalNormalMap: 0
     heightScale: 0.25
     normalMapFilter: 0
+<<<<<<< HEAD
   isReadable: 0
+=======
+  isReadable: 1
+>>>>>>> Updated import settings for dirt sprites
   grayScaleToAlpha: 0
   generateCubemap: 0
   cubemapConvolution: 0
   cubemapConvolutionSteps: 7
   cubemapConvolutionExponent: 1.5
   seamlessCubemap: 0
+<<<<<<< HEAD
   textureFormat: -1
+=======
+  textureFormat: 5
+>>>>>>> Updated import settings for dirt sprites
   maxTextureSize: 2048
   textureSettings:
     filterMode: -1
@@ -45,8 +58,13 @@ TextureImporter:
   spritePivot: {x: 0.5, y: 0.5}
   spriteBorder: {x: 0, y: 0, z: 0, w: 0}
   spritePixelsToUnits: 100
+<<<<<<< HEAD
   alphaIsTransparency: 0
   textureType: -1
+=======
+  alphaIsTransparency: 1
+  textureType: 5
+>>>>>>> Updated import settings for dirt sprites
   buildTargetSettings: []
   spriteSheet:
     sprites: []
