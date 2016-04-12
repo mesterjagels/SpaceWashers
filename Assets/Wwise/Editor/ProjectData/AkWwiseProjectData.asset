@@ -13,86 +13,14 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   CurrentPluginConfig: Profile
   EventWwu:
-  - PhysicalPath: Events/Default Work Unit.wwu
+  - PhysicalPath: Events\Default Work Unit.wwu
     ParentPhysicalPath: 
     Guid: '{B0CEAF43-BBC5-4227-A71F-F166445AE05A}'
-    m_lastTimePsrt1: -2122237184
-    m_lastTimePart2: -1999413145
+    m_lastTimePsrt1: -2097558635
+    m_lastTimePart2: -1999413534
     List:
-    - Name: clean
-      Path: Default Work Unit/Cleaners/clean
-      PathAndIcons:
-      - ElementName: Default Work Unit
-        ObjectType: 12
-      - ElementName: Cleaners
-        ObjectType: 4
-      - ElementName: clean
-        ObjectType: 3
-      ID: 1754255532
-      Guid: 442e0ebbde13324a92f676de3e8e6f44
-      maxAttenuation: 0
-    - Name: owBabe
-      Path: Default Work Unit/Cleaners/owBabe
-      PathAndIcons:
-      - ElementName: Default Work Unit
-        ObjectType: 12
-      - ElementName: Cleaners
-        ObjectType: 4
-      - ElementName: owBabe
-        ObjectType: 3
-      ID: -1484511633
-      Guid: f0d43f8728883449878bf0b321b8d0f8
-      maxAttenuation: 0
-    - Name: owEmo
-      Path: Default Work Unit/Cleaners/owEmo
-      PathAndIcons:
-      - ElementName: Default Work Unit
-        ObjectType: 12
-      - ElementName: Cleaners
-        ObjectType: 4
-      - ElementName: owEmo
-        ObjectType: 3
-      ID: -886805000
-      Guid: 3e709b10c9490341bb36ba31339e0657
-      maxAttenuation: 0
-    - Name: owGangsta
-      Path: Default Work Unit/Cleaners/owGangsta
-      PathAndIcons:
-      - ElementName: Default Work Unit
-        ObjectType: 12
-      - ElementName: Cleaners
-        ObjectType: 4
-      - ElementName: owGangsta
-        ObjectType: 3
-      ID: 1500169844
-      Guid: cdabe14bcce25d41a011619638d43455
-      maxAttenuation: 0
-    - Name: owGrunge
-      Path: Default Work Unit/Cleaners/owGrunge
-      PathAndIcons:
-      - ElementName: Default Work Unit
-        ObjectType: 12
-      - ElementName: Cleaners
-        ObjectType: 4
-      - ElementName: owGrunge
-        ObjectType: 3
-      ID: -1139027379
-      Guid: 9139f92e1c8aec42b967ba08e47822c6
-      maxAttenuation: 0
-    - Name: owJock
-      Path: Default Work Unit/Cleaners/owJock
-      PathAndIcons:
-      - ElementName: Default Work Unit
-        ObjectType: 12
-      - ElementName: Cleaners
-        ObjectType: 4
-      - ElementName: owJock
-        ObjectType: 3
-      ID: 530641892
-      Guid: a10fbec7e1202841b05fe9232a363735
-      maxAttenuation: 0
     - Name: spaceshipBoost
-      Path: Default Work Unit/Spaceship/spaceshipBoost
+      Path: Default Work Unit\Spaceship\spaceshipBoost
       PathAndIcons:
       - ElementName: Default Work Unit
         ObjectType: 12
@@ -104,7 +32,7 @@ MonoBehaviour:
       Guid: 092eebe8c8b1e74dbd0f2eded170461a
       maxAttenuation: 0
     - Name: spaceshipBoostStatus
-      Path: Default Work Unit/Spaceship/spaceshipBoostStatus
+      Path: Default Work Unit\Spaceship\spaceshipBoostStatus
       PathAndIcons:
       - ElementName: Default Work Unit
         ObjectType: 12
@@ -116,7 +44,7 @@ MonoBehaviour:
       Guid: 1194bcb3305b614ea6c51f870d36041f
       maxAttenuation: 0
     - Name: spaceshipShield
-      Path: Default Work Unit/Spaceship/spaceshipShield
+      Path: Default Work Unit\Spaceship\spaceshipShield
       PathAndIcons:
       - ElementName: Default Work Unit
         ObjectType: 12
@@ -128,7 +56,7 @@ MonoBehaviour:
       Guid: 4cdd1ecdfb81d9469e6b86e209d98b3b
       maxAttenuation: 0
     - Name: spaceshipShieldDry
-      Path: Default Work Unit/Spaceship/spaceshipShieldDry
+      Path: Default Work Unit\Spaceship\spaceshipShieldDry
       PathAndIcons:
       - ElementName: Default Work Unit
         ObjectType: 12
@@ -139,20 +67,8 @@ MonoBehaviour:
       ID: -1283168545
       Guid: 917e240fb4c229438be6ddc1ccb142c8
       maxAttenuation: 0
-    - Name: spaceshipShieldImpact
-      Path: Default Work Unit/Spaceship/spaceshipShieldImpact
-      PathAndIcons:
-      - ElementName: Default Work Unit
-        ObjectType: 12
-      - ElementName: Spaceship
-        ObjectType: 4
-      - ElementName: spaceshipShieldImpact
-        ObjectType: 3
-      ID: -146698270
-      Guid: 4bd3bb664d83a042b622bdd11bc435c6
-      maxAttenuation: 0
     - Name: spaceshipShieldUnable
-      Path: Default Work Unit/Spaceship/spaceshipShieldUnable
+      Path: Default Work Unit\Spaceship\spaceshipShieldUnable
       PathAndIcons:
       - ElementName: Default Work Unit
         ObjectType: 12
@@ -163,51 +79,29 @@ MonoBehaviour:
       ID: 1017248145
       Guid: 4016443586fb0b4c89e655dfa1c4a91c
       maxAttenuation: 0
-    - Name: spaceshipThrusters
-      Path: Default Work Unit/Spaceship/spaceshipThrusters
-      PathAndIcons:
-      - ElementName: Default Work Unit
-        ObjectType: 12
-      - ElementName: Spaceship
-        ObjectType: 4
-      - ElementName: spaceshipThrusters
-        ObjectType: 3
-      ID: -1264533745
-      Guid: e662bd113b7e38458107f928c9c9f653
-      maxAttenuation: 0
-    - Name: Test
-      Path: Default Work Unit/Test
-      PathAndIcons:
-      - ElementName: Default Work Unit
-        ObjectType: 12
-      - ElementName: Test
-        ObjectType: 3
-      ID: -1137964055
-      Guid: f53d5af4150cd04b809d7a71058f3f29
-      maxAttenuation: 0
   AuxBusWwu:
-  - PhysicalPath: Master-Mixer Hierarchy/Default Work Unit.wwu
+  - PhysicalPath: Master-Mixer Hierarchy\Default Work Unit.wwu
     ParentPhysicalPath: 
     Guid: '{AF6F5C06-D009-4B55-8318-085465639372}'
-    m_lastTimePsrt1: -1840155264
-    m_lastTimePart2: -1999413540
+    m_lastTimePsrt1: -2097043663
+    m_lastTimePart2: -1999413534
     List: []
   StateWwu:
-  - PhysicalPath: States/Default Work Unit.wwu
+  - PhysicalPath: States\Default Work Unit.wwu
     ParentPhysicalPath: 
     Guid: '{1CCDD674-A4AE-4CBB-9114-2645D93A9AA4}'
-    m_lastTimePsrt1: -1830155264
-    m_lastTimePart2: -1999413540
+    m_lastTimePsrt1: -2092199451
+    m_lastTimePart2: -1999413534
     List: []
   SwitchWwu:
-  - PhysicalPath: Switches/Default Work Unit.wwu
+  - PhysicalPath: Switches\Default Work Unit.wwu
     ParentPhysicalPath: 
     Guid: '{3E9B5808-472F-47E2-8E3D-485ADA80A05E}'
-    m_lastTimePsrt1: -1830155264
-    m_lastTimePart2: -1999413540
+    m_lastTimePsrt1: -2092194433
+    m_lastTimePart2: -1999413534
     List:
     - Name: Spaceship_Boost_Status
-      Path: Default Work Unit/Spaceship_Boost_Status
+      Path: Default Work Unit\Spaceship_Boost_Status
       PathAndIcons:
       - ElementName: Default Work Unit
         ObjectType: 12
@@ -228,14 +122,14 @@ MonoBehaviour:
       - bytes: 7d2719f0981ee247af83e0189e463b0b
       - bytes: 5b6de3d8f95f33438c8e7885761b32ba
   BankWwu:
-  - PhysicalPath: SoundBanks/Default Work Unit.wwu
+  - PhysicalPath: SoundBanks\Default Work Unit.wwu
     ParentPhysicalPath: 
     Guid: '{1EC8FF26-FD5B-4639-92A0-D63C2341B432}'
-    m_lastTimePsrt1: -2122237184
-    m_lastTimePart2: -1999413145
+    m_lastTimePsrt1: -2092209445
+    m_lastTimePart2: -1999413534
     List:
     - Name: MainSoundbank
-      Path: Default Work Unit/MainSoundbank
+      Path: Default Work Unit\MainSoundbank
       PathAndIcons:
       - ElementName: Default Work Unit
         ObjectType: 12
@@ -246,7 +140,6 @@ MonoBehaviour:
   ExpandedItems:
   - /Wwise
   - /Wwise/Events
-  - /Wwise/Events/Default Work Unit
   - /Wwise/SoundBanks
   - /Wwise/SoundBanks/Default Work Unit
   m_lastPopulateTimePsrt1: 0
