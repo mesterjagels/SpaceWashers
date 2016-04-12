@@ -1,4 +1,5 @@
 fileFormatVersion: 2
+<<<<<<< a9c4fdda4bcc48c5a480db032bfaefa257b50c38
 <<<<<<< HEAD
 guid: fd96699e4ec690346a74bd782a1199d3
 timeCreated: 1460033232
@@ -6,6 +7,10 @@ timeCreated: 1460033232
 guid: 4098ff4612a4b5c46abb2f556f96564f
 timeCreated: 1460460465
 >>>>>>> Updated import settings for dirt sprites
+=======
+guid: f71fee75ce573477d96eba5f19d22e4a
+timeCreated: 1460050800
+>>>>>>> More Wwise things.
 licenseType: Free
 TextureImporter:
   fileIDToRecycleName: {}
@@ -24,22 +29,30 @@ TextureImporter:
     externalNormalMap: 0
     heightScale: 0.25
     normalMapFilter: 0
+<<<<<<< a9c4fdda4bcc48c5a480db032bfaefa257b50c38
 <<<<<<< HEAD
   isReadable: 0
 =======
   isReadable: 1
 >>>>>>> Updated import settings for dirt sprites
+=======
+  isReadable: 0
+>>>>>>> More Wwise things.
   grayScaleToAlpha: 0
   generateCubemap: 0
   cubemapConvolution: 0
   cubemapConvolutionSteps: 7
   cubemapConvolutionExponent: 1.5
   seamlessCubemap: 0
+<<<<<<< a9c4fdda4bcc48c5a480db032bfaefa257b50c38
 <<<<<<< HEAD
   textureFormat: -1
 =======
   textureFormat: 5
 >>>>>>> Updated import settings for dirt sprites
+=======
+  textureFormat: -1
+>>>>>>> More Wwise things.
   maxTextureSize: 2048
   textureSettings:
     filterMode: -1
@@ -58,6 +71,7 @@ TextureImporter:
   spritePivot: {x: 0.5, y: 0.5}
   spriteBorder: {x: 0, y: 0, z: 0, w: 0}
   spritePixelsToUnits: 100
+<<<<<<< a9c4fdda4bcc48c5a480db032bfaefa257b50c38
 <<<<<<< HEAD
   alphaIsTransparency: 0
   textureType: -1
@@ -65,6 +79,10 @@ TextureImporter:
   alphaIsTransparency: 1
   textureType: 5
 >>>>>>> Updated import settings for dirt sprites
+=======
+  alphaIsTransparency: 0
+  textureType: -1
+>>>>>>> More Wwise things.
   buildTargetSettings: []
   spriteSheet:
     sprites: []

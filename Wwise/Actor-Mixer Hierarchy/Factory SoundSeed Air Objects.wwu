@@ -16,7 +16,7 @@ An example of trajectories and positioning handled in Wwise as opposed to SS Air
 									</PropertyList>
 									<ReferenceList>
 										<Reference Name="OutputBus">
-											<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{EC40B9D3-86D8-41C6-A75A-A40369084F59}"/>
+											<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{AF6F5C06-D009-4B55-8318-085465639372}"/>
 										</Reference>
 									</ReferenceList>
 									<ChildrenList>
@@ -30,7 +30,7 @@ An example of trajectories and positioning handled in Wwise as opposed to SS Air
 											</PropertyList>
 											<ReferenceList>
 												<Reference Name="OutputBus">
-													<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{EC40B9D3-86D8-41C6-A75A-A40369084F59}"/>
+													<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{AF6F5C06-D009-4B55-8318-085465639372}"/>
 												</Reference>
 											</ReferenceList>
 											<ChildrenList>
@@ -303,7 +303,7 @@ An example of trajectories and positioning handled in Wwise as opposed to SS Air
 											</PropertyList>
 											<ReferenceList>
 												<Reference Name="OutputBus">
-													<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{EC40B9D3-86D8-41C6-A75A-A40369084F59}"/>
+													<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{AF6F5C06-D009-4B55-8318-085465639372}"/>
 												</Reference>
 											</ReferenceList>
 											<ChildrenList>
@@ -363,7 +363,7 @@ An example of trajectories and positioning handled in Wwise as opposed to SS Air
 															</Custom>
 														</Reference>
 														<Reference Name="OutputBus">
-															<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{EC40B9D3-86D8-41C6-A75A-A40369084F59}"/>
+															<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{AF6F5C06-D009-4B55-8318-085465639372}"/>
 														</Reference>
 													</ReferenceList>
 													<ChildrenList>
@@ -404,7 +404,7 @@ An example of trajectories and positioning handled in Wwise as opposed to SS Air
 						<Flags>5</Flags>
 					</Point>
 					<Point>
-						<XPos>5.19466666666667E-02</XPos>
+						<XPos>0.0519466666666667</XPos>
 						<YPos>195.918</YPos>
 						<Flags>0</Flags>
 					</Point>
@@ -598,7 +598,7 @@ An example of trajectories and positioning handled in Wwise as opposed to SS Air
 															</Custom>
 														</Reference>
 														<Reference Name="OutputBus">
-															<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{EC40B9D3-86D8-41C6-A75A-A40369084F59}"/>
+															<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{AF6F5C06-D009-4B55-8318-085465639372}"/>
 														</Reference>
 													</ReferenceList>
 													<ChildrenList>
@@ -639,7 +639,7 @@ An example of trajectories and positioning handled in Wwise as opposed to SS Air
 						<Flags>5</Flags>
 					</Point>
 					<Point>
-						<XPos>5.84421686746988E-02</XPos>
+						<XPos>0.0584421686746988</XPos>
 						<YPos>0</YPos>
 						<Flags>0</Flags>
 					</Point>
@@ -833,7 +833,7 @@ An example of trajectories and positioning handled in Wwise as opposed to SS Air
 															</Custom>
 														</Reference>
 														<Reference Name="OutputBus">
-															<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{EC40B9D3-86D8-41C6-A75A-A40369084F59}"/>
+															<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{AF6F5C06-D009-4B55-8318-085465639372}"/>
 														</Reference>
 													</ReferenceList>
 													<ChildrenList>
@@ -874,7 +874,7 @@ An example of trajectories and positioning handled in Wwise as opposed to SS Air
 						<Flags>5</Flags>
 					</Point>
 					<Point>
-						<XPos>6.81825301204819E-02</XPos>
+						<XPos>0.0681825301204819</XPos>
 						<YPos>0</YPos>
 						<Flags>0</Flags>
 					</Point>
@@ -1024,7 +1024,7 @@ An example of trajectories and positioning handled in Wwise as opposed to SS Air
 													</PropertyList>
 													<ReferenceList>
 														<Reference Name="OutputBus">
-															<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{EC40B9D3-86D8-41C6-A75A-A40369084F59}"/>
+															<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{AF6F5C06-D009-4B55-8318-085465639372}"/>
 														</Reference>
 													</ReferenceList>
 													<ChildrenList>
@@ -1119,7 +1119,7 @@ An example of trajectories and positioning handled in Wwise as opposed to SS Air
 An example of trajectories and positioning handled in Wwise as opposed to SS Air positioning</Comment>
 									<ReferenceList>
 										<Reference Name="OutputBus">
-											<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{EC40B9D3-86D8-41C6-A75A-A40369084F59}"/>
+											<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{AF6F5C06-D009-4B55-8318-085465639372}"/>
 										</Reference>
 									</ReferenceList>
 									<ChildrenList>
@@ -1136,7 +1136,7 @@ An example of trajectories and positioning handled in Wwise as opposed to SS Air
 											</PropertyList>
 											<ReferenceList>
 												<Reference Name="OutputBus">
-													<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{EC40B9D3-86D8-41C6-A75A-A40369084F59}"/>
+													<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{AF6F5C06-D009-4B55-8318-085465639372}"/>
 												</Reference>
 											</ReferenceList>
 											<ChildrenList>
@@ -1395,7 +1395,7 @@ An example of trajectories and positioning handled in Wwise as opposed to SS Air
 											</PropertyList>
 											<ReferenceList>
 												<Reference Name="OutputBus">
-													<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{EC40B9D3-86D8-41C6-A75A-A40369084F59}"/>
+													<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{AF6F5C06-D009-4B55-8318-085465639372}"/>
 												</Reference>
 											</ReferenceList>
 											<ChildrenList>
@@ -1456,7 +1456,7 @@ An example of trajectories and positioning handled in Wwise as opposed to SS Air
 															</Custom>
 														</Reference>
 														<Reference Name="OutputBus">
-															<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{EC40B9D3-86D8-41C6-A75A-A40369084F59}"/>
+															<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{AF6F5C06-D009-4B55-8318-085465639372}"/>
 														</Reference>
 													</ReferenceList>
 													<ChildrenList>
@@ -1653,7 +1653,7 @@ An example of trajectories and positioning handled in Wwise as opposed to SS Air
 													</PropertyList>
 													<ReferenceList>
 														<Reference Name="OutputBus">
-															<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{EC40B9D3-86D8-41C6-A75A-A40369084F59}"/>
+															<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{AF6F5C06-D009-4B55-8318-085465639372}"/>
 														</Reference>
 													</ReferenceList>
 													<ChildrenList>
@@ -1703,7 +1703,7 @@ An example of trajectories and positioning handled in Wwise as opposed to SS Air
 											</PropertyList>
 											<ReferenceList>
 												<Reference Name="OutputBus">
-													<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{EC40B9D3-86D8-41C6-A75A-A40369084F59}"/>
+													<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{AF6F5C06-D009-4B55-8318-085465639372}"/>
 												</Reference>
 											</ReferenceList>
 											<ChildrenList>
@@ -1764,7 +1764,7 @@ An example of trajectories and positioning handled in Wwise as opposed to SS Air
 															</Custom>
 														</Reference>
 														<Reference Name="OutputBus">
-															<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{EC40B9D3-86D8-41C6-A75A-A40369084F59}"/>
+															<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{AF6F5C06-D009-4B55-8318-085465639372}"/>
 														</Reference>
 													</ReferenceList>
 													<ChildrenList>
@@ -1961,7 +1961,7 @@ An example of trajectories and positioning handled in Wwise as opposed to SS Air
 													</PropertyList>
 													<ReferenceList>
 														<Reference Name="OutputBus">
-															<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{EC40B9D3-86D8-41C6-A75A-A40369084F59}"/>
+															<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{AF6F5C06-D009-4B55-8318-085465639372}"/>
 														</Reference>
 													</ReferenceList>
 													<ChildrenList>
@@ -2011,7 +2011,7 @@ An example of trajectories and positioning handled in Wwise as opposed to SS Air
 											</PropertyList>
 											<ReferenceList>
 												<Reference Name="OutputBus">
-													<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{EC40B9D3-86D8-41C6-A75A-A40369084F59}"/>
+													<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{AF6F5C06-D009-4B55-8318-085465639372}"/>
 												</Reference>
 											</ReferenceList>
 											<ChildrenList>
@@ -2072,7 +2072,7 @@ An example of trajectories and positioning handled in Wwise as opposed to SS Air
 															</Custom>
 														</Reference>
 														<Reference Name="OutputBus">
-															<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{EC40B9D3-86D8-41C6-A75A-A40369084F59}"/>
+															<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{AF6F5C06-D009-4B55-8318-085465639372}"/>
 														</Reference>
 													</ReferenceList>
 													<ChildrenList>
@@ -2269,7 +2269,7 @@ An example of trajectories and positioning handled in Wwise as opposed to SS Air
 													</PropertyList>
 													<ReferenceList>
 														<Reference Name="OutputBus">
-															<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{EC40B9D3-86D8-41C6-A75A-A40369084F59}"/>
+															<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{AF6F5C06-D009-4B55-8318-085465639372}"/>
 														</Reference>
 													</ReferenceList>
 													<ChildrenList>
@@ -2319,7 +2319,7 @@ An example of trajectories and positioning handled in Wwise as opposed to SS Air
 											</PropertyList>
 											<ReferenceList>
 												<Reference Name="OutputBus">
-													<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{EC40B9D3-86D8-41C6-A75A-A40369084F59}"/>
+													<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{AF6F5C06-D009-4B55-8318-085465639372}"/>
 												</Reference>
 											</ReferenceList>
 											<ChildrenList>
@@ -2380,7 +2380,7 @@ An example of trajectories and positioning handled in Wwise as opposed to SS Air
 															</Custom>
 														</Reference>
 														<Reference Name="OutputBus">
-															<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{EC40B9D3-86D8-41C6-A75A-A40369084F59}"/>
+															<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{AF6F5C06-D009-4B55-8318-085465639372}"/>
 														</Reference>
 													</ReferenceList>
 													<ChildrenList>
@@ -2577,7 +2577,7 @@ An example of trajectories and positioning handled in Wwise as opposed to SS Air
 													</PropertyList>
 													<ReferenceList>
 														<Reference Name="OutputBus">
-															<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{EC40B9D3-86D8-41C6-A75A-A40369084F59}"/>
+															<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{AF6F5C06-D009-4B55-8318-085465639372}"/>
 														</Reference>
 													</ReferenceList>
 													<ChildrenList>
@@ -2627,7 +2627,7 @@ An example of trajectories and positioning handled in Wwise as opposed to SS Air
 											</PropertyList>
 											<ReferenceList>
 												<Reference Name="OutputBus">
-													<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{EC40B9D3-86D8-41C6-A75A-A40369084F59}"/>
+													<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{AF6F5C06-D009-4B55-8318-085465639372}"/>
 												</Reference>
 											</ReferenceList>
 											<ChildrenList>
@@ -2688,7 +2688,7 @@ An example of trajectories and positioning handled in Wwise as opposed to SS Air
 															</Custom>
 														</Reference>
 														<Reference Name="OutputBus">
-															<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{EC40B9D3-86D8-41C6-A75A-A40369084F59}"/>
+															<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{AF6F5C06-D009-4B55-8318-085465639372}"/>
 														</Reference>
 													</ReferenceList>
 													<ChildrenList>
@@ -2885,7 +2885,7 @@ An example of trajectories and positioning handled in Wwise as opposed to SS Air
 													</PropertyList>
 													<ReferenceList>
 														<Reference Name="OutputBus">
-															<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{EC40B9D3-86D8-41C6-A75A-A40369084F59}"/>
+															<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{AF6F5C06-D009-4B55-8318-085465639372}"/>
 														</Reference>
 													</ReferenceList>
 													<ChildrenList>
@@ -2935,7 +2935,7 @@ An example of trajectories and positioning handled in Wwise as opposed to SS Air
 											</PropertyList>
 											<ReferenceList>
 												<Reference Name="OutputBus">
-													<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{EC40B9D3-86D8-41C6-A75A-A40369084F59}"/>
+													<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{AF6F5C06-D009-4B55-8318-085465639372}"/>
 												</Reference>
 											</ReferenceList>
 											<ChildrenList>
@@ -2996,7 +2996,7 @@ An example of trajectories and positioning handled in Wwise as opposed to SS Air
 															</Custom>
 														</Reference>
 														<Reference Name="OutputBus">
-															<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{EC40B9D3-86D8-41C6-A75A-A40369084F59}"/>
+															<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{AF6F5C06-D009-4B55-8318-085465639372}"/>
 														</Reference>
 													</ReferenceList>
 													<ChildrenList>
@@ -3193,7 +3193,7 @@ An example of trajectories and positioning handled in Wwise as opposed to SS Air
 													</PropertyList>
 													<ReferenceList>
 														<Reference Name="OutputBus">
-															<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{EC40B9D3-86D8-41C6-A75A-A40369084F59}"/>
+															<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{AF6F5C06-D009-4B55-8318-085465639372}"/>
 														</Reference>
 													</ReferenceList>
 													<ChildrenList>
@@ -3249,7 +3249,7 @@ An example of trajectories and positioning handled in Wwise as opposed to SS Air
 									</PropertyList>
 									<ReferenceList>
 										<Reference Name="OutputBus">
-											<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{EC40B9D3-86D8-41C6-A75A-A40369084F59}"/>
+											<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{AF6F5C06-D009-4B55-8318-085465639372}"/>
 										</Reference>
 									</ReferenceList>
 									<ChildrenList>
@@ -3415,7 +3415,7 @@ An example of trajectories and positioning handled in Wwise as opposed to SS Air
 									</PropertyList>
 									<ReferenceList>
 										<Reference Name="OutputBus">
-											<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{EC40B9D3-86D8-41C6-A75A-A40369084F59}"/>
+											<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{AF6F5C06-D009-4B55-8318-085465639372}"/>
 										</Reference>
 									</ReferenceList>
 									<ChildrenList>
@@ -3570,7 +3570,7 @@ An example of trajectories and positioning handled in Wwise as opposed to SS Air
 									</PropertyList>
 									<ReferenceList>
 										<Reference Name="OutputBus">
-											<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{EC40B9D3-86D8-41C6-A75A-A40369084F59}"/>
+											<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{AF6F5C06-D009-4B55-8318-085465639372}"/>
 										</Reference>
 									</ReferenceList>
 									<ChildrenList>
@@ -3675,7 +3675,7 @@ An example of trajectories and positioning handled in Wwise as opposed to SS Air
 									</PropertyList>
 									<ReferenceList>
 										<Reference Name="OutputBus">
-											<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{EC40B9D3-86D8-41C6-A75A-A40369084F59}"/>
+											<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{AF6F5C06-D009-4B55-8318-085465639372}"/>
 										</Reference>
 									</ReferenceList>
 									<ChildrenList>
@@ -3906,7 +3906,7 @@ An example of trajectories and positioning handled in Wwise as opposed to SS Air
 									</PropertyList>
 									<ReferenceList>
 										<Reference Name="OutputBus">
-											<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{EC40B9D3-86D8-41C6-A75A-A40369084F59}"/>
+											<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{AF6F5C06-D009-4B55-8318-085465639372}"/>
 										</Reference>
 									</ReferenceList>
 									<ChildrenList>
@@ -4104,7 +4104,7 @@ An example of trajectories and positioning handled in Wwise as opposed to SS Air
 									</PropertyList>
 									<ReferenceList>
 										<Reference Name="OutputBus">
-											<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{EC40B9D3-86D8-41C6-A75A-A40369084F59}"/>
+											<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{AF6F5C06-D009-4B55-8318-085465639372}"/>
 										</Reference>
 									</ReferenceList>
 									<ChildrenList>
@@ -4119,14 +4119,14 @@ An example of trajectories and positioning handled in Wwise as opposed to SS Air
 											</PropertyList>
 											<ReferenceList>
 												<Reference Name="OutputBus">
-													<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{EC40B9D3-86D8-41C6-A75A-A40369084F59}"/>
+													<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{AF6F5C06-D009-4B55-8318-085465639372}"/>
 												</Reference>
 											</ReferenceList>
 											<ChildrenList>
 												<Sound Name="Arrow" ID="{06C7C35B-7B81-4A18-ADF3-F64BA69A9E29}" ShortID="541978274" Type="SoundFX">
 													<ReferenceList>
 														<Reference Name="OutputBus">
-															<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{EC40B9D3-86D8-41C6-A75A-A40369084F59}"/>
+															<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{AF6F5C06-D009-4B55-8318-085465639372}"/>
 														</Reference>
 													</ReferenceList>
 													<ChildrenList>
@@ -4227,7 +4227,7 @@ An example of trajectories and positioning handled in Wwise as opposed to SS Air
 												<Sound Name="Silence" ID="{35F5DD55-D553-44EF-B282-79948A842711}" ShortID="613963290" Type="SoundFX">
 													<ReferenceList>
 														<Reference Name="OutputBus">
-															<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{EC40B9D3-86D8-41C6-A75A-A40369084F59}"/>
+															<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{AF6F5C06-D009-4B55-8318-085465639372}"/>
 														</Reference>
 													</ReferenceList>
 													<ChildrenList>
@@ -4261,14 +4261,14 @@ An example of trajectories and positioning handled in Wwise as opposed to SS Air
 											</PropertyList>
 											<ReferenceList>
 												<Reference Name="OutputBus">
-													<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{EC40B9D3-86D8-41C6-A75A-A40369084F59}"/>
+													<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{AF6F5C06-D009-4B55-8318-085465639372}"/>
 												</Reference>
 											</ReferenceList>
 											<ChildrenList>
 												<Sound Name="Arrow" ID="{B1A2D0B9-FEC7-45F0-8042-29DA809B8FF1}" ShortID="718792907" Type="SoundFX">
 													<ReferenceList>
 														<Reference Name="OutputBus">
-															<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{EC40B9D3-86D8-41C6-A75A-A40369084F59}"/>
+															<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{AF6F5C06-D009-4B55-8318-085465639372}"/>
 														</Reference>
 													</ReferenceList>
 													<ChildrenList>
@@ -4369,7 +4369,7 @@ An example of trajectories and positioning handled in Wwise as opposed to SS Air
 												<Sound Name="Silence" ID="{F6C15E8E-03AE-4BBE-AA41-79D1F3BB9967}" ShortID="757203631" Type="SoundFX">
 													<ReferenceList>
 														<Reference Name="OutputBus">
-															<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{EC40B9D3-86D8-41C6-A75A-A40369084F59}"/>
+															<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{AF6F5C06-D009-4B55-8318-085465639372}"/>
 														</Reference>
 													</ReferenceList>
 													<ChildrenList>
@@ -4403,14 +4403,14 @@ An example of trajectories and positioning handled in Wwise as opposed to SS Air
 											</PropertyList>
 											<ReferenceList>
 												<Reference Name="OutputBus">
-													<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{EC40B9D3-86D8-41C6-A75A-A40369084F59}"/>
+													<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{AF6F5C06-D009-4B55-8318-085465639372}"/>
 												</Reference>
 											</ReferenceList>
 											<ChildrenList>
 												<Sound Name="Arrow" ID="{FEB1A354-2A9E-4BDA-8EF9-A28D2AA15AC1}" ShortID="992258119" Type="SoundFX">
 													<ReferenceList>
 														<Reference Name="OutputBus">
-															<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{EC40B9D3-86D8-41C6-A75A-A40369084F59}"/>
+															<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{AF6F5C06-D009-4B55-8318-085465639372}"/>
 														</Reference>
 													</ReferenceList>
 													<ChildrenList>
@@ -4511,7 +4511,7 @@ An example of trajectories and positioning handled in Wwise as opposed to SS Air
 												<Sound Name="Silence" ID="{FC7C2688-D485-41B8-923C-65DFCB1990EF}" ShortID="507633266" Type="SoundFX">
 													<ReferenceList>
 														<Reference Name="OutputBus">
-															<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{EC40B9D3-86D8-41C6-A75A-A40369084F59}"/>
+															<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{AF6F5C06-D009-4B55-8318-085465639372}"/>
 														</Reference>
 													</ReferenceList>
 													<ChildrenList>
@@ -4545,14 +4545,14 @@ An example of trajectories and positioning handled in Wwise as opposed to SS Air
 											</PropertyList>
 											<ReferenceList>
 												<Reference Name="OutputBus">
-													<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{EC40B9D3-86D8-41C6-A75A-A40369084F59}"/>
+													<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{AF6F5C06-D009-4B55-8318-085465639372}"/>
 												</Reference>
 											</ReferenceList>
 											<ChildrenList>
 												<Sound Name="Arrow" ID="{67F1D393-4A8A-4972-AD52-A9D8112D7A3C}" ShortID="685833007" Type="SoundFX">
 													<ReferenceList>
 														<Reference Name="OutputBus">
-															<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{EC40B9D3-86D8-41C6-A75A-A40369084F59}"/>
+															<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{AF6F5C06-D009-4B55-8318-085465639372}"/>
 														</Reference>
 													</ReferenceList>
 													<ChildrenList>
@@ -4653,7 +4653,7 @@ An example of trajectories and positioning handled in Wwise as opposed to SS Air
 												<Sound Name="Silence" ID="{EA1943AE-08E1-4E43-8ABA-D21E10F9C86F}" ShortID="36972759" Type="SoundFX">
 													<ReferenceList>
 														<Reference Name="OutputBus">
-															<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{EC40B9D3-86D8-41C6-A75A-A40369084F59}"/>
+															<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{AF6F5C06-D009-4B55-8318-085465639372}"/>
 														</Reference>
 													</ReferenceList>
 													<ChildrenList>
@@ -4687,14 +4687,14 @@ An example of trajectories and positioning handled in Wwise as opposed to SS Air
 											</PropertyList>
 											<ReferenceList>
 												<Reference Name="OutputBus">
-													<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{EC40B9D3-86D8-41C6-A75A-A40369084F59}"/>
+													<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{AF6F5C06-D009-4B55-8318-085465639372}"/>
 												</Reference>
 											</ReferenceList>
 											<ChildrenList>
 												<Sound Name="Arrow" ID="{49C490C2-28A0-4B27-B6B0-50F3E974885E}" ShortID="845183019" Type="SoundFX">
 													<ReferenceList>
 														<Reference Name="OutputBus">
-															<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{EC40B9D3-86D8-41C6-A75A-A40369084F59}"/>
+															<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{AF6F5C06-D009-4B55-8318-085465639372}"/>
 														</Reference>
 													</ReferenceList>
 													<ChildrenList>
@@ -4796,7 +4796,7 @@ An example of trajectories and positioning handled in Wwise as opposed to SS Air
 												<Sound Name="Silence" ID="{9F8ED909-45DB-4381-BF4A-E5D0BE94D769}" ShortID="275508572" Type="SoundFX">
 													<ReferenceList>
 														<Reference Name="OutputBus">
-															<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{EC40B9D3-86D8-41C6-A75A-A40369084F59}"/>
+															<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{AF6F5C06-D009-4B55-8318-085465639372}"/>
 														</Reference>
 													</ReferenceList>
 													<ChildrenList>
@@ -4830,14 +4830,14 @@ An example of trajectories and positioning handled in Wwise as opposed to SS Air
 											</PropertyList>
 											<ReferenceList>
 												<Reference Name="OutputBus">
-													<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{EC40B9D3-86D8-41C6-A75A-A40369084F59}"/>
+													<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{AF6F5C06-D009-4B55-8318-085465639372}"/>
 												</Reference>
 											</ReferenceList>
 											<ChildrenList>
 												<Sound Name="Arrow" ID="{F690B9A6-AFB7-496D-A561-18061483691F}" ShortID="170912858" Type="SoundFX">
 													<ReferenceList>
 														<Reference Name="OutputBus">
-															<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{EC40B9D3-86D8-41C6-A75A-A40369084F59}"/>
+															<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{AF6F5C06-D009-4B55-8318-085465639372}"/>
 														</Reference>
 													</ReferenceList>
 													<ChildrenList>
@@ -4938,7 +4938,7 @@ An example of trajectories and positioning handled in Wwise as opposed to SS Air
 												<Sound Name="Silence" ID="{BC9C4CF8-685E-49E8-BC33-0B56E7ACCCFB}" ShortID="98221531" Type="SoundFX">
 													<ReferenceList>
 														<Reference Name="OutputBus">
-															<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{EC40B9D3-86D8-41C6-A75A-A40369084F59}"/>
+															<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{AF6F5C06-D009-4B55-8318-085465639372}"/>
 														</Reference>
 													</ReferenceList>
 													<ChildrenList>
@@ -4973,7 +4973,7 @@ An example of trajectories and positioning handled in Wwise as opposed to SS Air
 							</PropertyList>
 							<ReferenceList>
 								<Reference Name="OutputBus">
-									<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{EC40B9D3-86D8-41C6-A75A-A40369084F59}"/>
+									<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{AF6F5C06-D009-4B55-8318-085465639372}"/>
 								</Reference>
 							</ReferenceList>
 							<ChildrenList>
@@ -5149,7 +5149,7 @@ An example of trajectories and positioning handled in Wwise as opposed to SS Air
 									</PropertyList>
 									<ReferenceList>
 										<Reference Name="OutputBus">
-											<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{EC40B9D3-86D8-41C6-A75A-A40369084F59}"/>
+											<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{AF6F5C06-D009-4B55-8318-085465639372}"/>
 										</Reference>
 									</ReferenceList>
 									<ChildrenList>
@@ -5362,7 +5362,7 @@ An example of trajectories and positioning handled in Wwise as opposed to SS Air
 									</PropertyList>
 									<ReferenceList>
 										<Reference Name="OutputBus">
-											<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{EC40B9D3-86D8-41C6-A75A-A40369084F59}"/>
+											<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{AF6F5C06-D009-4B55-8318-085465639372}"/>
 										</Reference>
 									</ReferenceList>
 									<ChildrenList>
@@ -5629,7 +5629,7 @@ An example of trajectories and positioning handled in Wwise as opposed to SS Air
 									</PropertyList>
 									<ReferenceList>
 										<Reference Name="OutputBus">
-											<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{EC40B9D3-86D8-41C6-A75A-A40369084F59}"/>
+											<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{AF6F5C06-D009-4B55-8318-085465639372}"/>
 										</Reference>
 									</ReferenceList>
 									<ChildrenList>
@@ -5856,7 +5856,7 @@ An example of trajectories and positioning handled in Wwise as opposed to SS Air
 									</PropertyList>
 									<ReferenceList>
 										<Reference Name="OutputBus">
-											<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{EC40B9D3-86D8-41C6-A75A-A40369084F59}"/>
+											<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{AF6F5C06-D009-4B55-8318-085465639372}"/>
 										</Reference>
 									</ReferenceList>
 									<ChildrenList>
@@ -6144,7 +6144,7 @@ RPM - a throttle control for the engine</Comment>
 									</PropertyList>
 									<ReferenceList>
 										<Reference Name="OutputBus">
-											<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{EC40B9D3-86D8-41C6-A75A-A40369084F59}"/>
+											<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{AF6F5C06-D009-4B55-8318-085465639372}"/>
 										</Reference>
 									</ReferenceList>
 									<ChildrenList>
@@ -6337,7 +6337,7 @@ RPM - a throttle control for the engine</Comment>
 				</PropertyList>
 				<PointList>
 					<Point>
-						<XPos>0.00001</XPos>
+						<XPos>1E-05</XPos>
 						<YPos>0</YPos>
 						<Flags>12</Flags>
 						<Time>0</Time>
@@ -6391,7 +6391,7 @@ RPM - a throttle control for the engine</Comment>
 									</PropertyList>
 									<ReferenceList>
 										<Reference Name="OutputBus">
-											<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{EC40B9D3-86D8-41C6-A75A-A40369084F59}"/>
+											<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{AF6F5C06-D009-4B55-8318-085465639372}"/>
 										</Reference>
 									</ReferenceList>
 									<ChildrenList>
@@ -6683,7 +6683,7 @@ RPM - Controls the speed at which the car passes by</Comment>
 											</Custom>
 										</Reference>
 										<Reference Name="OutputBus">
-											<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{EC40B9D3-86D8-41C6-A75A-A40369084F59}"/>
+											<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{AF6F5C06-D009-4B55-8318-085465639372}"/>
 										</Reference>
 									</ReferenceList>
 									<ChildrenList>
@@ -6962,7 +6962,7 @@ RPM - Controls the speed at which the car passes by</Comment>
 								<BlendContainer Name="Airplane" ID="{FFD16B0D-1091-4919-A8D2-0D84A8643FC4}" ShortID="229779334">
 									<ReferenceList>
 										<Reference Name="OutputBus">
-											<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{EC40B9D3-86D8-41C6-A75A-A40369084F59}"/>
+											<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{AF6F5C06-D009-4B55-8318-085465639372}"/>
 										</Reference>
 									</ReferenceList>
 									<ChildrenList>
@@ -6979,7 +6979,7 @@ RPM - a throttle control for the engine</Comment>
 											</PropertyList>
 											<ReferenceList>
 												<Reference Name="OutputBus">
-													<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{EC40B9D3-86D8-41C6-A75A-A40369084F59}"/>
+													<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{AF6F5C06-D009-4B55-8318-085465639372}"/>
 												</Reference>
 											</ReferenceList>
 											<ChildrenList>
@@ -7241,7 +7241,7 @@ RPM - a throttle control for the engine</Comment>
 											</PropertyList>
 											<ReferenceList>
 												<Reference Name="OutputBus">
-													<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{EC40B9D3-86D8-41C6-A75A-A40369084F59}"/>
+													<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{AF6F5C06-D009-4B55-8318-085465639372}"/>
 												</Reference>
 											</ReferenceList>
 											<ChildrenList>
@@ -7464,14 +7464,14 @@ Foes will take more time to load bigger arrows and bolts, unless they're furious
 									</PropertyList>
 									<ReferenceList>
 										<Reference Name="OutputBus">
-											<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{EC40B9D3-86D8-41C6-A75A-A40369084F59}"/>
+											<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{AF6F5C06-D009-4B55-8318-085465639372}"/>
 										</Reference>
 									</ReferenceList>
 									<ChildrenList>
 										<Sound Name="Arrow" ID="{FFFEE9A1-6B07-417B-AA65-044C212AC42F}" ShortID="262153073" Type="SoundFX">
 											<ReferenceList>
 												<Reference Name="OutputBus">
-													<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{EC40B9D3-86D8-41C6-A75A-A40369084F59}"/>
+													<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{AF6F5C06-D009-4B55-8318-085465639372}"/>
 												</Reference>
 											</ReferenceList>
 											<ChildrenList>
@@ -7690,7 +7690,7 @@ Foes will take more time to load bigger arrows and bolts, unless they're furious
 											</PropertyList>
 											<ReferenceList>
 												<Reference Name="OutputBus">
-													<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{EC40B9D3-86D8-41C6-A75A-A40369084F59}"/>
+													<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{AF6F5C06-D009-4B55-8318-085465639372}"/>
 												</Reference>
 											</ReferenceList>
 											<ChildrenList>
@@ -7717,7 +7717,7 @@ Foes will take more time to load bigger arrows and bolts, unless they're furious
 									</PropertyList>
 									<ReferenceList>
 										<Reference Name="OutputBus">
-											<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{EC40B9D3-86D8-41C6-A75A-A40369084F59}"/>
+											<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{AF6F5C06-D009-4B55-8318-085465639372}"/>
 										</Reference>
 									</ReferenceList>
 									<ChildrenList>
@@ -7956,7 +7956,7 @@ Foes will take more time to load bigger arrows and bolts, unless they're furious
 									</PropertyList>
 									<ReferenceList>
 										<Reference Name="OutputBus">
-											<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{EC40B9D3-86D8-41C6-A75A-A40369084F59}"/>
+											<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{AF6F5C06-D009-4B55-8318-085465639372}"/>
 										</Reference>
 									</ReferenceList>
 									<ChildrenList>
@@ -8145,7 +8145,7 @@ Foes will take more time to load bigger arrows and bolts, unless they're furious
 									</PropertyList>
 									<ReferenceList>
 										<Reference Name="OutputBus">
-											<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{EC40B9D3-86D8-41C6-A75A-A40369084F59}"/>
+											<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{AF6F5C06-D009-4B55-8318-085465639372}"/>
 										</Reference>
 									</ReferenceList>
 									<ChildrenList>
@@ -8460,7 +8460,7 @@ Foes will take more time to load bigger arrows and bolts, unless they're furious
 									</PropertyList>
 									<ReferenceList>
 										<Reference Name="OutputBus">
-											<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{EC40B9D3-86D8-41C6-A75A-A40369084F59}"/>
+											<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{AF6F5C06-D009-4B55-8318-085465639372}"/>
 										</Reference>
 									</ReferenceList>
 									<ChildrenList>
@@ -8751,414 +8751,12 @@ Air currents change during the hours of the day and months of the year.</Comment
 									</PropertyList>
 									<ReferenceList>
 										<Reference Name="OutputBus">
-											<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{EC40B9D3-86D8-41C6-A75A-A40369084F59}"/>
+											<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{AF6F5C06-D009-4B55-8318-085465639372}"/>
 										</Reference>
 									</ReferenceList>
-									<ChildrenList>
-										<SourcePlugin Name="SoundSeed Air Wind" ID="{87576840-7511-49B5-9177-1EFFB9091FC5}" ShortID="71113179" PluginName="SoundSeed Air/SoundSeed Wind" CompanyID="0" PluginID="119">
-											<PropertyList>
-												<Property Name="AverageVelocity" Type="Real32" Value="-75.8">
-													<RTPCList>
-														<RTPC Name="" ID="{5C8697F9-7334-48DA-B3DE-E4BFD5505165}" ShortID="734600401">
-															<ReferenceList>
-																<Reference Name="ControlInput">
-																	<ObjectRef Name="SS_Air_TimeOfDay" ID="{536FA72C-8C7E-4C8B-AE03-EF34FDADC314}" WorkUnitID="{3B167755-FB42-458B-98BF-96F557AFB3B9}"/>
-																</Reference>
-															</ReferenceList>
-															<Curve Name="" ID="{16770155-BC23-430B-9598-9745F6B0B75A}">
-																<PropertyList>
-																	<Property Name="Flags" Type="int32" Value="1"/>
-																</PropertyList>
-																<PointList>
-																	<Point>
-																		<XPos>0</XPos>
-																		<YPos>-312.05673</YPos>
-																		<Flags>5</Flags>
-																		<SegmentShape>InvertedSCurve</SegmentShape>
-																	</Point>
-																	<Point>
-																		<XPos>4.90225</XPos>
-																		<YPos>1777.47737</YPos>
-																		<Flags>0</Flags>
-																		<SegmentShape>InvertedSCurve</SegmentShape>
-																	</Point>
-																	<Point>
-																		<XPos>11.0376</XPos>
-																		<YPos>-268.94426</YPos>
-																		<Flags>0</Flags>
-																		<SegmentShape>InvertedSCurve</SegmentShape>
-																	</Point>
-																	<Point>
-																		<XPos>17.08271</XPos>
-																		<YPos>1850.53331</YPos>
-																		<Flags>0</Flags>
-																		<SegmentShape>InvertedSCurve</SegmentShape>
-																	</Point>
-																	<Point>
-																		<XPos>24</XPos>
-																		<YPos>-312.05673</YPos>
-																		<Flags>37</Flags>
-																	</Point>
-																</PointList>
-															</Curve>
-														</RTPC>
-													</RTPCList>
-												</Property>
-												<Property Name="AverageVelocityAutomate" Type="bool" Value="True"/>
-												<Property Name="AverageVelocityRandom" Type="Real32" Value="25.3"/>
-												<Property Name="ChannelMask" Type="int16" Value="2"/>
-												<Property Name="Direction" Type="Real32" Value="90">
-													<RTPCList>
-														<RTPC Name="" ID="{1B37D192-C371-43C0-A712-0AE5963911BD}" ShortID="59159959">
-															<ReferenceList>
-																<Reference Name="ControlInput">
-																	<ObjectRef Name="SS_Air_TimeOfDay" ID="{536FA72C-8C7E-4C8B-AE03-EF34FDADC314}" WorkUnitID="{3B167755-FB42-458B-98BF-96F557AFB3B9}"/>
-																</Reference>
-															</ReferenceList>
-															<Curve Name="" ID="{C9F7737D-798F-4F43-A8C9-14584CA74F13}">
-																<PropertyList>
-																	<Property Name="Flags" Type="int32" Value="1"/>
-																</PropertyList>
-																<PointList>
-																	<Point>
-																		<XPos>0</XPos>
-																		<YPos>0</YPos>
-																		<Flags>5</Flags>
-																	</Point>
-																	<Point>
-																		<XPos>0.421052631578947</XPos>
-																		<YPos>100.494961061496</YPos>
-																		<Flags>0</Flags>
-																	</Point>
-																	<Point>
-																		<XPos>10.6165416</XPos>
-																		<YPos>104.52475</YPos>
-																		<Flags>0</Flags>
-																	</Point>
-																	<Point>
-																		<XPos>11.4889608</XPos>
-																		<YPos>-75.22388</YPos>
-																		<Flags>0</Flags>
-																	</Point>
-																	<Point>
-																		<XPos>23.428572</XPos>
-																		<YPos>-77.01492</YPos>
-																		<Flags>0</Flags>
-																	</Point>
-																	<Point>
-																		<XPos>24</XPos>
-																		<YPos>0.89552</YPos>
-																		<Flags>37</Flags>
-																	</Point>
-																</PointList>
-															</Curve>
-														</RTPC>
-													</RTPCList>
-												</Property>
-												<Property Name="DirectionRandom" Type="Real32" Value="1"/>
-												<Property Name="Duration" Type="Real64" Value="60"/>
-												<Property Name="DurationRandom" Type="Real32" Value="60"/>
-												<Property Name="FrequencyScale" Type="Real32">
-													<RTPCList>
-														<RTPC Name="" ID="{84430DDF-6008-4719-AAF1-1763BA28FDF1}" ShortID="227985263">
-															<ReferenceList>
-																<Reference Name="ControlInput">
-																	<ObjectRef Name="SS_Air_Month" ID="{09E2B445-C4A3-447F-B3CA-818A1D925EF7}" WorkUnitID="{3B167755-FB42-458B-98BF-96F557AFB3B9}"/>
-																</Reference>
-															</ReferenceList>
-															<Curve Name="" ID="{51EED6EC-BFAF-4F80-AD06-7C230BCCE805}">
-																<PropertyList>
-																	<Property Name="Flags" Type="int32" Value="1"/>
-																</PropertyList>
-																<PointList>
-																	<Point>
-																		<XPos>1</XPos>
-																		<YPos>-0.00472</YPos>
-																		<Flags>5</Flags>
-																	</Point>
-																	<Point>
-																		<XPos>6.19674</XPos>
-																		<YPos>-0.62164</YPos>
-																		<Flags>0</Flags>
-																	</Point>
-																	<Point>
-																		<XPos>12</XPos>
-																		<YPos>-0.00472</YPos>
-																		<Flags>37</Flags>
-																	</Point>
-																</PointList>
-															</Curve>
-														</RTPC>
-													</RTPCList>
-												</Property>
-												<Property Name="Gustiness" Type="Real32" Value="0.43">
-													<RTPCList>
-														<RTPC Name="" ID="{123DED1E-6B25-4ABD-81B8-D9AB678C7A2F}" ShortID="369685944">
-															<ReferenceList>
-																<Reference Name="ControlInput">
-																	<ObjectRef Name="SS_Air_TimeOfDay" ID="{536FA72C-8C7E-4C8B-AE03-EF34FDADC314}" WorkUnitID="{3B167755-FB42-458B-98BF-96F557AFB3B9}"/>
-																</Reference>
-															</ReferenceList>
-															<Curve Name="" ID="{DE52EEA4-58E4-4438-B4D1-85B7EFF67949}">
-																<PropertyList>
-																	<Property Name="Flags" Type="int32" Value="1"/>
-																</PropertyList>
-																<PointList>
-																	<Point>
-																		<XPos>0</XPos>
-																		<YPos>0.5</YPos>
-																		<Flags>5</Flags>
-																	</Point>
-																	<Point>
-																		<XPos>1.4436096</XPos>
-																		<YPos>0.69154</YPos>
-																		<Flags>0</Flags>
-																	</Point>
-																	<Point>
-																		<XPos>4.75188</XPos>
-																		<YPos>0.29644</YPos>
-																		<Flags>0</Flags>
-																	</Point>
-																	<Point>
-																		<XPos>10.2556392</XPos>
-																		<YPos>0.29858</YPos>
-																		<Flags>0</Flags>
-																	</Point>
-																	<Point>
-																		<XPos>14.1353376</XPos>
-																		<YPos>0.62885</YPos>
-																		<Flags>0</Flags>
-																	</Point>
-																	<Point>
-																		<XPos>24</XPos>
-																		<YPos>0.5</YPos>
-																		<Flags>37</Flags>
-																	</Point>
-																</PointList>
-															</Curve>
-														</RTPC>
-													</RTPCList>
-												</Property>
-												<Property Name="GustinessAutomate" Type="bool" Value="True"/>
-												<Property Name="MaxDistance" Type="Real32" Value="50"/>
-												<Property Name="MinDistance" Type="Real32" Value="1.4"/>
-												<Property Name="Variability" Type="Real32" Value="0.29">
-													<RTPCList>
-														<RTPC Name="" ID="{300ABB77-9029-433D-8762-0D10277B1A64}" ShortID="528231047">
-															<ReferenceList>
-																<Reference Name="ControlInput">
-																	<ObjectRef Name="SS_Air_TimeOfDay" ID="{536FA72C-8C7E-4C8B-AE03-EF34FDADC314}" WorkUnitID="{3B167755-FB42-458B-98BF-96F557AFB3B9}"/>
-																</Reference>
-															</ReferenceList>
-															<Curve Name="" ID="{9C8BF006-4B33-446A-8EF3-0BCA8F58E161}">
-																<PropertyList>
-																	<Property Name="Flags" Type="int32" Value="1"/>
-																</PropertyList>
-																<PointList>
-																	<Point>
-																		<XPos>0</XPos>
-																		<YPos>0.25</YPos>
-																		<Flags>5</Flags>
-																	</Point>
-																	<Point>
-																		<XPos>8.3308272</XPos>
-																		<YPos>0.61816</YPos>
-																		<Flags>0</Flags>
-																	</Point>
-																	<Point>
-																		<XPos>24</XPos>
-																		<YPos>0.25</YPos>
-																		<Flags>37</Flags>
-																	</Point>
-																</PointList>
-															</Curve>
-														</RTPC>
-													</RTPCList>
-												</Property>
-											</PropertyList>
-											<Language>SFX</Language>
-											<PluginData>
-	<CurveList Version="1">
-		<CurveInfo Name="AverageVelocity">
-			<Curve Name="" ID="{B0023E87-80EA-485E-B90F-2B9F2A8B71B1}">
-				<PropertyList>
-					<Property Name="Flags" Type="int32" Value="1"/>
-				</PropertyList>
-				<PointList>
-					<Point>
-						<XPos>0</XPos>
-						<YPos>0</YPos>
-						<Flags>5</Flags>
-					</Point>
-					<Point>
-						<XPos>16.41379</XPos>
-						<YPos>450</YPos>
-						<Flags>0</Flags>
-					</Point>
-					<Point>
-						<XPos>60</XPos>
-						<YPos>0</YPos>
-						<Flags>37</Flags>
-					</Point>
-				</PointList>
-			</Curve>
-		</CurveInfo>
-		<CurveInfo Name="Direction">
-			<Curve Name="" ID="{F2C2DB23-B150-4062-BE80-5E488473BC27}">
-				<PropertyList>
-					<Property Name="Flags" Type="int32" Value="1"/>
-				</PropertyList>
-				<PointList>
-					<Point>
-						<XPos>0</XPos>
-						<YPos>-90</YPos>
-						<Flags>5</Flags>
-					</Point>
-					<Point>
-						<XPos>60</XPos>
-						<YPos>0</YPos>
-						<Flags>37</Flags>
-					</Point>
-				</PointList>
-			</Curve>
-		</CurveInfo>
-		<CurveInfo Name="Gustiness">
-			<Curve Name="" ID="{70015EA8-CCDC-4937-BAB3-A191225ED74D}">
-				<PropertyList>
-					<Property Name="Flags" Type="int32" Value="1"/>
-				</PropertyList>
-				<PointList>
-					<Point>
-						<XPos>0</XPos>
-						<YPos>0</YPos>
-						<Flags>5</Flags>
-						<SegmentShape>Exp3</SegmentShape>
-					</Point>
-					<Point>
-						<XPos>5.79311</XPos>
-						<YPos>0.1116</YPos>
-						<Flags>0</Flags>
-						<SegmentShape>Log3</SegmentShape>
-					</Point>
-					<Point>
-						<XPos>60</XPos>
-						<YPos>0</YPos>
-						<Flags>37</Flags>
-					</Point>
-				</PointList>
-			</Curve>
-		</CurveInfo>
-		<CurveInfo Name="Variability">
-			<Curve Name="" ID="{25CC9F2D-713E-4901-B98C-E008E093447E}">
-				<PropertyList>
-					<Property Name="Flags" Type="int32" Value="1"/>
-				</PropertyList>
-				<PointList>
-					<Point>
-						<XPos>0</XPos>
-						<YPos>0.01037</YPos>
-						<Flags>5</Flags>
-					</Point>
-					<Point>
-						<XPos>38.00364</XPos>
-						<YPos>0.42228</YPos>
-						<Flags>0</Flags>
-					</Point>
-					<Point>
-						<XPos>60</XPos>
-						<YPos>0.25907</YPos>
-						<Flags>37</Flags>
-					</Point>
-				</PointList>
-			</Curve>
-		</CurveInfo>
-	</CurveList>
-</PluginData>
-											<PluginInnerObjectList>
-												<List Name="Deflectors">
-													<PluginInnerObject Name="" ID="{B8C174ED-8D04-4ED1-B835-B8676F008A69}" PluginName="Deflector" CompanyID="0" PluginID="121">
-														<PropertyList>
-															<Property Name="Frequency" Type="Real32" Value="72"/>
-															<Property Name="Gain" Type="Real32" Value="9"/>
-															<Property Name="PanX" Type="Real64" Value="-14.0298507462687"/>
-															<Property Name="PanY" Type="Real64" Value="21.5568862275449"/>
-															<Property Name="QFactor" Type="Real32" Value="50"/>
-														</PropertyList>
-													</PluginInnerObject>
-													<PluginInnerObject Name="" ID="{3938FF5F-46F8-42A1-9463-F5BF6AE41D95}" PluginName="Deflector" CompanyID="0" PluginID="121">
-														<PropertyList>
-															<Property Name="Frequency" Type="Real32" Value="62"/>
-															<Property Name="Gain" Type="Real32" Value="9"/>
-															<Property Name="PanX" Type="Real64" Value="22.9850746268657"/>
-															<Property Name="PanY" Type="Real64" Value="-14.3712574850299"/>
-															<Property Name="QFactor" Type="Real32" Value="50"/>
-														</PropertyList>
-													</PluginInnerObject>
-													<PluginInnerObject Name="" ID="{28908EB7-2952-4493-9B9A-E1E2224DC5F2}" PluginName="Deflector" CompanyID="0" PluginID="121">
-														<PropertyList>
-															<Property Name="Frequency" Type="Real32" Value="246"/>
-															<Property Name="PanX" Type="Real64" Value="22.3880597014926"/>
-															<Property Name="PanY" Type="Real64" Value="11.9760479041916"/>
-															<Property Name="QFactor" Type="Real32" Value="50"/>
-														</PropertyList>
-													</PluginInnerObject>
-													<PluginInnerObject Name="" ID="{7FD41E62-F1F8-4EF1-895A-713BE7B8E11E}" PluginName="Deflector" CompanyID="0" PluginID="121">
-														<PropertyList>
-															<Property Name="Frequency" Type="Real32" Value="190"/>
-															<Property Name="PanX" Type="Real64" Value="-16.4179104477612"/>
-															<Property Name="PanY" Type="Real64" Value="-22.7544910179641"/>
-															<Property Name="QFactor" Type="Real32" Value="50"/>
-														</PropertyList>
-													</PluginInnerObject>
-													<PluginInnerObject Name="" ID="{460416EB-4F5F-4C2D-867A-E21C25FDD4EC}" PluginName="Deflector" CompanyID="0" PluginID="121">
-														<PropertyList>
-															<Property Name="Frequency" Type="Real32" Value="252"/>
-															<Property Name="PanX" Type="Real64" Value="-20.5970149253731"/>
-															<Property Name="PanY" Type="Real64" Value="7.18562874251497"/>
-															<Property Name="QFactor" Type="Real32" Value="50"/>
-														</PropertyList>
-													</PluginInnerObject>
-													<PluginInnerObject Name="" ID="{C3C3805C-8C81-4118-8509-FCB238DB30F9}" PluginName="Deflector" CompanyID="0" PluginID="121">
-														<PropertyList>
-															<Property Name="Frequency" Type="Real32" Value="271"/>
-															<Property Name="PanX" Type="Real64" Value="-24.1791044776119"/>
-															<Property Name="PanY" Type="Real64" Value="-11.377245508982"/>
-															<Property Name="QFactor" Type="Real32" Value="50"/>
-														</PropertyList>
-													</PluginInnerObject>
-													<PluginInnerObject Name="" ID="{B297C4D0-80CE-4F2C-B689-15C50098CF77}" PluginName="Deflector" CompanyID="0" PluginID="121">
-														<PropertyList>
-															<Property Name="Frequency" Type="Real32" Value="476"/>
-															<Property Name="PanX" Type="Real64" Value="8.65671641791045"/>
-															<Property Name="PanY" Type="Real64" Value="21.5568862275449"/>
-															<Property Name="QFactor" Type="Real32" Value="50"/>
-														</PropertyList>
-													</PluginInnerObject>
-													<PluginInnerObject Name="" ID="{699F5365-96D1-4522-AD48-B57EA1788EC4}" PluginName="Deflector" CompanyID="0" PluginID="121">
-														<PropertyList>
-															<Property Name="PanX" Type="Real64" Value="9.25373134328358"/>
-															<Property Name="PanY" Type="Real64" Value="-23.3532934131737"/>
-															<Property Name="QFactor" Type="Real32" Value="50"/>
-														</PropertyList>
-													</PluginInnerObject>
-													<PluginInnerObject Name="" ID="{7977B44F-9132-43A2-AF60-E056E31E12A6}" PluginName="Deflector" CompanyID="0" PluginID="121">
-														<PropertyList>
-															<Property Name="Frequency" Type="Real32" Value="7818"/>
-															<Property Name="Gain" Type="Real32" Value="-20"/>
-															<Property Name="PanX" Type="Real64" Value="-34.3283582089552"/>
-															<Property Name="PanY" Type="Real64" Value="-20.9580838323354"/>
-														</PropertyList>
-													</PluginInnerObject>
-												</List>
-											</PluginInnerObjectList>
-										</SourcePlugin>
-									</ChildrenList>
 									<PositioningInfo>
 										<Position Name="" ID="{757D1354-9144-4B5D-BA6A-9274DC1CA595}"/>
 									</PositioningInfo>
-									<ActiveSourceList>
-										<ActiveSource Name="SoundSeed Air Wind" ID="{87576840-7511-49B5-9177-1EFFB9091FC5}" Platform="Linked"/>
-									</ActiveSourceList>
 								</Sound>
 								<Sound Name="Grove" ID="{F884DF91-8E8A-459D-B125-996761ECD3E1}" ShortID="185087443" Type="SoundFX">
 									<Comment>Grove of trees.
@@ -9170,7 +8768,7 @@ Air currents change during the hours of the day and foliage changes during  the 
 									</PropertyList>
 									<ReferenceList>
 										<Reference Name="OutputBus">
-											<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{EC40B9D3-86D8-41C6-A75A-A40369084F59}"/>
+											<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{AF6F5C06-D009-4B55-8318-085465639372}"/>
 										</Reference>
 									</ReferenceList>
 									<ChildrenList>
@@ -9663,7 +9261,7 @@ Air currents change during the hours of the day and foliage changes during  the 
 									</PropertyList>
 									<ReferenceList>
 										<Reference Name="OutputBus">
-											<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{EC40B9D3-86D8-41C6-A75A-A40369084F59}"/>
+											<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{AF6F5C06-D009-4B55-8318-085465639372}"/>
 										</Reference>
 									</ReferenceList>
 									<ChildrenList>
@@ -9950,7 +9548,7 @@ Air currents change during the hours of the day and months of the year.</Comment
 									</PropertyList>
 									<ReferenceList>
 										<Reference Name="OutputBus">
-											<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{EC40B9D3-86D8-41C6-A75A-A40369084F59}"/>
+											<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{AF6F5C06-D009-4B55-8318-085465639372}"/>
 										</Reference>
 									</ReferenceList>
 									<ChildrenList>
@@ -10310,7 +9908,7 @@ Air currents change during the hours of the day and months of the year.</Comment
 									</PropertyList>
 									<ReferenceList>
 										<Reference Name="OutputBus">
-											<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{EC40B9D3-86D8-41C6-A75A-A40369084F59}"/>
+											<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{AF6F5C06-D009-4B55-8318-085465639372}"/>
 										</Reference>
 									</ReferenceList>
 									<ChildrenList>
@@ -10670,7 +10268,7 @@ Presence is roughly related to distance and occlusion</Comment>
 							</PropertyList>
 							<ReferenceList>
 								<Reference Name="OutputBus">
-									<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{EC40B9D3-86D8-41C6-A75A-A40369084F59}"/>
+									<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{AF6F5C06-D009-4B55-8318-085465639372}"/>
 								</Reference>
 							</ReferenceList>
 							<ChildrenList>
@@ -10894,7 +10492,7 @@ Presence is roughly related to distance and occlusion</Comment>
 				</PropertyList>
 				<PointList>
 					<Point>
-						<XPos>0.00001</XPos>
+						<XPos>1E-05</XPos>
 						<YPos>-0.59347</YPos>
 						<Flags>12</Flags>
 						<Time>0</Time>
@@ -10954,7 +10552,7 @@ Presence is roughly related to distance and occlusion</Comment>
 							</PropertyList>
 							<ReferenceList>
 								<Reference Name="OutputBus">
-									<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{EC40B9D3-86D8-41C6-A75A-A40369084F59}"/>
+									<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{AF6F5C06-D009-4B55-8318-085465639372}"/>
 								</Reference>
 							</ReferenceList>
 							<ChildrenList>
@@ -11112,7 +10710,7 @@ Presence is roughly related to distance and occlusion</Comment>
 							</PropertyList>
 							<ReferenceList>
 								<Reference Name="OutputBus">
-									<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{EC40B9D3-86D8-41C6-A75A-A40369084F59}"/>
+									<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{AF6F5C06-D009-4B55-8318-085465639372}"/>
 								</Reference>
 							</ReferenceList>
 							<ChildrenList>

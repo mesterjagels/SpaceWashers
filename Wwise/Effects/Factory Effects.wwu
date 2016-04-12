@@ -586,7 +586,7 @@
 								<Effect Name="High_Pass_60Hz" ID="{F9627628-0B10-4272-BC30-D4C20423CB38}" PluginName="Wwise Parametric EQ" CompanyID="0" PluginID="105" PluginType="3">
 									<PropertyList>
 										<Property Name="FilterTypeBand1" Type="int32" Value="1"/>
-										<Property Name="FrequencyBand1" Type="Real32" Value="60"/>
+										<Property Name="FrequencyBand1" Type="Real32" Value="189"/>
 										<Property Name="OnOffBand2" Type="bool" Value="False"/>
 										<Property Name="OnOffBand3" Type="bool" Value="False"/>
 									</PropertyList>
@@ -621,7 +621,39 @@
 									<PropertyList>
 										<Property Name="FilterTypeBand1" Type="int32" Value="1"/>
 										<Property Name="FilterTypeBand3" Type="int32" Value="0"/>
-										<Property Name="FrequencyBand3" Type="Real32" Value="20000"/>
+										<Property Name="FrequencyBand3" Type="Real32" Value="20000">
+											<RTPCList>
+												<RTPC Name="" ID="{2E07C9A0-24FA-4922-A94C-8FC400AB208A}" ShortID="386376145">
+													<ReferenceList>
+														<Reference Name="ControlInput">
+															<ObjectRef Name="thrusterSpeed" ID="{A5D52048-268D-4777-BC2B-59833DB7900A}" WorkUnitID="{5FFFB265-F525-4B64-B554-71B22CAD1F7B}"/>
+														</Reference>
+													</ReferenceList>
+													<Curve Name="" ID="{B46ACA57-DF59-435C-94E8-EB0A65120B47}">
+														<PropertyList>
+															<Property Name="Flags" Type="int32" Value="5"/>
+														</PropertyList>
+														<PointList>
+															<Point>
+																<XPos>0</XPos>
+																<YPos>68.21788</YPos>
+																<Flags>5</Flags>
+															</Point>
+															<Point>
+																<XPos>55.67901</XPos>
+																<YPos>1969.34665</YPos>
+																<Flags>0</Flags>
+															</Point>
+															<Point>
+																<XPos>100</XPos>
+																<YPos>12000</YPos>
+																<Flags>37</Flags>
+															</Point>
+														</PointList>
+													</Curve>
+												</RTPC>
+											</RTPCList>
+										</Property>
 										<Property Name="OnOffBand1" Type="bool" Value="False"/>
 										<Property Name="OnOffBand2" Type="bool" Value="False"/>
 									</PropertyList>

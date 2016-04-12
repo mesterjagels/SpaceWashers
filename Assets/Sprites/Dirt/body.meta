@@ -1,4 +1,5 @@
 fileFormatVersion: 2
+<<<<<<< a9c4fdda4bcc48c5a480db032bfaefa257b50c38
 <<<<<<< HEAD
 guid: 4c61db82ec316374b85bceead864734d
 folderAsset: yes
@@ -8,6 +9,11 @@ guid: fc728e525792fbe479fcf90c10987172
 folderAsset: yes
 timeCreated: 1460460460
 >>>>>>> Updated import settings for dirt sprites
+=======
+guid: d75446ece06a34b1db0586230a098ad4
+folderAsset: yes
+timeCreated: 1460050787
+>>>>>>> More Wwise things.
 licenseType: Free
 DefaultImporter:
   userData: 

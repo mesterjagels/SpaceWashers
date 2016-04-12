@@ -22,6 +22,7 @@
 				<Event Id="4148269026" Name="spaceshipShieldImpact"/>
 				<Event Id="1017248145" Name="spaceshipShieldUnable"/>
 				<Event Id="3030433551" Name="spaceshipThrusters"/>
+				<Event Id="3157003241" Name="Test" MaxAttenuation="0.000000"/>
 			</IncludedEvents>
 			<IncludedMemoryFiles>
 				<File Id="36554443" Language="SFX">
@@ -38,7 +39,7 @@
 				</File>
 				<File Id="450443388" Language="SFX">
 					<ShortName>shield_dry.wav</ShortName>
-					<Path>SFX/shield_dry_93929E17.wem</Path>
+					<Path>SFX/shield_dry_122276DC.wem</Path>
 				</File>
 				<File Id="578150549" Language="SFX">
 					<ShortName>boost_full.wav</ShortName>

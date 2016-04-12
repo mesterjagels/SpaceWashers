@@ -20,6 +20,7 @@ namespace AK
         static const AkUniqueID SPACESHIPSHIELDIMPACT = 4148269026U;
         static const AkUniqueID SPACESHIPSHIELDUNABLE = 1017248145U;
         static const AkUniqueID SPACESHIPTHRUSTERS = 3030433551U;
+        static const AkUniqueID TEST = 3157003241U;
     } // namespace EVENTS
 
     namespace SWITCHES

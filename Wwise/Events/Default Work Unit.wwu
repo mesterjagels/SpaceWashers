@@ -21,6 +21,13 @@
 										</Element>
 									</ElementList>
 								</Action>
+								<Action Name="Reset Playlist" ID="{4E31217F-D5AF-47EC-8D79-3A2861312ED9}" ShortID="82712226" Type="ResetPlaylist" Scope="One" Global="true">
+									<ElementList>
+										<Element ID="{5D700054-A1CB-414F-B3FF-B7213A6E0452}" Global="true">
+											<ObjectRef Name="Shield Sequence" ID="{5C326E3D-7763-46F0-B6F5-0C56A4CBAF86}" WorkUnitID="{72212674-B2C2-49C4-9D6F-91A524068B0C}"/>
+										</Element>
+									</ElementList>
+								</Action>
 							</ChildrenList>
 						</Event>
 						<Event Name="spaceshipBoostStatus" ID="{B3BC9411-5B30-4E61-A6C5-1F870D36041F}">
@@ -77,9 +84,60 @@
 								</Action>
 							</ChildrenList>
 						</Event>
-						<Event Name="spaceshipShieldUnable" ID="{35441640-FB86-4C0B-89E6-55DFA1C4A91C}"/>
+						<Event Name="spaceshipShieldUnable" ID="{35441640-FB86-4C0B-89E6-55DFA1C4A91C}">
+							<ChildrenList>
+								<Action Name="Play" ID="{92300A39-C6E8-4394-A5B8-98E0CC6AFD46}" ShortID="909324180" Type="Play" Scope="One" Global="false">
+									<ElementList>
+										<Element ID="{2F8CBC75-AADF-47B1-9951-899B9907D232}" Global="false">
+											<ObjectRef Name="shield_unable" ID="{1EAEFEE0-DED1-43AE-A24C-463A902D4801}" WorkUnitID="{72212674-B2C2-49C4-9D6F-91A524068B0C}"/>
+										</Element>
+									</ElementList>
+								</Action>
+							</ChildrenList>
+						</Event>
+						<Event Name="spaceshipShieldImpact" ID="{66BBD34B-834D-42A0-B622-BDD11BC435C6}">
+							<ChildrenList>
+								<Action Name="Play" ID="{2DC6FD41-7131-4A10-9EF9-9B6B578870D0}" ShortID="198028550" Type="Play" Scope="One" Global="false">
+									<ElementList>
+										<Element ID="{C135A83E-472B-492D-A8BE-5A5A651B8AD4}" Global="false">
+											<ObjectRef Name="shield_impact" ID="{6FC4CC93-52CF-413F-9877-B15EA961EC37}" WorkUnitID="{72212674-B2C2-49C4-9D6F-91A524068B0C}"/>
+										</Element>
+									</ElementList>
+								</Action>
+							</ChildrenList>
+						</Event>
+						<Event Name="spaceshipThrusters" ID="{11BD62E6-7E3B-4538-8107-F928C9C9F653}">
+							<ChildrenList>
+								<Action Name="Stop All" ID="{65EF61F9-CE98-42FD-B7BA-42D16A1A1052}" ShortID="276371632" Type="Stop" Scope="All" Global="false"/>
+								<Action Name="Play" ID="{BAC071F1-55A7-41C2-860F-5BABD9E7F68D}" ShortID="186623427" Type="Play" Scope="One" Global="false">
+									<ElementList>
+										<Element ID="{6EE487F4-E79D-44FD-83CB-1E926B38878C}" Global="false">
+											<ObjectRef Name="thrustersHigh" ID="{905B2A64-1C7B-42C7-81B7-8046A8D15924}" WorkUnitID="{72212674-B2C2-49C4-9D6F-91A524068B0C}"/>
+										</Element>
+									</ElementList>
+								</Action>
+								<Action Name="Play" ID="{F5A41B18-E2B1-43E7-983A-6CBCBDBA13C2}" ShortID="631013290" Type="Play" Scope="One" Global="false">
+									<ElementList>
+										<Element ID="{E120EF20-94EF-42C2-8770-6D49FC0BDA35}" Global="false">
+											<ObjectRef Name="thrustersLow" ID="{CC0F6F5A-6589-481A-85A4-4CDF50B6EC41}" WorkUnitID="{72212674-B2C2-49C4-9D6F-91A524068B0C}"/>
+										</Element>
+									</ElementList>
+								</Action>
+							</ChildrenList>
+						</Event>
 					</ChildrenList>
 				</Folder>
+				<Folder Name="Cleaners" ID="{F206A961-5711-4E01-8353-87200F848E75}" ShortID="797536000">
+					<ChildrenList>
+						<Event Name="clean" ID="{BB0E2E44-13DE-4A32-92F6-76DE3E8E6F44}"/>
+						<Event Name="owBabe" ID="{873FD4F0-8828-4934-878B-F0B321B8D0F8}"/>
+						<Event Name="owGrunge" ID="{2EF93991-8A1C-42EC-B967-BA08E47822C6}"/>
+						<Event Name="owGangsta" ID="{4BE1ABCD-E2CC-415D-A011-619638D43455}"/>
+						<Event Name="owJock" ID="{C7BE0FA1-20E1-4128-B05F-E9232A363735}"/>
+						<Event Name="owEmo" ID="{109B703E-49C9-4103-BB36-BA31339E0657}"/>
+					</ChildrenList>
+				</Folder>
+				<Event Name="Test" ID="{F45A3DF5-0C15-4BD0-809D-7A71058F3F29}"/>
 			</ChildrenList>
 		</WorkUnit>
 	</Events>
