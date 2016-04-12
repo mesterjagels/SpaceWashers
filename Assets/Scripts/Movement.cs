@@ -10,8 +10,7 @@ public class Movement : MonoBehaviour {
 	Transform tf;
 	Vector3 movePos;
 	float slow;
-	Vector3 curVelocity, curShipVel;
-	Vector2 velX, velZ;
+
 	LineRenderer line;
 
 	public float normalDrag, magnetDrag;
@@ -39,6 +38,8 @@ public class Movement : MonoBehaviour {
 	public bool moving;
 	public float distToCord;
 	public bool washing;
+	public Vector3 curVelocity, curShipVel;
+	public Vector2 velX, velZ;
 
 	[HideInInspector]
 	public List <GameObject> childrenNotThis = new List<GameObject>();
@@ -248,7 +249,7 @@ public class Movement : MonoBehaviour {
 		//Debug.Log (Input.GetJoystickNames ());
 
 		if ((spaceshipRb.velocity.x > 5 || spaceshipRb.velocity.x < 5) && spaceshipRb.velocity.x != 0 && !GameObject.FindGameObjectWithTag("Spaceship").GetComponent<SpaceshipController>().boostActive) {
-			rb.velocity = new Vector2 ((spaceshipRb.velocity.x/2)+rb.velocity.x, rb.velocity.y);
+			rb.velocity = new Vector2 ((spaceshipRb.velocity.x/2)+velX.x, rb.velocity.y);
 		}
 
 		if (magnet) {
@@ -272,6 +273,7 @@ public class Movement : MonoBehaviour {
 			foreach (Rigidbody2D rbc in childRbs){
 				rbc.mass = 1;	
 			}
+			playerHolder.transform.parent = null;
 //			slow = 1;
 //			rb.velocity = Vector2.zero+spaceshipRb.velocity;
 //			rb.angularVelocity = 0+spaceshipRb.angularVelocity;
@@ -286,6 +288,7 @@ public class Movement : MonoBehaviour {
 			foreach (Rigidbody2D rbc in childRbs){
 				rbc.mass = magnetMass;	
 			}
+			playerHolder.transform.parent = spaceshipRb.gameObject.transform;
 			Flip();
 //			slow = bracingSlow;
 //			rb.detectCollisions = true;

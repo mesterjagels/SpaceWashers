@@ -12,8 +12,6 @@ public class SpaceshipController : MonoBehaviour {
 	Transform tf;
 	bool move;
 	float curBoost, moveTime, rotTime, curShield;
-	public AnimationClip left, right;
-	Animation anim;
 	public float minSpeed, maxSpeed;
 	public float speedPerAcceleration;
 	public float moveSpeed, laneSwitchSpeed, sideThrustSpeed, sideDecelerationSpeed, sideThrustAccelerationSpeed;
@@ -64,7 +62,6 @@ public class SpaceshipController : MonoBehaviour {
 		startRot = tf.rotation;
 		lPos = new Vector3 (startPos.x-10, startPos.y);
 		rPos = new Vector3 (startPos.x+10, startPos.y);
-		anim = GetComponent<Animation>();
 		rb = GetComponent<Rigidbody2D> ();
 		sideAccTimer = 0;
 		shieldBarRect = shieldBar.rectTransform;
@@ -80,10 +77,7 @@ public class SpaceshipController : MonoBehaviour {
 		curBoost = maxBoost;
 		decel = true;
 		shield.SetActive (false);
-		players = GameObject.FindGameObjectsWithTag("Player");
-        //		GoLeft ();
-        //		GoRight();
-
+		players = GameObject.FindGameObjectsWithTag("Player");        
         arduino = Arduino.global;
         arduino.Setup(ConfigurePins);
 		prevMoveSpeed = moveSpeed;
@@ -155,12 +149,7 @@ public class SpaceshipController : MonoBehaviour {
 		} else {
 			shieldActive = false;
 		}
-
-        //if (Input.GetKeyUp(shieldButton) | (arduino.digitalRead(pinBtn1) == 0 && pinBtn1Last == 1))
-        //{
-        //    shieldActive = false;
-        //    pinBtn1Last = 0;
-        //}
+		        
         if (curShield <= 0 && shieldActive)
         {
             shieldActive = false;
@@ -175,19 +164,17 @@ public class SpaceshipController : MonoBehaviour {
             boostActive = false;
         }
 
-
-
-        if (move && gridMovement) {
-			moveTime += Time.deltaTime*0.25f;
-			rotTime = moveTime*2;
-			if (tf.position.x != targetPos.x) {
-				tf.position = Vector3.MoveTowards (tf.position, new Vector3 (targetPos.x, tf.position.y, tf.position.z), moveTime*laneSwitchSpeed);
-				//tf.position = Vector3.Lerp (tf.position, new Vector3 (targetPos.x, tf.position.y, tf.position.z), moveTime*laneSwitchSpeed);
-			}else {
-				moveTime = 0;
-				move = false;
-			}
-		}
+//        if (move && gridMovement) {
+//			moveTime += Time.deltaTime*0.25f;
+//			rotTime = moveTime*2;
+//			if (tf.position.x != targetPos.x) {
+//				tf.position = Vector3.MoveTowards (tf.position, new Vector3 (targetPos.x, tf.position.y, tf.position.z), moveTime*laneSwitchSpeed);
+//				//tf.position = Vector3.Lerp (tf.position, new Vector3 (targetPos.x, tf.position.y, tf.position.z), moveTime*laneSwitchSpeed);
+//			}else {
+//				moveTime = 0;
+//				move = false;
+//			}
+//		}
 
 		if (decel) {
 			Decelerate();
@@ -341,14 +328,13 @@ public class SpaceshipController : MonoBehaviour {
 	void GoRight () {
 		if (tf.position.x != rPos.x && !move) {
 			if (tf.position.x == startPos.x) {
-//				rPos = new Vector3 (rPos.x, rPos.y, tf.position.z);
+
 				targetPos = new Vector3 (rPos.x, tf.position.y, tf.position.z);
 			}else if (tf.position.x == lPos.x) {
-//				startPos = new Vector3 (startPos.x, startPos.y, tf.position.z);
+
 				targetPos = new Vector3 (startPos.x, tf.position.y, tf.position.z);
 			}
-//			anim.clip = right;
-//			anim.Play ();
+
 			move = true;
 		}
 		if (!gridMovement) {
@@ -407,6 +393,11 @@ public class SpaceshipController : MonoBehaviour {
 		boostBarScale.x = prcntg;
 //		curBoostSpeed = 0;
 		boostBar.rectTransform.localScale = boostBarScale;
+		for (int i = 0; i < players.Length; i++) {
+			if (players[i].GetComponent<PlayerHead>().head.GetComponent<Movement>().magnet){
+				players[i].GetComponent<PlayerHead>().head.GetComponent<Movement>().rb.velocity = rb.velocity;		
+			}
+		}
 		if (curBoostSpeed > 0) {
 			curBoostSpeed -= Time.deltaTime * (boostSpeed*0.5f);
 		} else {

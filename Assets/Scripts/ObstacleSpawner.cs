@@ -117,20 +117,20 @@ public class ObstacleSpawner : MonoBehaviour {
 
 	void SpawnEasy (GameObject obj, Vector3 pos, int nr) {
 		GameObject obs = Instantiate (obj, pos, Quaternion.identity) as GameObject;
-		obs.transform.name = "Easy " + nr;
+		obs.transform.name = "Easy ";
 		obs.transform.parent = gameObject.transform;
 	}
 
 	void SpawnMedium (GameObject obj, Vector3 pos, int nr) {
 		GameObject obs = Instantiate (obj, pos, Quaternion.identity) as GameObject;
-		obs.transform.name = "Medium " + nr;
+		obs.transform.name = "Medium ";
 		obs.transform.localScale = new Vector3 (obs.transform.localScale.x * 1.5f, obs.transform.localScale.y, obs.transform.localScale.z);
 		obs.transform.parent = gameObject.transform;
 	}
 
 	void SpawnHard (GameObject obj, Vector3 pos, int nr) {
 		GameObject obs = Instantiate (obj, pos, Quaternion.identity) as GameObject;
-		obs.transform.name = "Hard " + nr;
+		obs.transform.name = "Hard ";
 		obs.transform.localScale = new Vector3 (obs.transform.localScale.x * 2, obs.transform.localScale.y, obs.transform.localScale.z);
 		obs.transform.parent = gameObject.transform;
 	}
