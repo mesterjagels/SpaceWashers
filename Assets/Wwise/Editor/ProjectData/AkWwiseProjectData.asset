@@ -8,24 +8,19 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-<<<<<<< HEAD
   m_Script: {fileID: 11500000, guid: 16c95f5455d6445c9b82a5d0b2b76cef, type: 3}
-=======
-  m_Script: {fileID: 11500000, guid: 7674afcf63fdb034abcc803c9b58a01b, type: 3}
->>>>>>> Commit fra PC
   m_Name: AkWwiseProjectData
   m_EditorClassIdentifier: 
   CurrentPluginConfig: Profile
   EventWwu:
-  - PhysicalPath: Events\Default Work Unit.wwu
+  - PhysicalPath: Events/Default Work Unit.wwu
     ParentPhysicalPath: 
-<<<<<<< HEAD
     Guid: '{B0CEAF43-BBC5-4227-A71F-F166445AE05A}'
-    m_lastTimePsrt1: 212130964
-    m_lastTimePart2: -1999412182
+    m_lastTimePsrt1: 1487777664
+    m_lastTimePart2: -1999412532
     List:
     - Name: clean
-      Path: Default Work Unit\Cleaners\clean
+      Path: Default Work Unit/Cleaners/clean
       PathAndIcons:
       - ElementName: Default Work Unit
         ObjectType: 12
@@ -37,7 +32,7 @@ MonoBehaviour:
       Guid: 442e0ebbde13324a92f676de3e8e6f44
       maxAttenuation: 0
     - Name: owBabe
-      Path: Default Work Unit\Cleaners\owBabe
+      Path: Default Work Unit/Cleaners/owBabe
       PathAndIcons:
       - ElementName: Default Work Unit
         ObjectType: 12
@@ -49,7 +44,7 @@ MonoBehaviour:
       Guid: f0d43f8728883449878bf0b321b8d0f8
       maxAttenuation: 0
     - Name: owEmo
-      Path: Default Work Unit\Cleaners\owEmo
+      Path: Default Work Unit/Cleaners/owEmo
       PathAndIcons:
       - ElementName: Default Work Unit
         ObjectType: 12
@@ -61,7 +56,7 @@ MonoBehaviour:
       Guid: 3e709b10c9490341bb36ba31339e0657
       maxAttenuation: 0
     - Name: owGangsta
-      Path: Default Work Unit\Cleaners\owGangsta
+      Path: Default Work Unit/Cleaners/owGangsta
       PathAndIcons:
       - ElementName: Default Work Unit
         ObjectType: 12
@@ -73,7 +68,7 @@ MonoBehaviour:
       Guid: cdabe14bcce25d41a011619638d43455
       maxAttenuation: 0
     - Name: owGrunge
-      Path: Default Work Unit\Cleaners\owGrunge
+      Path: Default Work Unit/Cleaners/owGrunge
       PathAndIcons:
       - ElementName: Default Work Unit
         ObjectType: 12
@@ -85,7 +80,7 @@ MonoBehaviour:
       Guid: 9139f92e1c8aec42b967ba08e47822c6
       maxAttenuation: 0
     - Name: owJock
-      Path: Default Work Unit\Cleaners\owJock
+      Path: Default Work Unit/Cleaners/owJock
       PathAndIcons:
       - ElementName: Default Work Unit
         ObjectType: 12
@@ -97,7 +92,7 @@ MonoBehaviour:
       Guid: a10fbec7e1202841b05fe9232a363735
       maxAttenuation: 0
     - Name: spaceshipBoost
-      Path: Default Work Unit\Spaceship\spaceshipBoost
+      Path: Default Work Unit/Spaceship/spaceshipBoost
       PathAndIcons:
       - ElementName: Default Work Unit
         ObjectType: 12
@@ -109,7 +104,7 @@ MonoBehaviour:
       Guid: 092eebe8c8b1e74dbd0f2eded170461a
       maxAttenuation: 0
     - Name: spaceshipBoostStatus
-      Path: Default Work Unit\Spaceship\spaceshipBoostStatus
+      Path: Default Work Unit/Spaceship/spaceshipBoostStatus
       PathAndIcons:
       - ElementName: Default Work Unit
         ObjectType: 12
@@ -121,7 +116,7 @@ MonoBehaviour:
       Guid: 1194bcb3305b614ea6c51f870d36041f
       maxAttenuation: 0
     - Name: spaceshipShield
-      Path: Default Work Unit\Spaceship\spaceshipShield
+      Path: Default Work Unit/Spaceship/spaceshipShield
       PathAndIcons:
       - ElementName: Default Work Unit
         ObjectType: 12
@@ -133,7 +128,7 @@ MonoBehaviour:
       Guid: 4cdd1ecdfb81d9469e6b86e209d98b3b
       maxAttenuation: 0
     - Name: spaceshipShieldDry
-      Path: Default Work Unit\Spaceship\spaceshipShieldDry
+      Path: Default Work Unit/Spaceship/spaceshipShieldDry
       PathAndIcons:
       - ElementName: Default Work Unit
         ObjectType: 12
@@ -145,7 +140,7 @@ MonoBehaviour:
       Guid: 917e240fb4c229438be6ddc1ccb142c8
       maxAttenuation: 0
     - Name: spaceshipShieldImpact
-      Path: Default Work Unit\Spaceship\spaceshipShieldImpact
+      Path: Default Work Unit/Spaceship/spaceshipShieldImpact
       PathAndIcons:
       - ElementName: Default Work Unit
         ObjectType: 12
@@ -157,7 +152,7 @@ MonoBehaviour:
       Guid: 4bd3bb664d83a042b622bdd11bc435c6
       maxAttenuation: 0
     - Name: spaceshipShieldUnable
-      Path: Default Work Unit\Spaceship\spaceshipShieldUnable
+      Path: Default Work Unit/Spaceship/spaceshipShieldUnable
       PathAndIcons:
       - ElementName: Default Work Unit
         ObjectType: 12
@@ -169,7 +164,7 @@ MonoBehaviour:
       Guid: 4016443586fb0b4c89e655dfa1c4a91c
       maxAttenuation: 0
     - Name: spaceshipThrusters
-      Path: Default Work Unit\Spaceship\spaceshipThrusters
+      Path: Default Work Unit/Spaceship/spaceshipThrusters
       PathAndIcons:
       - ElementName: Default Work Unit
         ObjectType: 12
@@ -181,7 +176,7 @@ MonoBehaviour:
       Guid: e662bd113b7e38458107f928c9c9f653
       maxAttenuation: 0
     - Name: Test
-      Path: Default Work Unit\Test
+      Path: Default Work Unit/Test
       PathAndIcons:
       - ElementName: Default Work Unit
         ObjectType: 12
@@ -189,58 +184,30 @@ MonoBehaviour:
         ObjectType: 3
       ID: -1137964055
       Guid: f53d5af4150cd04b809d7a71058f3f29
-=======
-    Guid: '{775366B4-26E6-443A-B2B4-76C56B03934F}'
-    m_lastTimePsrt1: 222282086
-    m_lastTimePart2: -1999418143
-    List:
-    - Name: PlopEvent
-      Path: Default Work Unit\PlopEvent
-      PathAndIcons:
-      - ElementName: Default Work Unit
-        ObjectType: 12
-      - ElementName: PlopEvent
-        ObjectType: 3
-      ID: 1919418076
-      Guid: 200288351a4e0146b88830b5bdfc4271
->>>>>>> Commit fra PC
       maxAttenuation: 0
   AuxBusWwu:
-  - PhysicalPath: Master-Mixer Hierarchy\Default Work Unit.wwu
+  - PhysicalPath: Master-Mixer Hierarchy/Default Work Unit.wwu
     ParentPhysicalPath: 
-<<<<<<< HEAD
     Guid: '{AF6F5C06-D009-4B55-8318-085465639372}'
-    m_lastTimePsrt1: -1996282177
-    m_lastTimePart2: -1999412577
-=======
-    Guid: '{E8439A0E-2D8A-4865-B06F-4238910BEF99}'
-    m_lastTimePsrt1: -1761982264
-    m_lastTimePart2: -1999418145
->>>>>>> Commit fra PC
+    m_lastTimePsrt1: -1840155264
+    m_lastTimePart2: -1999413540
     List: []
   StateWwu:
-  - PhysicalPath: States\Default Work Unit.wwu
+  - PhysicalPath: States/Default Work Unit.wwu
     ParentPhysicalPath: 
-<<<<<<< HEAD
     Guid: '{1CCDD674-A4AE-4CBB-9114-2645D93A9AA4}'
-    m_lastTimePsrt1: -1987071651
-    m_lastTimePart2: -1999412577
-=======
-    Guid: '{A3ACA855-7690-486D-80A8-CCEFE8C62776}'
-    m_lastTimePsrt1: -1761992288
-    m_lastTimePart2: -1999418145
->>>>>>> Commit fra PC
+    m_lastTimePsrt1: -1830155264
+    m_lastTimePart2: -1999413540
     List: []
   SwitchWwu:
-  - PhysicalPath: Switches\Default Work Unit.wwu
+  - PhysicalPath: Switches/Default Work Unit.wwu
     ParentPhysicalPath: 
-<<<<<<< HEAD
     Guid: '{3E9B5808-472F-47E2-8E3D-485ADA80A05E}'
-    m_lastTimePsrt1: -1987071651
-    m_lastTimePart2: -1999412577
+    m_lastTimePsrt1: -1830155264
+    m_lastTimePart2: -1999413540
     List:
     - Name: Spaceship_Boost_Status
-      Path: Default Work Unit\Spaceship_Boost_Status
+      Path: Default Work Unit/Spaceship_Boost_Status
       PathAndIcons:
       - ElementName: Default Work Unit
         ObjectType: 12
@@ -261,14 +228,14 @@ MonoBehaviour:
       - bytes: 7d2719f0981ee247af83e0189e463b0b
       - bytes: 5b6de3d8f95f33438c8e7885761b32ba
   BankWwu:
-  - PhysicalPath: SoundBanks\Default Work Unit.wwu
+  - PhysicalPath: SoundBanks/Default Work Unit.wwu
     ParentPhysicalPath: 
     Guid: '{1EC8FF26-FD5B-4639-92A0-D63C2341B432}'
-    m_lastTimePsrt1: 212610992
-    m_lastTimePart2: -1999412182
+    m_lastTimePsrt1: 1487777664
+    m_lastTimePart2: -1999412532
     List:
     - Name: MainSoundbank
-      Path: Default Work Unit\MainSoundbank
+      Path: Default Work Unit/MainSoundbank
       PathAndIcons:
       - ElementName: Default Work Unit
         ObjectType: 12
@@ -276,32 +243,6 @@ MonoBehaviour:
         ObjectType: 7
       ID: 534561221
       Guid: e0f029cd999c074886702b021a7e7cd7
-  ExpandedItems: []
-  m_lastPopulateTimePsrt1: 0
-  m_lastPopulateTimePart2: 0
-  autoPopulateEnabled: 1
-  basePath: Audio/GeneratedSoundBanks
-=======
-    Guid: '{C8280359-4087-4014-900D-BDC51B4DE00E}'
-    m_lastTimePsrt1: -1761997302
-    m_lastTimePart2: -1999418145
-    List: []
-  BankWwu:
-  - PhysicalPath: SoundBanks\Default Work Unit.wwu
-    ParentPhysicalPath: 
-    Guid: '{EC3C476B-7D5B-4E3E-AE7F-1558323B4BF6}'
-    m_lastTimePsrt1: 222116831
-    m_lastTimePart2: -1999418143
-    List:
-    - Name: MAIN
-      Path: Default Work Unit\MAIN
-      PathAndIcons:
-      - ElementName: Default Work Unit
-        ObjectType: 12
-      - ElementName: MAIN
-        ObjectType: 7
-      ID: -1133058374
-      Guid: b579cadd5c4e3f46897357052a155eb5
   ExpandedItems:
   - /Wwise
   - /Wwise/Events
@@ -311,8 +252,7 @@ MonoBehaviour:
   m_lastPopulateTimePsrt1: 0
   m_lastPopulateTimePart2: 0
   autoPopulateEnabled: 1
-  basePath: Audio\GeneratedSoundBanks
->>>>>>> Commit fra PC
+  basePath: Audio/GeneratedSoundBanks
   language: English(US)
   defaultPoolSize: 4096
   lowerPoolSize: 2048
