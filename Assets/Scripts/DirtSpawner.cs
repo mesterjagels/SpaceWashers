@@ -8,6 +8,7 @@ public class DirtSpawner : MonoBehaviour
     public float interval = 0;
     public int distanceFromCam;
     private GameObject cam;
+    public int dirtSpawnerWidth = 50;
 
 
     void Awake()
@@ -27,7 +28,9 @@ public class DirtSpawner : MonoBehaviour
         while (true)
         {
             Debug.Log("Planet spawned");
-            Instantiate(dirt[Random.RandomRange(0, dirt.Length-1)], new Vector3(Random.Range(cam.transform.position.x - 100, cam.transform.position.x + 100), cam.transform.position.y - distanceFromCam, 10), Quaternion.identity);
+            Instantiate(dirt[Random.RandomRange(0, dirt.Length)], new Vector3(Random.Range(cam.transform.position.x - dirtSpawnerWidth, cam.transform.position.x + dirtSpawnerWidth), 
+                cam.transform.position.y - distanceFromCam, 10), 
+                Quaternion.identity);
             yield return new WaitForSeconds(interval);
         }
     }
