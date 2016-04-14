@@ -1,6 +1,7 @@
 ﻿using UnityEngine;
 using System.Collections;
 using System.Collections.Generic;
+using InControl;
 
 public class Movement : MonoBehaviour {
 
@@ -22,6 +23,7 @@ public class Movement : MonoBehaviour {
 	List <GameObject> topDownSprites = new List<GameObject>();
 	float magnetMass = 10;
 	Rigidbody2D ragdollHandRb;
+
 	Vector2 ragdollHandVel;
 	public float magnetDelay;
 	public float washHandSpeed;
@@ -49,6 +51,8 @@ public class Movement : MonoBehaviour {
 	public Rigidbody2D rb, spaceshipRb;
 	[HideInInspector]
 	public bool magnet;
+	[HideInInspector]
+	public InputDevice inputDevice;
 //	public GameObject [] childSprites;
 //	GameObject spaceship;
 	// Use this for initialization
@@ -61,30 +65,42 @@ public class Movement : MonoBehaviour {
 //		spaceship = GameObject.FindGameObjectWithTag("Spaceship");
 		spaceshipRb = GameObject.FindGameObjectWithTag("Spaceship").GetComponent<Rigidbody2D>();
 		rb.drag = normalDrag;
-		if (tf.parent.parent.name.Contains("Player1")) {
-			playerNr = 1;
-		}else if (tf.parent.parent.name.Contains("Player2")) {
-			playerNr = 2;
-		}else if(tf.parent.parent.name.Contains("Player3")) {
-			playerNr = 3;
+//		if (tf.parent.parent.name.Contains("Player1")) {
+//			playerNr = 1;
+//		}else if (tf.parent.parent.name.Contains("Player2")) {
+//			playerNr = 2;
+//		}else if(tf.parent.parent.name.Contains("Player3")) {
+//			playerNr = 3;
+//		}else if(tf.parent.parent.name.Contains("Player4")) {
+//			playerNr = 4;
+//		}else if(tf.parent.parent.name.Contains("Player0")) {
+//			playerNr = 0;
+//		}
+
+		for (int i = 0; i < 10; i++) {
+			if (tf.parent.parent.name.Contains("Player" + i.ToString())){
+				playerNr = i;
+			}
 		}
 
-		if (playerNr == 1) {
-			lHorAxis = "Horizontal";
-			lVerAxis = "Vertical";
-			rHorAxis = "HorizontalR1";
-			rVerAxis = "VerticalR1";
-		} else if (playerNr == 2) {
-			lHorAxis = "HorizontalL1";
-			lVerAxis = "VerticalL1";
-			rHorAxis = "HorizontalR2";
-			rVerAxis = "VerticalR2";
-		} else if (playerNr == 3) {
-			lHorAxis = "HorizontalL2";
-			lVerAxis = "VerticalL2";
-			rHorAxis = "HorizontalR3";
-			rVerAxis = "VerticalR3";
-		}
+//		if (playerNr == 1) {
+//			lHorAxis = "Horizontal";
+//			lVerAxis = "Vertical";
+//			rHorAxis = "HorizontalR1";
+//			rVerAxis = "VerticalR1";
+//		} else if (playerNr == 2) {
+//			lHorAxis = "HorizontalL2";
+//			lVerAxis = "VerticalL2";
+//			rHorAxis = "HorizontalR2";
+//			rVerAxis = "VerticalR2";
+//		} else if (playerNr == 3) {
+//			lHorAxis = "HorizontalL2";
+//			lVerAxis = "VerticalL2";
+//			rHorAxis = "HorizontalR3";
+//			rVerAxis = "VerticalR3";
+//		}
+		inputDevice = (InputManager.Devices.Count > playerNr) ? InputManager.Devices[playerNr] : null;
+		Debug.Log ("player nr: " + playerNr);
 //		topDownChar.SetActive (false);
 		spaceshipRb = GameObject.FindGameObjectWithTag("Spaceship").GetComponent<Rigidbody2D>();
 		thisSprite = GetComponent<SpriteRenderer>();
@@ -96,7 +112,7 @@ public class Movement : MonoBehaviour {
 	// Update is called once per frame
 	void Update () {
 		if (Input.GetKey (left)
-		    || Input.GetAxis(lHorAxis) < 0
+		    || inputDevice.Direction.X < 0
 		    ) {
 			if (!magnet) {
 //				rb.AddForce (Vector2.left * moveSpeed * slow * Time.deltaTime);
@@ -109,7 +125,7 @@ public class Movement : MonoBehaviour {
 				MoveRB (velX, velZ);
 			}
 		} else if (Input.GetKeyUp (left)
-		           || Input.GetAxis(lHorAxis) == 0
+		           || inputDevice.Direction.X == 0
 		           ) {
 			velX = Vector2.zero;
 			if (moving)
@@ -117,7 +133,7 @@ public class Movement : MonoBehaviour {
 		}
 
 		if (Input.GetKey (right)
-		    || Input.GetAxis(lHorAxis) > 0
+		    || inputDevice.Direction.X > 0
 		    ) {
 			if (!magnet) 
 			{
@@ -134,7 +150,7 @@ public class Movement : MonoBehaviour {
 
 
 		}else if (Input.GetKeyUp (right)
-		          || Input.GetAxis(lHorAxis) == 0
+		          || inputDevice.Direction.X == 0
 		          ) {
 			velX = Vector2.zero;
 			if (moving)
@@ -142,7 +158,7 @@ public class Movement : MonoBehaviour {
 		}
 
 		if (Input.GetKey (up)
-		    || Input.GetAxis(lVerAxis) > 0
+		    || inputDevice.Direction.Y > 0
 		    ) {
 			if (!magnet) 
 			{
@@ -157,7 +173,7 @@ public class Movement : MonoBehaviour {
 //				Move ();
 			}
 		}else if (Input.GetKeyUp (up)
-		          || Input.GetAxis(lVerAxis) == 0
+		          || inputDevice.Direction.Y == 0
 		          ) {
 			velZ = Vector2.zero;
 			if (moving)
@@ -165,7 +181,7 @@ public class Movement : MonoBehaviour {
 		}
 
 		if (Input.GetKey (down)
-		    || Input.GetAxis(lVerAxis) < 0
+		    || inputDevice.Direction.Y < 0
 		    ) {
 
 			if (!magnet) 
@@ -181,7 +197,7 @@ public class Movement : MonoBehaviour {
 //				Move ();
 			}
 		}else if (Input.GetKeyUp (down)
-		          || Input.GetAxis(lVerAxis) == 0
+		          || inputDevice.Direction.Y == 0
 		          ) {
 			velZ = Vector2.zero;
 			if (moving)
@@ -192,18 +208,21 @@ public class Movement : MonoBehaviour {
 //			rb.velocity = Vector2.zero+spaceshipRb.velocity;
 //		}
 
-		if (Input.GetKeyDown (magnetBoots) || Input.GetButtonDown ("ControllerR1"))
+		if (Input.GetKeyDown (magnetBoots) || inputDevice.RightBumper)
 		{
 			Invoke ("Boots", magnetDelay);
 		}
 
-		if (Input.GetAxis (rHorAxis) != 0 || Input.GetAxis(rVerAxis) != 0  || Input.GetKey(KeyCode.Space)) {
+		if (inputDevice.RightStickX != 0 || inputDevice.RightStickY != 0  || Input.GetKey(KeyCode.Space)) {
 			washing = true;
+//			Debug.Log ("Rhor: " + Input.GetAxis(rHorAxis) + ", rVer: " + Input.GetAxis(rVerAxis));
 		}else{
 			washing = false;
 		}
 
-		if (washing || Input.GetKey(KeyCode.L)){
+		if (washing 
+//		    || Input.GetKey(KeyCode.L)
+		    ){
 			foreach (Transform go in tf.parent){
 				go.GetComponent<FlipCharacter>().SetBack();
 			}
@@ -216,7 +235,7 @@ public class Movement : MonoBehaviour {
 			}
 		}
 
-		if (Input.GetKey (detach) || Input.GetButton ("ControllerL1")) {
+		if (Input.GetKey (detach) || inputDevice.LeftBumper) {
 			cord.gameObject.GetComponent<RopeStart> ().Detach (tf.position);
 		}
 //		line.SetPosition (0, tf.position);
@@ -233,19 +252,25 @@ public class Movement : MonoBehaviour {
 //		}
 
 
-		if (Input.GetAxis (rHorAxis) > 0) {
+		if (inputDevice.RightStickX > 0) {
 			ragdollHandVel.x = washHandSpeed;
-			ragdollHandRb.velocity = ragdollHandVel;
-		}if (Input.GetAxis (rHorAxis) < 0) {
+			ragdollHandRb.velocity = ragdollHandVel+rb.velocity;
+		}if (inputDevice.RightStickX < 0) {
 			ragdollHandVel.x = (-washHandSpeed);
-			ragdollHandRb.velocity = ragdollHandVel;
-		}if (Input.GetAxis (rVerAxis) < 0) {
+			ragdollHandRb.velocity = ragdollHandVel+rb.velocity;
+		}if (inputDevice.RightStickY > 0) {
 			ragdollHandVel.y = washHandSpeed;
-			ragdollHandRb.velocity = ragdollHandVel;
-		}if (Input.GetAxis (rVerAxis) > 0) {
+			ragdollHandRb.velocity = ragdollHandVel+rb.velocity;
+		}if (inputDevice.RightStickY < 0) {
 			ragdollHandVel.y = (-washHandSpeed);
-			ragdollHandRb.velocity = ragdollHandVel;
+			ragdollHandRb.velocity = ragdollHandVel+rb.velocity;
 		}
+		if (inputDevice.RightStick == Vector2.zero){
+			ragdollHandVel = Vector2.zero;
+		}
+//		if (ragdollHandVel != Vector2.zero && (velX != Vector2.zero || velZ != Vector2.zero)){
+//			ragdollHandRb.velocity = ragdollHandRb.velocity+rb.velocity;
+//		}
 		//Debug.Log (Input.GetJoystickNames ());
 
 		if ((spaceshipRb.velocity.x > 5 || spaceshipRb.velocity.x < 5) && spaceshipRb.velocity.x != 0 && !GameObject.FindGameObjectWithTag("Spaceship").GetComponent<SpaceshipController>().boostActive) {

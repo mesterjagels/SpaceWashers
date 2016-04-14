@@ -16,8 +16,8 @@ MonoBehaviour:
   - PhysicalPath: Events\Default Work Unit.wwu
     ParentPhysicalPath: 
     Guid: '{B0CEAF43-BBC5-4227-A71F-F166445AE05A}'
-    m_lastTimePsrt1: -445424369
-    m_lastTimePart2: -1999412532
+    m_lastTimePsrt1: 212130964
+    m_lastTimePart2: -1999412182
     List:
     - Name: clean
       Path: Default Work Unit\Cleaners\clean
@@ -189,22 +189,22 @@ MonoBehaviour:
   - PhysicalPath: Master-Mixer Hierarchy\Default Work Unit.wwu
     ParentPhysicalPath: 
     Guid: '{AF6F5C06-D009-4B55-8318-085465639372}'
-    m_lastTimePsrt1: -2097043663
-    m_lastTimePart2: -1999413534
+    m_lastTimePsrt1: -1996282177
+    m_lastTimePart2: -1999412577
     List: []
   StateWwu:
   - PhysicalPath: States\Default Work Unit.wwu
     ParentPhysicalPath: 
     Guid: '{1CCDD674-A4AE-4CBB-9114-2645D93A9AA4}'
-    m_lastTimePsrt1: -2092199451
-    m_lastTimePart2: -1999413534
+    m_lastTimePsrt1: -1987071651
+    m_lastTimePart2: -1999412577
     List: []
   SwitchWwu:
   - PhysicalPath: Switches\Default Work Unit.wwu
     ParentPhysicalPath: 
     Guid: '{3E9B5808-472F-47E2-8E3D-485ADA80A05E}'
-    m_lastTimePsrt1: -2092194433
-    m_lastTimePart2: -1999413534
+    m_lastTimePsrt1: -1987071651
+    m_lastTimePart2: -1999412577
     List:
     - Name: Spaceship_Boost_Status
       Path: Default Work Unit\Spaceship_Boost_Status
@@ -231,8 +231,8 @@ MonoBehaviour:
   - PhysicalPath: SoundBanks\Default Work Unit.wwu
     ParentPhysicalPath: 
     Guid: '{1EC8FF26-FD5B-4639-92A0-D63C2341B432}'
-    m_lastTimePsrt1: -444838574
-    m_lastTimePart2: -1999412532
+    m_lastTimePsrt1: 212610992
+    m_lastTimePart2: -1999412182
     List:
     - Name: MainSoundbank
       Path: Default Work Unit\MainSoundbank
@@ -243,11 +243,7 @@ MonoBehaviour:
         ObjectType: 7
       ID: 534561221
       Guid: e0f029cd999c074886702b021a7e7cd7
-  ExpandedItems:
-  - /Wwise
-  - /Wwise/Events
-  - /Wwise/SoundBanks
-  - /Wwise/SoundBanks/Default Work Unit
+  ExpandedItems: []
   m_lastPopulateTimePsrt1: 0
   m_lastPopulateTimePart2: 0
   autoPopulateEnabled: 1
