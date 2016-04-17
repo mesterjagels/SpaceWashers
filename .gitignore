@@ -24,3 +24,10 @@ ExportedObj/
 
 # Unity3D Generated File On Crash Reports
 sysinfo.txt
+Assets/Wwise/Deployment.meta
+Assets/Wwise/Deployment/Plugins.meta
+Assets/Wwise/Deployment/Plugins/Mac_new.meta
+Assets/Wwise/Deployment/Plugins/Windows.meta
+Assets/Wwise/Deployment/Plugins/Windows/x86_64.meta
+Assets/Wwise/Deployment/Plugins/Windows/x86_64/Profile.meta
+Assets/Wwise/Deployment/Plugins/Windows_new.meta
