@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <ValidationCache Version="1" SchemaVersion="70">
-	<ValidationCacheItem File="Y:\Spiludvikling\Game Developments\Wwise\Actor-Mixer Hierarchy\Default Work Unit.wwu" DateLow="2393124992" DateHigh="30511348"/>
-	<ValidationCacheItem File="Y:\Spiludvikling\Game Developments\Wwise\Actor-Mixer Hierarchy\Factory SoundSeed Air Objects.wwu" DateLow="2393124992" DateHigh="30511348"/>
+	<ValidationCacheItem File="Y:\Spiludvikling\Game Developments\Wwise\Actor-Mixer Hierarchy\Default Work Unit.wwu" DateLow="909553536" DateHigh="30512309"/>
+	<ValidationCacheItem File="Y:\Spiludvikling\Game Developments\Wwise\Actor-Mixer Hierarchy\Factory SoundSeed Air Objects.wwu" DateLow="909553536" DateHigh="30512309"/>
 	<ValidationCacheItem File="Y:\Spiludvikling\Game Developments\Wwise\Actor-Mixer Hierarchy\Factory Synth One.wwu" DateLow="1876587904" DateHigh="30511301"/>
 	<ValidationCacheItem File="Y:\Spiludvikling\Game Developments\Wwise\Attenuations\Default Work Unit.wwu" DateLow="1876587904" DateHigh="30511301"/>
 	<ValidationCacheItem File="Y:\Spiludvikling\Game Developments\Wwise\Control Surface Sessions\Default Work Unit.wwu" DateLow="1876587904" DateHigh="30511301"/>
@@ -12,7 +12,7 @@
 	<ValidationCacheItem File="Y:\Spiludvikling\Game Developments\Wwise\Effects\Factory Altiverb - Outdoor and More.wwu" DateLow="1876587904" DateHigh="30511301"/>
 	<ValidationCacheItem File="Y:\Spiludvikling\Game Developments\Wwise\Effects\Factory Auro Headphone.wwu" DateLow="1876587904" DateHigh="30511301"/>
 	<ValidationCacheItem File="Y:\Spiludvikling\Game Developments\Wwise\Effects\Factory Convolution Reverb Effects.wwu" DateLow="1876587904" DateHigh="30511301"/>
-	<ValidationCacheItem File="Y:\Spiludvikling\Game Developments\Wwise\Effects\Factory Effects.wwu" DateLow="2393124992" DateHigh="30511348"/>
+	<ValidationCacheItem File="Y:\Spiludvikling\Game Developments\Wwise\Effects\Factory Effects.wwu" DateLow="909553536" DateHigh="30512309"/>
 	<ValidationCacheItem File="Y:\Spiludvikling\Game Developments\Wwise\Effects\Factory iZotope Box Modeler.wwu" DateLow="1876587904" DateHigh="30511301"/>
 	<ValidationCacheItem File="Y:\Spiludvikling\Game Developments\Wwise\Effects\Factory iZotope Delay.wwu" DateLow="1876587904" DateHigh="30511301"/>
 	<ValidationCacheItem File="Y:\Spiludvikling\Game Developments\Wwise\Effects\Factory iZotope Dynamics.wwu" DateLow="1876587904" DateHigh="30511301"/>
@@ -21,8 +21,8 @@
 	<ValidationCacheItem File="Y:\Spiludvikling\Game Developments\Wwise\Effects\Factory iZotope Multiband Distortion.wwu" DateLow="1876587904" DateHigh="30511301"/>
 	<ValidationCacheItem File="Y:\Spiludvikling\Game Developments\Wwise\Effects\Factory iZotope Singleband Distortion.wwu" DateLow="1876587904" DateHigh="30511301"/>
 	<ValidationCacheItem File="Y:\Spiludvikling\Game Developments\Wwise\Effects\Factory McDSP Effects.wwu" DateLow="1876587904" DateHigh="30511301"/>
-	<ValidationCacheItem File="Y:\Spiludvikling\Game Developments\Wwise\Events\Default Work Unit.wwu" DateLow="2393124992" DateHigh="30511348"/>
-	<ValidationCacheItem File="Y:\Spiludvikling\Game Developments\Wwise\Game Parameters\Default Work Unit.wwu" DateLow="2393124992" DateHigh="30511348"/>
+	<ValidationCacheItem File="Y:\Spiludvikling\Game Developments\Wwise\Events\Default Work Unit.wwu" DateLow="909553536" DateHigh="30512309"/>
+	<ValidationCacheItem File="Y:\Spiludvikling\Game Developments\Wwise\Game Parameters\Default Work Unit.wwu" DateLow="909553536" DateHigh="30512309"/>
 	<ValidationCacheItem File="Y:\Spiludvikling\Game Developments\Wwise\Game Parameters\Factory SoundSeed Air Game Syncs.wwu" DateLow="1876587904" DateHigh="30511301"/>
 	<ValidationCacheItem File="Y:\Spiludvikling\Game Developments\Wwise\Interactive Music Hierarchy\Default Work Unit.wwu" DateLow="1876587904" DateHigh="30511301"/>
 	<ValidationCacheItem File="Y:\Spiludvikling\Game Developments\Wwise\Master-Mixer Hierarchy\Default Work Unit.wwu" DateLow="1876587904" DateHigh="30511301"/>
@@ -31,11 +31,11 @@
 	<ValidationCacheItem File="Y:\Spiludvikling\Game Developments\Wwise\Presets\Default Work Unit.wwu" DateLow="1886587904" DateHigh="30511301"/>
 	<ValidationCacheItem File="Y:\Spiludvikling\Game Developments\Wwise\Queries\Default Work Unit.wwu" DateLow="1886587904" DateHigh="30511301"/>
 	<ValidationCacheItem File="Y:\Spiludvikling\Game Developments\Wwise\Queries\Factory Queries.wwu" DateLow="1886587904" DateHigh="30511301"/>
-	<ValidationCacheItem File="Y:\Spiludvikling\Game Developments\Wwise\SoundBanks\Default Work Unit.wwu" DateLow="2393124992" DateHigh="30511348"/>
+	<ValidationCacheItem File="Y:\Spiludvikling\Game Developments\Wwise\SoundBanks\Default Work Unit.wwu" DateLow="909553536" DateHigh="30512309"/>
 	<ValidationCacheItem File="Y:\Spiludvikling\Game Developments\Wwise\Soundcaster Sessions\Default Work Unit.wwu" DateLow="1886587904" DateHigh="30511301"/>
 	<ValidationCacheItem File="Y:\Spiludvikling\Game Developments\Wwise\States\Default Work Unit.wwu" DateLow="1886587904" DateHigh="30511301"/>
 	<ValidationCacheItem File="Y:\Spiludvikling\Game Developments\Wwise\Switches\Default Work Unit.wwu" DateLow="1886587904" DateHigh="30511301"/>
 	<ValidationCacheItem File="Y:\Spiludvikling\Game Developments\Wwise\Triggers\Default Work Unit.wwu" DateLow="1886587904" DateHigh="30511301"/>
-	<ValidationCacheItem File="Y:\Spiludvikling\Game Developments\Wwise\Wwise.AndreasLagerstedt.wsettings" DateLow="2423124992" DateHigh="30511348"/>
+	<ValidationCacheItem File="Y:\Spiludvikling\Game Developments\Wwise\Wwise.AndreasLagerstedt.wsettings" DateLow="1734505984" DateHigh="30511696"/>
 	<ValidationCacheItem File="Y:\Spiludvikling\Game Developments\Wwise\Wwise.wproj" DateLow="1886587904" DateHigh="30511301"/>
 </ValidationCache>

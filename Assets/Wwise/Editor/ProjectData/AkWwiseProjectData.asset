@@ -245,10 +245,6 @@ MonoBehaviour:
       Guid: e0f029cd999c074886702b021a7e7cd7
   ExpandedItems:
   - /Wwise
-  - /Wwise/Events
-  - /Wwise/Events/Default Work Unit
-  - /Wwise/SoundBanks
-  - /Wwise/SoundBanks/Default Work Unit
   m_lastPopulateTimePsrt1: 0
   m_lastPopulateTimePart2: 0
   autoPopulateEnabled: 1
