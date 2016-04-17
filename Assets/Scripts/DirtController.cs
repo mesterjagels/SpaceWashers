@@ -20,6 +20,11 @@ public class DirtController : MonoBehaviour {
 	public float minPrcntCleaned;
 	public List <Vector3> randomPos;
 
+    //  Score Variables
+    public int numberOfPlayers;
+    public int[] playerScore; 
+    public int totalScore;
+
 //	public int brushSize;
 	// Use this for initialization
 	void Start () {
@@ -27,6 +32,10 @@ public class DirtController : MonoBehaviour {
 		duplicate = Instantiate (original) as Texture2D;
 		alreadyWashed = duplicate.GetPixels32 ();
 		totalPixels = alreadyWashed.Length;
+
+        //  Score related
+        playerScore = new int[numberOfPlayers];
+
 		CalculateStuff ();
 	}
 
@@ -35,7 +44,8 @@ public class DirtController : MonoBehaviour {
 	}
 
 	
-	public void Clean (int brushSize, Vector2 pixelUV) {
+	public void Clean (int brushSize, Vector2 pixelUV, GameObject mGameObject) {
+
 		rend.material.mainTexture = duplicate;
 //		pixelUV = hit.textureCoord;
 		pixelUV.x *= duplicate.width;
@@ -86,7 +96,8 @@ public class DirtController : MonoBehaviour {
 
 	void Cleaned () {
 		//Something happens when the dirt is cleaned
-
 		Destroy (this.gameObject, 0.5f);
+
+        //Increase player score, spawn scrolling score at the position of the destroyed object
 	}
 }

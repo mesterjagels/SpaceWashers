@@ -88,7 +88,7 @@ public class PaintTest : MonoBehaviour {
 //					CalculateStuff ();
 //				}
 				//Debug.Log ("pixeluv: " + pixelUV);
-				hit.transform.GetComponent<DirtController>().Clean (brushSize, pixelUV);
+				hit.transform.GetComponent<DirtController>().Clean (brushSize, pixelUV, this.gameObject);
 			}
 
 		}
