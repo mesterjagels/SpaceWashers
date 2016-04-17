@@ -1,7 +1,13 @@
 <?xml version="1.0" encoding="utf-8"?>
+<<<<<<< HEAD
 <WwiseDocument Type="WorkUnit" ID="{AF6F5C06-D009-4B55-8318-085465639372}" SchemaVersion="70">
 	<Busses>
 		<WorkUnit Name="Default Work Unit" ID="{AF6F5C06-D009-4B55-8318-085465639372}" PersistMode="Standalone">
+=======
+<WwiseDocument Type="WorkUnit" ID="{E8439A0E-2D8A-4865-B06F-4238910BEF99}" SchemaVersion="70">
+	<Busses>
+		<WorkUnit Name="Default Work Unit" ID="{E8439A0E-2D8A-4865-B06F-4238910BEF99}" PersistMode="Standalone">
+>>>>>>> Commit fra PC
 			<ChildrenList>
 				<Bus Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}"/>
 				<Bus Name="Master Secondary Bus" ID="{D2E0BC7E-7B3F-4FFE-A670-FAE02761B631}"/>

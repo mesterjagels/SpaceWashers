@@ -1,21 +1,31 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <WwiseDocument Type="Project" SchemaVersion="70">
 	<ProjectInfo>
+<<<<<<< HEAD
 		<Project Name="Wwise" ID="{DD919F9C-C5F1-4B62-8B8E-075332E06002}">
 			<Platforms>
 				<Platform Name="Mac" ReferencePlatform="Mac" ID="{FEE67A5B-943A-42FF-B6A2-C75541C820FB}" />
 				<Platform Name="Windows" ReferencePlatform="Windows" ID="{4F21336A-DEF8-43AF-9D2D-D949A7F1B3D9}" />
+=======
+		<Project Name="Wwise" ID="{478A672E-A8CF-43EF-A894-E11C13B16D0C}">
+			<Platforms>
+				<Platform Name="Windows" ReferencePlatform="Windows" ID="{29940BD4-58BE-4F9A-B70A-DC5859E4A859}" />
+>>>>>>> Commit fra PC
 			</Platforms>
 			<PropertyList>
 				<Property Name="DefaultLanguage" Type="int32" Value="12" />
 				<Property Name="ExternalSourcesInputPath" Type="string">
 					<ValueList>
+<<<<<<< HEAD
 						<Value Platform="Mac"></Value>
+=======
+>>>>>>> Commit fra PC
 						<Value Platform="Windows"></Value>
 					</ValueList>
 				</Property>
 				<Property Name="ExternalSourcesOutputPath" Type="string">
 					<ValueList>
+<<<<<<< HEAD
 						<Value Platform="Mac">GeneratedSoundBanks\Mac\</Value>
 						<Value Platform="Windows">GeneratedSoundBanks\Windows\</Value>
 					</ValueList>
@@ -25,30 +35,50 @@
 				<Property Name="SoundBankPaths" Type="string">
 					<ValueList>
 						<Value Platform="Mac">GeneratedSoundBanks\Mac\</Value>
+=======
+						<Value Platform="Windows">GeneratedSoundBanks\Windows\</Value>
+					</ValueList>
+				</Property>
+				<Property Name="SoundBankGenerateHeaderFile" Type="bool" Value="True" /><Property Name="SoundBankGenerateMaxAttenuationInfo" Type="bool" Value="True" /><Property Name="SoundBankHeaderFilePath" Type="string" Value="X:\UnityProjects\Space Washers\Assets\StreamingAssets\Audio\GeneratedSoundBanks" />
+				<Property Name="SoundBankPaths" Type="string">
+					<ValueList>
+>>>>>>> Commit fra PC
 						<Value Platform="Windows">GeneratedSoundBanks\Windows\</Value>
 					</ValueList>
 				</Property>
 				<Property Name="SoundBankPostGenerateCustomCmdDescription" Type="string">
 					<ValueList>
+<<<<<<< HEAD
 						<Value Platform="Mac">Copy Streamed Files</Value>
+=======
+>>>>>>> Commit fra PC
 						<Value Platform="Windows">Copy Streamed Files</Value>
 					</ValueList>
 				</Property>
 				<Property Name="SoundBankPostGenerateCustomCmdLines" Type="string">
 					<ValueList>
+<<<<<<< HEAD
 						<Value Platform="Mac">"$(WwiseExePath)\CopyStreamedFiles.exe" -info "$(InfoFilePath)" -outputpath "$(SoundBankPath)" -banks "$(SoundBankListAsTextFile)" -languages "$(LanguageList)"</Value>
+=======
+>>>>>>> Commit fra PC
 						<Value Platform="Windows">"$(WwiseExePath)\CopyStreamedFiles.exe" -info "$(InfoFilePath)" -outputpath "$(SoundBankPath)" -banks "$(SoundBankListAsTextFile)" -languages "$(LanguageList)"</Value>
 					</ValueList>
 				</Property>
 				<Property Name="SoundBankPreGenerateCustomCmdDescription" Type="string">
 					<ValueList>
+<<<<<<< HEAD
 						<Value Platform="Mac"></Value>
+=======
+>>>>>>> Commit fra PC
 						<Value Platform="Windows"></Value>
 					</ValueList>
 				</Property>
 				<Property Name="SoundBankPreGenerateCustomCmdLines" Type="string">
 					<ValueList>
+<<<<<<< HEAD
 						<Value Platform="Mac"></Value>
+=======
+>>>>>>> Commit fra PC
 						<Value Platform="Windows"></Value>
 					</ValueList>
 				</Property>
@@ -8171,6 +8201,7 @@
 						</Property>
 					</PropertyList>
 				</SharedPropertyList>
+<<<<<<< HEAD
 				<SharedPropertyList ClassName="Wwise Convolution Reverb" PluginType="3" CompanyID="0" PluginID="127">
 					<PropertyList>
 						<Property Name="AlgoTypeSelect" Type="int32">
@@ -8325,6 +8356,8 @@
 						</Property>
 					</PropertyList>
 				</SharedPropertyList>
+=======
+>>>>>>> Commit fra PC
 				<SharedPropertyList ClassName="Wwise Meter" PluginType="3" CompanyID="0" PluginID="129">
 					<PropertyList>
 						<Property Name="AttackTime" Type="Real32">
@@ -9287,7 +9320,11 @@
 					<Comment></Comment>
 					<ObsOccCurve CurveXType="Obstruction" CurveYType="Volume">
 						<PlatformCurve Platform="Linked" EnableCurve="true">
+<<<<<<< HEAD
 							<Curve Name="" ID="{7859B55D-3DD5-447D-9400-A261E2A4E56B}">
+=======
+							<Curve Name="" ID="{A229957C-7653-4EBA-A825-FEF23D2B4837}">
+>>>>>>> Commit fra PC
 								<PropertyList>
 									<Property Name="Flags" Type="int32" Value="3" />
 								</PropertyList>
@@ -9308,7 +9345,11 @@
 					</ObsOccCurve>
 					<ObsOccCurve CurveXType="Obstruction" CurveYType="LPF">
 						<PlatformCurve Platform="Linked" EnableCurve="true">
+<<<<<<< HEAD
 							<Curve Name="" ID="{5045C0F5-316D-424E-9B16-069BDE26F0CD}">
+=======
+							<Curve Name="" ID="{6B239DE5-89CB-4B36-A929-F8BA2464438C}">
+>>>>>>> Commit fra PC
 								<PropertyList>
 									<Property Name="Flags" Type="int32" Value="1" />
 								</PropertyList>
@@ -9329,7 +9370,11 @@
 					</ObsOccCurve>
 					<ObsOccCurve CurveXType="Obstruction" CurveYType="HPF">
 						<PlatformCurve Platform="Linked" EnableCurve="false">
+<<<<<<< HEAD
 							<Curve Name="" ID="{C45E16F6-AF7F-4296-A797-0841A47E35C3}">
+=======
+							<Curve Name="" ID="{D66A946F-9262-4980-BE24-83CA505E015D}">
+>>>>>>> Commit fra PC
 								<PropertyList>
 									<Property Name="Flags" Type="int32" Value="1" />
 								</PropertyList>
@@ -9350,7 +9395,11 @@
 					</ObsOccCurve>
 					<ObsOccCurve CurveXType="Occlusion" CurveYType="Volume">
 						<PlatformCurve Platform="Linked" EnableCurve="true">
+<<<<<<< HEAD
 							<Curve Name="" ID="{17045EE3-C1A1-4238-B385-5CE6546D37C5}">
+=======
+							<Curve Name="" ID="{CDC52986-008D-4458-A46A-D7E27EAEA3CF}">
+>>>>>>> Commit fra PC
 								<PropertyList>
 									<Property Name="Flags" Type="int32" Value="3" />
 								</PropertyList>
@@ -9371,7 +9420,11 @@
 					</ObsOccCurve>
 					<ObsOccCurve CurveXType="Occlusion" CurveYType="LPF">
 						<PlatformCurve Platform="Linked" EnableCurve="true">
+<<<<<<< HEAD
 							<Curve Name="" ID="{BEBFFC74-8CD2-4B07-BEA0-BEE2A0A8B96F}">
+=======
+							<Curve Name="" ID="{9CFF5EC0-3765-4032-8176-E9F35DB4D445}">
+>>>>>>> Commit fra PC
 								<PropertyList>
 									<Property Name="Flags" Type="int32" Value="1" />
 								</PropertyList>
@@ -9392,7 +9445,11 @@
 					</ObsOccCurve>
 					<ObsOccCurve CurveXType="Occlusion" CurveYType="HPF">
 						<PlatformCurve Platform="Linked" EnableCurve="false">
+<<<<<<< HEAD
 							<Curve Name="" ID="{A8F67986-F880-4832-BD9A-B0F431AD7483}">
+=======
+							<Curve Name="" ID="{85DBE879-6577-43AC-8F91-1DB288A1A2CA}">
+>>>>>>> Commit fra PC
 								<PropertyList>
 									<Property Name="Flags" Type="int32" Value="1" />
 								</PropertyList>

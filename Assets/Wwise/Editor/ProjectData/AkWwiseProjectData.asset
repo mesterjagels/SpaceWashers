@@ -8,13 +8,18 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
+<<<<<<< HEAD
   m_Script: {fileID: 11500000, guid: 16c95f5455d6445c9b82a5d0b2b76cef, type: 3}
+=======
+  m_Script: {fileID: 11500000, guid: 7674afcf63fdb034abcc803c9b58a01b, type: 3}
+>>>>>>> Commit fra PC
   m_Name: AkWwiseProjectData
   m_EditorClassIdentifier: 
   CurrentPluginConfig: Profile
   EventWwu:
   - PhysicalPath: Events\Default Work Unit.wwu
     ParentPhysicalPath: 
+<<<<<<< HEAD
     Guid: '{B0CEAF43-BBC5-4227-A71F-F166445AE05A}'
     m_lastTimePsrt1: 212130964
     m_lastTimePart2: -1999412182
@@ -184,24 +189,52 @@ MonoBehaviour:
         ObjectType: 3
       ID: -1137964055
       Guid: f53d5af4150cd04b809d7a71058f3f29
+=======
+    Guid: '{775366B4-26E6-443A-B2B4-76C56B03934F}'
+    m_lastTimePsrt1: 222282086
+    m_lastTimePart2: -1999418143
+    List:
+    - Name: PlopEvent
+      Path: Default Work Unit\PlopEvent
+      PathAndIcons:
+      - ElementName: Default Work Unit
+        ObjectType: 12
+      - ElementName: PlopEvent
+        ObjectType: 3
+      ID: 1919418076
+      Guid: 200288351a4e0146b88830b5bdfc4271
+>>>>>>> Commit fra PC
       maxAttenuation: 0
   AuxBusWwu:
   - PhysicalPath: Master-Mixer Hierarchy\Default Work Unit.wwu
     ParentPhysicalPath: 
+<<<<<<< HEAD
     Guid: '{AF6F5C06-D009-4B55-8318-085465639372}'
     m_lastTimePsrt1: -1996282177
     m_lastTimePart2: -1999412577
+=======
+    Guid: '{E8439A0E-2D8A-4865-B06F-4238910BEF99}'
+    m_lastTimePsrt1: -1761982264
+    m_lastTimePart2: -1999418145
+>>>>>>> Commit fra PC
     List: []
   StateWwu:
   - PhysicalPath: States\Default Work Unit.wwu
     ParentPhysicalPath: 
+<<<<<<< HEAD
     Guid: '{1CCDD674-A4AE-4CBB-9114-2645D93A9AA4}'
     m_lastTimePsrt1: -1987071651
     m_lastTimePart2: -1999412577
+=======
+    Guid: '{A3ACA855-7690-486D-80A8-CCEFE8C62776}'
+    m_lastTimePsrt1: -1761992288
+    m_lastTimePart2: -1999418145
+>>>>>>> Commit fra PC
     List: []
   SwitchWwu:
   - PhysicalPath: Switches\Default Work Unit.wwu
     ParentPhysicalPath: 
+<<<<<<< HEAD
     Guid: '{3E9B5808-472F-47E2-8E3D-485ADA80A05E}'
     m_lastTimePsrt1: -1987071651
     m_lastTimePart2: -1999412577
@@ -248,6 +281,38 @@ MonoBehaviour:
   m_lastPopulateTimePart2: 0
   autoPopulateEnabled: 1
   basePath: Audio/GeneratedSoundBanks
+=======
+    Guid: '{C8280359-4087-4014-900D-BDC51B4DE00E}'
+    m_lastTimePsrt1: -1761997302
+    m_lastTimePart2: -1999418145
+    List: []
+  BankWwu:
+  - PhysicalPath: SoundBanks\Default Work Unit.wwu
+    ParentPhysicalPath: 
+    Guid: '{EC3C476B-7D5B-4E3E-AE7F-1558323B4BF6}'
+    m_lastTimePsrt1: 222116831
+    m_lastTimePart2: -1999418143
+    List:
+    - Name: MAIN
+      Path: Default Work Unit\MAIN
+      PathAndIcons:
+      - ElementName: Default Work Unit
+        ObjectType: 12
+      - ElementName: MAIN
+        ObjectType: 7
+      ID: -1133058374
+      Guid: b579cadd5c4e3f46897357052a155eb5
+  ExpandedItems:
+  - /Wwise
+  - /Wwise/Events
+  - /Wwise/Events/Default Work Unit
+  - /Wwise/SoundBanks
+  - /Wwise/SoundBanks/Default Work Unit
+  m_lastPopulateTimePsrt1: 0
+  m_lastPopulateTimePart2: 0
+  autoPopulateEnabled: 1
+  basePath: Audio\GeneratedSoundBanks
+>>>>>>> Commit fra PC
   language: English(US)
   defaultPoolSize: 4096
   lowerPoolSize: 2048

@@ -1,6 +1,12 @@
 <?xml version="1.0" encoding="utf-8"?>
+<<<<<<< HEAD
 <WwiseDocument Type="WorkUnit" ID="{F38E170A-4462-4583-95E6-E12C160BF689}" SchemaVersion="70">
 	<Modulators>
 		<WorkUnit Name="Default Work Unit" ID="{F38E170A-4462-4583-95E6-E12C160BF689}" PersistMode="Standalone"/>
+=======
+<WwiseDocument Type="WorkUnit" ID="{C0945C4D-94CB-4EBB-B8C3-FC09862343BE}" SchemaVersion="70">
+	<Modulators>
+		<WorkUnit Name="Default Work Unit" ID="{C0945C4D-94CB-4EBB-B8C3-FC09862343BE}" PersistMode="Standalone"/>
+>>>>>>> Commit fra PC
 	</Modulators>
 </WwiseDocument>

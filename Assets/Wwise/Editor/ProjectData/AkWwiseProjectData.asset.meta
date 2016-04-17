@@ -1,6 +1,11 @@
 fileFormatVersion: 2
+<<<<<<< HEAD
 guid: dcc69cef5e113473a99a97344861997e
 timeCreated: 1459856206
+=======
+guid: 927ec9590e14d92478afc455a751b484
+timeCreated: 1458052894
+>>>>>>> Commit fra PC
 licenseType: Free
 NativeFormatImporter:
   userData: 

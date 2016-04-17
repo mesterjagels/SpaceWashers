@@ -1,16 +1,25 @@
 <?xml version="1.0" encoding="utf-8"?>
 <SoundBanksInfo Platform="Windows" BasePlatform="Windows" SchemaVersion="10" SoundbankVersion="113">
 	<RootPaths>
+<<<<<<< HEAD
 		<ProjectRoot>/Users/AndreasLagerstedt/Library/Application Support/Wwise/Bottles/wwise/dosdevices/y:/Spiludvikling/Game Developments/Wwise/</ProjectRoot>
 		<SourceFilesRoot>/Users/AndreasLagerstedt/Library/Application Support/Wwise/Bottles/wwise/dosdevices/y:/Spiludvikling/Game Developments/Wwise/.cache/Windows/</SourceFilesRoot>
 		<SoundBanksRoot>/Users/AndreasLagerstedt/Library/Application Support/Wwise/Bottles/wwise/dosdevices/y:/Spiludvikling/Game Developments/Wwise/GeneratedSoundBanks/Windows/</SoundBanksRoot>
 		<ExternalSourcesInputFile></ExternalSourcesInputFile>
 		<ExternalSourcesOutputRoot>/Users/AndreasLagerstedt/Library/Application Support/Wwise/Bottles/wwise/dosdevices/y:/Spiludvikling/Game Developments/Wwise/GeneratedSoundBanks/Windows/</ExternalSourcesOutputRoot>
+=======
+		<ProjectRoot>X:\UnityProjects\Space Washers\Wwise\</ProjectRoot>
+		<SourceFilesRoot>X:\UnityProjects\Space Washers\Wwise\.cache\Windows\</SourceFilesRoot>
+		<SoundBanksRoot>X:\UnityProjects\Space Washers\Wwise\GeneratedSoundBanks\Windows\</SoundBanksRoot>
+		<ExternalSourcesInputFile></ExternalSourcesInputFile>
+		<ExternalSourcesOutputRoot>X:\UnityProjects\Space Washers\Wwise\GeneratedSoundBanks\Windows\</ExternalSourcesOutputRoot>
+>>>>>>> Commit fra PC
 	</RootPaths>
 	<DialogueEvents/>
 	<StreamedFiles/>
 	<MediaFilesNotInAnyBank/>
 	<SoundBanks>
+<<<<<<< HEAD
 		<SoundBank Id="534561221" Language="SFX">
 			<ShortName>MainSoundbank</ShortName>
 			<Path>MainSoundbank.bnk</Path>
@@ -79,5 +88,24 @@
 			<ShortName>Init</ShortName>
 			<Path>Init.bnk</Path>
 		</SoundBank>
+=======
+		<SoundBank Id="1355168291" Language="SFX">
+			<ShortName>Init</ShortName>
+			<Path>Init.bnk</Path>
+		</SoundBank>
+		<SoundBank Id="3161908922" Language="SFX">
+			<ShortName>MAIN</ShortName>
+			<Path>MAIN.bnk</Path>
+			<IncludedEvents>
+				<Event Id="1919418076" Name="PlopEvent"/>
+			</IncludedEvents>
+			<IncludedMemoryFiles>
+				<File Id="119554571" Language="SFX">
+					<ShortName>Plop.wav</ShortName>
+					<Path>SFX\Plop_9E69E797.wem</Path>
+				</File>
+			</IncludedMemoryFiles>
+		</SoundBank>
+>>>>>>> Commit fra PC
 	</SoundBanks>
 </SoundBanksInfo>

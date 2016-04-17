@@ -1,4 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
+<<<<<<< HEAD
 <WwiseDocument Type="WorkUnit" ID="{72212674-B2C2-49C4-9D6F-91A524068B0C}" SchemaVersion="70">
 	<AudioObjects>
 		<WorkUnit Name="Default Work Unit" ID="{72212674-B2C2-49C4-9D6F-91A524068B0C}" PersistMode="Standalone">
@@ -651,6 +652,31 @@
 						</Sound>
 					</ChildrenList>
 				</Folder>
+=======
+<WwiseDocument Type="WorkUnit" ID="{35950EB1-852C-4325-BC63-A0CCD3B5C07E}" SchemaVersion="70">
+	<AudioObjects>
+		<WorkUnit Name="Default Work Unit" ID="{35950EB1-852C-4325-BC63-A0CCD3B5C07E}" PersistMode="Standalone">
+			<ChildrenList>
+				<Sound Name="Plop" ID="{0A81D915-4C4F-4883-9AF6-6DA3C31F3C67}" ShortID="211195604" Type="SoundFX">
+					<ReferenceList>
+						<Reference Name="Conversion">
+							<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{9E1D8CBF-0452-4789-8A99-40B595EEF185}"/>
+						</Reference>
+						<Reference Name="OutputBus">
+							<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{E8439A0E-2D8A-4865-B06F-4238910BEF99}"/>
+						</Reference>
+					</ReferenceList>
+					<ChildrenList>
+						<AudioFileSource Name="Plop" ID="{5183F045-59B4-4FC1-A54E-51A35F49A53D}" ShortID="119554571">
+							<Language>SFX</Language>
+							<AudioFile>Plop.wav</AudioFile>
+						</AudioFileSource>
+					</ChildrenList>
+					<ActiveSourceList>
+						<ActiveSource Name="Plop" ID="{5183F045-59B4-4FC1-A54E-51A35F49A53D}" Platform="Linked"/>
+					</ActiveSourceList>
+				</Sound>
+>>>>>>> Commit fra PC
 			</ChildrenList>
 		</WorkUnit>
 	</AudioObjects>

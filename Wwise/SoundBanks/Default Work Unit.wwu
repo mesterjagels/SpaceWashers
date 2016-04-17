@@ -1,4 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
+<<<<<<< HEAD
 <WwiseDocument Type="WorkUnit" ID="{1EC8FF26-FD5B-4639-92A0-D63C2341B432}" SchemaVersion="70">
 	<SoundBanks>
 		<WorkUnit Name="Default Work Unit" ID="{1EC8FF26-FD5B-4639-92A0-D63C2341B432}" PersistMode="Standalone">
@@ -13,6 +14,15 @@
 						<ObjectRef Name="spaceshipShieldDry" ID="{0F247E91-C2B4-4329-8BE6-DDC1CCB142C8}" WorkUnitID="{B0CEAF43-BBC5-4227-A71F-F166445AE05A}" Filter="7" Origin="Manual"/>
 						<ObjectRef Name="spaceshipThrusters" ID="{11BD62E6-7E3B-4538-8107-F928C9C9F653}" WorkUnitID="{B0CEAF43-BBC5-4227-A71F-F166445AE05A}" Filter="7" Origin="Manual"/>
 						<ObjectRef Name="Test" ID="{F45A3DF5-0C15-4BD0-809D-7A71058F3F29}" WorkUnitID="{B0CEAF43-BBC5-4227-A71F-F166445AE05A}" Filter="7" Origin="Manual"/>
+=======
+<WwiseDocument Type="WorkUnit" ID="{EC3C476B-7D5B-4E3E-AE7F-1558323B4BF6}" SchemaVersion="70">
+	<SoundBanks>
+		<WorkUnit Name="Default Work Unit" ID="{EC3C476B-7D5B-4E3E-AE7F-1558323B4BF6}" PersistMode="Standalone">
+			<ChildrenList>
+				<SoundBank Name="MAIN" ID="{DDCA79B5-4E5C-463F-8973-57052A155EB5}">
+					<ObjectInclusionList>
+						<ObjectRef Name="PlopEvent" ID="{35880220-4E1A-4601-B888-30B5BDFC4271}" WorkUnitID="{775366B4-26E6-443A-B2B4-76C56B03934F}" Filter="7" Origin="Manual"/>
+>>>>>>> Commit fra PC
 					</ObjectInclusionList>
 					<ObjectExclusionList/>
 					<GameSyncExclusionList/>

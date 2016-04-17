@@ -1,7 +1,14 @@
 fileFormatVersion: 2
+<<<<<<< HEAD
 guid: 5c92fe98a141149d0b5c8b726ff80e3a
 folderAsset: yes
 timeCreated: 1457627112
+=======
+guid: 9533f15dc0a20fa449e2034998a8a144
+folderAsset: yes
+timeCreated: 1457624450
+licenseType: Free
+>>>>>>> Commit fra PC
 DefaultImporter:
   userData: 
   assetBundleName: 

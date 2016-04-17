@@ -1,4 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
+<<<<<<< HEAD
 <WwiseDocument Type="WorkUnit" ID="{5FFFB265-F525-4B64-B554-71B22CAD1F7B}" SchemaVersion="70">
 	<GameParameters>
 		<WorkUnit Name="Default Work Unit" ID="{5FFFB265-F525-4B64-B554-71B22CAD1F7B}" PersistMode="Standalone">
@@ -6,5 +7,10 @@
 				<GameParameter Name="thrusterSpeed" ID="{A5D52048-268D-4777-BC2B-59833DB7900A}"/>
 			</ChildrenList>
 		</WorkUnit>
+=======
+<WwiseDocument Type="WorkUnit" ID="{FA479EBF-D827-4FEA-B30D-9942B77A7420}" SchemaVersion="70">
+	<GameParameters>
+		<WorkUnit Name="Default Work Unit" ID="{FA479EBF-D827-4FEA-B30D-9942B77A7420}" PersistMode="Standalone"/>
+>>>>>>> Commit fra PC
 	</GameParameters>
 </WwiseDocument>

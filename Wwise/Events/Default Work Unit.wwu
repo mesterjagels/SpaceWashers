@@ -1,4 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
+<<<<<<< HEAD
 <WwiseDocument Type="WorkUnit" ID="{B0CEAF43-BBC5-4227-A71F-F166445AE05A}" SchemaVersion="70">
 	<Events>
 		<WorkUnit Name="Default Work Unit" ID="{B0CEAF43-BBC5-4227-A71F-F166445AE05A}" PersistMode="Standalone">
@@ -138,6 +139,23 @@
 					</ChildrenList>
 				</Folder>
 				<Event Name="Test" ID="{F45A3DF5-0C15-4BD0-809D-7A71058F3F29}"/>
+=======
+<WwiseDocument Type="WorkUnit" ID="{775366B4-26E6-443A-B2B4-76C56B03934F}" SchemaVersion="70">
+	<Events>
+		<WorkUnit Name="Default Work Unit" ID="{775366B4-26E6-443A-B2B4-76C56B03934F}" PersistMode="Standalone">
+			<ChildrenList>
+				<Event Name="PlopEvent" ID="{35880220-4E1A-4601-B888-30B5BDFC4271}">
+					<ChildrenList>
+						<Action Name="Play" ID="{59E70238-26E5-40A0-96EE-BC4BAC901489}" ShortID="594386988" Type="Play" Scope="One" Global="false">
+							<ElementList>
+								<Element ID="{0202430C-BC58-4101-9840-C1F41994E524}" Global="false">
+									<ObjectRef Name="Plop" ID="{0A81D915-4C4F-4883-9AF6-6DA3C31F3C67}" WorkUnitID="{35950EB1-852C-4325-BC63-A0CCD3B5C07E}"/>
+								</Element>
+							</ElementList>
+						</Action>
+					</ChildrenList>
+				</Event>
+>>>>>>> Commit fra PC
 			</ChildrenList>
 		</WorkUnit>
 	</Events>

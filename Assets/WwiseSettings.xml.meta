@@ -1,6 +1,11 @@
 fileFormatVersion: 2
+<<<<<<< HEAD
 guid: b2e51db6b5d8d4345a3b076fcd0fcfc6
 timeCreated: 1459856274
+=======
+guid: 1fa4daccccf2e73478312481e279397d
+timeCreated: 1458052917
+>>>>>>> Commit fra PC
 licenseType: Free
 TextScriptImporter:
   userData: 

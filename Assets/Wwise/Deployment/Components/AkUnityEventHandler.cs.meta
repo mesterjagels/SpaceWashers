@@ -1,6 +1,11 @@
 fileFormatVersion: 2
+<<<<<<< HEAD
 guid: 5d6649b1d21544ec3969e418461d575c
 timeCreated: 1459856197
+=======
+guid: e369a8ccbb797ab45a84f5917bf758ac
+timeCreated: 1458052890
+>>>>>>> Commit fra PC
 licenseType: Free
 MonoImporter:
   serializedVersion: 2

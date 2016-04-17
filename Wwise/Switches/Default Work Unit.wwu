@@ -1,4 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
+<<<<<<< HEAD
 <WwiseDocument Type="WorkUnit" ID="{3E9B5808-472F-47E2-8E3D-485ADA80A05E}" SchemaVersion="70">
 	<Switches>
 		<WorkUnit Name="Default Work Unit" ID="{3E9B5808-472F-47E2-8E3D-485ADA80A05E}" PersistMode="Standalone">
@@ -11,5 +12,10 @@
 				</SwitchGroup>
 			</ChildrenList>
 		</WorkUnit>
+=======
+<WwiseDocument Type="WorkUnit" ID="{C8280359-4087-4014-900D-BDC51B4DE00E}" SchemaVersion="70">
+	<Switches>
+		<WorkUnit Name="Default Work Unit" ID="{C8280359-4087-4014-900D-BDC51B4DE00E}" PersistMode="Standalone"/>
+>>>>>>> Commit fra PC
 	</Switches>
 </WwiseDocument>

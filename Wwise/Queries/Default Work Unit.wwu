@@ -1,6 +1,12 @@
 <?xml version="1.0" encoding="utf-8"?>
+<<<<<<< HEAD
 <WwiseDocument Type="WorkUnit" ID="{54608388-7EE9-4CB0-9924-15105AB51728}" SchemaVersion="70">
 	<Queries>
 		<WorkUnit Name="Default Work Unit" ID="{54608388-7EE9-4CB0-9924-15105AB51728}" PersistMode="Standalone"/>
+=======
+<WwiseDocument Type="WorkUnit" ID="{79D47E9C-466A-46CC-8726-BE388D8AE07B}" SchemaVersion="70">
+	<Queries>
+		<WorkUnit Name="Default Work Unit" ID="{79D47E9C-466A-46CC-8726-BE388D8AE07B}" PersistMode="Standalone"/>
+>>>>>>> Commit fra PC
 	</Queries>
 </WwiseDocument>

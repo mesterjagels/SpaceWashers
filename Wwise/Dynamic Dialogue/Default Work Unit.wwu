@@ -1,6 +1,12 @@
 <?xml version="1.0" encoding="utf-8"?>
+<<<<<<< HEAD
 <WwiseDocument Type="WorkUnit" ID="{A12CC68C-B4E4-4ADF-A348-172E12A098A2}" SchemaVersion="70">
 	<DynamicDialogue>
 		<WorkUnit Name="Default Work Unit" ID="{A12CC68C-B4E4-4ADF-A348-172E12A098A2}" PersistMode="Standalone"/>
+=======
+<WwiseDocument Type="WorkUnit" ID="{F4F8146B-6019-41CA-90DE-BE55258826B1}" SchemaVersion="70">
+	<DynamicDialogue>
+		<WorkUnit Name="Default Work Unit" ID="{F4F8146B-6019-41CA-90DE-BE55258826B1}" PersistMode="Standalone"/>
+>>>>>>> Commit fra PC
 	</DynamicDialogue>
 </WwiseDocument>
