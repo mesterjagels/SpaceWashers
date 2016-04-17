@@ -1,0 +1,48 @@
+Event	ID	Name			Wwise Object Path	Notes
+	1017248145	spaceshipShieldUnable			\Default Work Unit\Spaceship\spaceshipShieldUnable	
+	2504043352	spaceshipBoost			\Default Work Unit\Spaceship\spaceshipBoost	
+	3011798751	spaceshipShieldDry			\Default Work Unit\Spaceship\spaceshipShieldDry	
+	3030433551	spaceshipThrusters			\Default Work Unit\Spaceship\spaceshipThrusters	
+	3157003241	Test			\Default Work Unit\Test	
+	3424209326	spaceshipBoostStatus			\Default Work Unit\Spaceship\spaceshipBoostStatus	
+	3978528892	spaceshipShield			\Default Work Unit\Spaceship\spaceshipShield	
+	4148269026	spaceshipShieldImpact			\Default Work Unit\Spaceship\spaceshipShieldImpact	
+
+Switch Group	ID	Name			Wwise Object Path	Notes
+	452629428	Spaceship_Boost_Status			\Default Work Unit\Spaceship_Boost_Status	
+
+Switch	ID	Name	Switch Group			Notes
+	2130572680	Unable	Spaceship_Boost_Status			
+	2510516222	Full	Spaceship_Boost_Status			
+
+Game Parameter	ID	Name			Wwise Object Path	Notes
+	823839643	thrusterSpeed			\Default Work Unit\thrusterSpeed	
+
+Modulator Envelope	ID	Name			Wwise Object Path	Notes
+	817951452	Modulator Envelope (Custom)				
+
+Effect plug-ins	ID	Name	Type				Notes
+	6633525	One_Tap_Half_Second (Custom)	Wwise Delay			
+	776837744	Born_In_1950	Wwise Parametric EQ			
+	842301852	Wwise Guitar Distortion (Custom)	Wwise Guitar Distortion			
+	1008402193	Low_Pass_20KHz	Wwise Parametric EQ			
+	1068644088	Wwise Guitar Distortion (Custom)	Wwise Guitar Distortion			
+	3604890626	High_Pass_60Hz	Wwise Parametric EQ			
+
+Source plug-ins	ID	Name	Type		Wwise Object Path	Notes
+	959651841	Wwise Synth One	Wwise Synth One		\Actor-Mixer Hierarchy\Default Work Unit\New Virtual Folder\thrustersHigh\Wwise Synth One	
+
+In Memory Audio	ID	Name	Audio source file		Wwise Object Path	Notes	Data Size
+	36554443	thrustersLow	Y:\Spiludvikling\Game Developments\Wwise\.cache\Windows\SFX\thrusters_4B8CC0C5.wem		\Actor-Mixer Hierarchy\Default Work Unit\New Virtual Folder\thrustersLow		377880
+	292275680	shield_unable	Y:\Spiludvikling\Game Developments\Wwise\.cache\Windows\SFX\shield_unable_9E69E797.wem		\Actor-Mixer Hierarchy\Default Work Unit\shield_unable		84064
+	341881403	shield_off	Y:\Spiludvikling\Game Developments\Wwise\.cache\Windows\SFX\shield_off_9E69E797.wem		\Actor-Mixer Hierarchy\Default Work Unit\Shield Sequence\shield_off		60064
+	450443388	shield_dry	Y:\Spiludvikling\Game Developments\Wwise\.cache\Windows\SFX\shield_dry_122276DC.wem		\Actor-Mixer Hierarchy\Default Work Unit\shield_dry		183496
+	578150549	boost_full	Y:\Spiludvikling\Game Developments\Wwise\.cache\Windows\SFX\boost_full_42A4DA44.wem		\Actor-Mixer Hierarchy\Default Work Unit\Spaceship_Boost_Status\boost_full		108064
+	812466626	boost_start	Y:\Spiludvikling\Game Developments\Wwise\.cache\Windows\SFX\boost_start_9E69E797.wem		\Actor-Mixer Hierarchy\Default Work Unit\Boost Sequence\Boost Ignition\boost_start		192064
+	822492927	shield_loop	Y:\Spiludvikling\Game Developments\Wwise\.cache\Windows\SFX\shield_loop_4B8CC0C5.wem		\Actor-Mixer Hierarchy\Default Work Unit\Shield Sequence\Shield Engage\shield_loop		768064
+	825375094	boost_end	Y:\Spiludvikling\Game Developments\Wwise\.cache\Windows\SFX\boost_end_9E69E797.wem		\Actor-Mixer Hierarchy\Default Work Unit\Boost Sequence\boost_end		192064
+	856839015	boost_loop	Y:\Spiludvikling\Game Developments\Wwise\.cache\Windows\SFX\boost_loop_4B8CC0C5.wem		\Actor-Mixer Hierarchy\Default Work Unit\Boost Sequence\Boost Ignition\boost_loop		576064
+	881683486	shield_impact	Y:\Spiludvikling\Game Developments\Wwise\.cache\Windows\SFX\shield_impact_9E69E797.wem		\Actor-Mixer Hierarchy\Default Work Unit\shield_impact		200836
+	931558804	shield_on	Y:\Spiludvikling\Game Developments\Wwise\.cache\Windows\SFX\shield_on_9E69E797.wem		\Actor-Mixer Hierarchy\Default Work Unit\Shield Sequence\Shield Engage\shield_on		24064
+	964095035	boost_unable	Y:\Spiludvikling\Game Developments\Wwise\.cache\Windows\SFX\boost_unable_2C050C84.wem		\Actor-Mixer Hierarchy\Default Work Unit\Spaceship_Boost_Status\boost_unable		64700
+

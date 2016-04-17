@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<IncrementalBankBuild Version="4" Flags="878078161">
+<<<<<<< HEAD
+	<Platform GUID="{FEE67A5B-943A-42FF-B6A2-C75541C820FB}">
+		<Language ID="0">
+			<Bank Name="Init" Hash="2779699799" StreamHash="157587662" Timestamp="131045041830000000"/>
+			<Bank Name="MainSoundbank" Hash="2869064261" StreamHash="157587662" Timestamp="131046731910000000"/>
+		</Language>
+	</Platform>
+	<Platform GUID="{4F21336A-DEF8-43AF-9D2D-D949A7F1B3D9}">
+		<Language ID="0">
+			<Bank Name="Init" Hash="1969434988" StreamHash="157587662" Timestamp="131045041830000000"/>
+			<Bank Name="MainSoundbank" Hash="2869064261" StreamHash="157587662" Timestamp="131046731910000000"/>
+=======
+	<Platform GUID="{29940BD4-58BE-4F9A-B70A-DC5859E4A859}">
+		<Language ID="0">
+			<Bank Name="Init" Hash="3958984000" StreamHash="157587662" Timestamp="131025269532062233"/>
+			<Bank Name="MAIN" Hash="4042848415" StreamHash="157587662" Timestamp="131025269532042183"/>
+>>>>>>> Commit fra PC
+		</Language>
+	</Platform>
+</IncrementalBankBuild>
