@@ -7,21 +7,12 @@ public class PlanetShredder : MonoBehaviour {
     {
         if (col.gameObject.CompareTag("Planet"))
         {
-            Debug.Log("Planet destroyed");
+          //  Debug.Log("Planet destroyed");
             Destroy(col.gameObject);
         } else if (col.gameObject.CompareTag("Obstacle"))
         {
-            Debug.Log("Spacetrash shredded");
-            Destroy(col.gameObject);
-        }
-    }
-
-    void OnCollisionEnter2D(Collision2D other)
-    {
-        if (other.gameObject.CompareTag("Obstacle"))
-        {
-            Debug.Log("Spacetrash shredded");
-            Destroy(other.gameObject);
+           // Debug.Log("Spacetrash deactivated from OnTriggerEnter2d");
+            col.gameObject.SetActive(false); 
         }
     }
 }
