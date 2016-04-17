@@ -1,17 +1,5 @@
 fileFormatVersion: 2
-<<<<<<< a9c4fdda4bcc48c5a480db032bfaefa257b50c38
-<<<<<<< HEAD
 guid: 57ef6377d94852b4ca58dad32ec1f38a
-timeCreated: 1460033231
-=======
-guid: 18f39acc55705ef4283679b479372602
-timeCreated: 1460460465
->>>>>>> Updated import settings for dirt sprites
-=======
-guid: 18292dded97df469baa88fd088c75fb9
-timeCreated: 1460050798
->>>>>>> More Wwise things.
-licenseType: Free
 TextureImporter:
   fileIDToRecycleName: {}
   serializedVersion: 2
@@ -27,32 +15,16 @@ TextureImporter:
   bumpmap:
     convertToNormalMap: 0
     externalNormalMap: 0
-    heightScale: 0.25
+    heightScale: .25
     normalMapFilter: 0
-<<<<<<< a9c4fdda4bcc48c5a480db032bfaefa257b50c38
-<<<<<<< HEAD
-  isReadable: 0
-=======
   isReadable: 1
->>>>>>> Updated import settings for dirt sprites
-=======
-  isReadable: 0
->>>>>>> More Wwise things.
   grayScaleToAlpha: 0
   generateCubemap: 0
   cubemapConvolution: 0
-  cubemapConvolutionSteps: 7
+  cubemapConvolutionSteps: 8
   cubemapConvolutionExponent: 1.5
   seamlessCubemap: 0
-<<<<<<< a9c4fdda4bcc48c5a480db032bfaefa257b50c38
-<<<<<<< HEAD
-  textureFormat: -1
-=======
   textureFormat: 5
->>>>>>> Updated import settings for dirt sprites
-=======
-  textureFormat: -1
->>>>>>> More Wwise things.
   maxTextureSize: 2048
   textureSettings:
     filterMode: -1
@@ -68,25 +40,14 @@ TextureImporter:
   spriteExtrude: 1
   spriteMeshType: 1
   alignment: 0
-  spritePivot: {x: 0.5, y: 0.5}
+  spritePivot: {x: .5, y: .5}
   spriteBorder: {x: 0, y: 0, z: 0, w: 0}
   spritePixelsToUnits: 100
-<<<<<<< a9c4fdda4bcc48c5a480db032bfaefa257b50c38
-<<<<<<< HEAD
-  alphaIsTransparency: 0
-  textureType: -1
-=======
   alphaIsTransparency: 1
   textureType: 5
->>>>>>> Updated import settings for dirt sprites
-=======
-  alphaIsTransparency: 0
-  textureType: -1
->>>>>>> More Wwise things.
   buildTargetSettings: []
   spriteSheet:
     sprites: []
-    outline: []
   spritePackingTag: 
   userData: 
   assetBundleName: 

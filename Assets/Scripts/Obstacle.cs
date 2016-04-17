@@ -13,8 +13,8 @@ public class Obstacle : MonoBehaviour {
 	// Use this for initialization
 	void Start () {
 		randomHeight = Random.Range (1, 4);
+//		randomHeight = 1;
 		gameObject.transform.name = gameObject.transform.name+randomHeight.ToString();
-
 	}
 	
 	// Update is called once per frame
@@ -40,12 +40,12 @@ public class Obstacle : MonoBehaviour {
 					Debug.Log ("rayhit: " + rayhit.transform.gameObject);
 
 				}
-				if (other.transform.name.Contains ("left")){
-					GetComponent<Rigidbody2D>().velocity = new Vector3 (-50, other.transform.parent.parent.GetComponent<Rigidbody2D>().velocity.y, 0);
-				}
-				if (other.transform.name.Contains ("right")) {
-					GetComponent<Rigidbody2D>().velocity = new Vector3 (50, other.transform.parent.parent.GetComponent<Rigidbody2D>().velocity.y, 0);
-				}
+//				if (other.transform.name.Contains ("left")){
+//					GetComponent<Rigidbody2D>().velocity = new Vector3 (-50, other.transform.parent.parent.GetComponent<Rigidbody2D>().velocity.y, 0);
+//				}
+//				if (other.transform.name.Contains ("right")) {
+//					GetComponent<Rigidbody2D>().velocity = new Vector3 (50, other.transform.parent.parent.GetComponent<Rigidbody2D>().velocity.y, 0);
+//				}
 //				GetComponent<MeshRenderer>().enabled = false;
 				hit = true;
 

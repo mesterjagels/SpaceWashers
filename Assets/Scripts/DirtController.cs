@@ -1,5 +1,6 @@
 ﻿using UnityEngine;
 using System.Collections;
+using System.Collections.Generic;
 
 public class DirtController : MonoBehaviour {
 
@@ -17,6 +18,7 @@ public class DirtController : MonoBehaviour {
 	public int totalPixels;
 	public float curPrcnt;
 	public float minPrcntCleaned;
+	public List <Vector3> randomPos;
 
 //	public int brushSize;
 	// Use this for initialization

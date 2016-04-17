@@ -1,13 +1,12 @@
 ﻿using UnityEngine;
 using System.Collections;
+using System.Collections.Generic;
 
 public class ShipCollider : MonoBehaviour {
 
-//	public Bounds bnds;
 	float randomX, randomY;
 	public GameObject oilDirt, pizzaDirt, toxicDirt, sodaDirt, particle;
-//	public Vector2 spawnPosOffset;
-//	public Vector3 max, min;
+	public List <GameObject> dirts;
 	[Header ("For the top colliders")]
 	public Vector3 topPos;
 	Vector3 posToMoveTo;
@@ -36,19 +35,24 @@ public class ShipCollider : MonoBehaviour {
 		}
 		particleSpawned = true;
 		posToSpawn = new Vector3 (posToSpawn.x, randomY, posToSpawn.z);
-		if (!isTop){
-			GameObject dirty = Instantiate (dirt, new Vector3 (posToSpawn.x+offset.x, posToSpawn.y, posToSpawn.z), Quaternion.identity) as GameObject;
-		//	part = Instantiate (particle, new Vector3 (posToSpawn.x+offset.x, posToSpawn.y, posToSpawn.z-5), Quaternion.identity) as GameObject;
-			dirty.transform.gameObject.name = "DIRT!";
-			dirty.transform.parent = GameObject.FindGameObjectWithTag("Spaceship").transform;
-		}else {
-			randomTopPos = Random.Range (0, 3);
-			GameObject dirty = Instantiate (dirt, transform.position+topPos, Quaternion.identity) as GameObject;
-		//	part = Instantiate (particle, transform.position+topPos, Quaternion.identity) as GameObject;
-		//  part.transform.position = new Vector3 (part.transform.position.x, part.transform.position.y, part.transform.position.z-5);
-			dirty.transform.gameObject.name = "DIRT!";
-			dirty.transform.parent = GameObject.FindGameObjectWithTag("Spaceship").transform;
+//		if (!isTop){
+//			GameObject dirty = Instantiate (dirt, new Vector3 (posToSpawn.x+offset.x, posToSpawn.y, posToSpawn.z), Quaternion.identity) as GameObject;		
+//			dirty.transform.gameObject.name = "DIRT!";
+//			dirty.transform.parent = transform;
+//
+//		}else {
+		int randomDirt = Random.Range (0, dirts.Count);
+		GameObject dirty = Instantiate (dirts[randomDirt], transform.position+topPos, dirts[randomDirt].transform.rotation) as GameObject;
+		dirty.transform.gameObject.name = "DIRT!";
+		dirty.transform.parent = transform;
+		int randomPosition = Random.Range (0, dirty.GetComponent<DirtController>().randomPos.Count);
+		if (this.transform.name.Contains ("left")){
+			dirty.transform.localPosition = dirty.GetComponent<DirtController>().randomPos[randomPosition];
+		}else if (this.transform.name.Contains ("right")) {
+			dirty.transform.localPosition = new Vector3 
+				(-dirty.GetComponent<DirtController>().randomPos[randomPosition].x, dirty.GetComponent<DirtController>().randomPos[randomPosition].y, dirty.GetComponent<DirtController>().randomPos[randomPosition].z);
+			dirty.transform.localScale = new Vector3 (-dirty.transform.localScale.x, dirty.transform.localScale.y, dirty.transform.localScale.z);
 		}
+//		}
 	}
-
 }
