@@ -7,8 +7,9 @@ public class ScrollUV : MonoBehaviour {
     Material mat;
     Vector2 offset;
     GameObject spaceship;
-    public float parralax = 2f;
     int uvMoveSpeed = 20;
+    [Header("Change parallax effect. Higher means slower background movement")]
+    public float parralax = 2f;
 
 	// Use this for initialization
 	void Start () {
