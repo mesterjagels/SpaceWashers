@@ -89,15 +89,15 @@ Material:
         first:
           name: _TextureMG
         second:
-          m_Texture: {fileID: 2800000, guid: 9e3202924e483e448b8b783cdf975215, type: 3}
-          m_Scale: {x: 0.005, y: 0.005}
+          m_Texture: {fileID: 2800000, guid: 9c0f744ecd94d6843b19f64b5f507edd, type: 3}
+          m_Scale: {x: 0.015, y: 0.015}
           m_Offset: {x: 0, y: 0}
       data:
         first:
           name: _TextureBG
         second:
-          m_Texture: {fileID: 2800000, guid: bbf2c695f72a3e7498f405757d4ac0f3, type: 3}
-          m_Scale: {x: 0.001, y: 0.001}
+          m_Texture: {fileID: 2800000, guid: 9e3202924e483e448b8b783cdf975215, type: 3}
+          m_Scale: {x: 0.015, y: 0.015}
           m_Offset: {x: 0, y: 0}
       data:
         first:
