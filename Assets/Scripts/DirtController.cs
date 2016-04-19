@@ -96,10 +96,7 @@ public class DirtController : MonoBehaviour {
 
 	void Cleaned () {
 		//Something happens when the dirt is cleaned
-<<<<<<< HEAD
-=======
         //TODO: put scoring for the different players here 
->>>>>>> Created object pool to spawn obstacles, as well as parallax background
 		Destroy (this.gameObject, 0.5f);
 
         //Increase player score, spawn scrolling score at the position of the destroyed object
