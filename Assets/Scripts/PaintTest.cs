@@ -5,6 +5,8 @@ using System.Collections.Generic;
 
 public class PaintTest : MonoBehaviour {
 
+    public int playerNumber;
+
 	public Texture2D tex;
 	public GameObject spaceship;
 	Renderer rend;
@@ -88,7 +90,7 @@ public class PaintTest : MonoBehaviour {
 //					CalculateStuff ();
 //				}
 				//Debug.Log ("pixeluv: " + pixelUV);
-				hit.transform.GetComponent<DirtController>().Clean (brushSize, pixelUV, this.gameObject);
+				hit.transform.GetComponent<DirtController>().Clean (brushSize, pixelUV, playerNumber);
 			}
 
 		}

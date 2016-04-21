@@ -36,7 +36,7 @@ public class DirtController : MonoBehaviour {
         //  Score related
         playerScore = new int[numberOfPlayers];
 
-		CalculateStuff ();
+		CalculateStuff (0);
 	}
 
 	void OnEnable () {
@@ -44,7 +44,7 @@ public class DirtController : MonoBehaviour {
 	}
 
 	
-	public void Clean (int brushSize, Vector2 pixelUV, GameObject mGameObject) {
+	public void Clean (int brushSize, Vector2 pixelUV, int playerNumber) {
 
 		rend.material.mainTexture = duplicate;
 //		pixelUV = hit.textureCoord;
@@ -64,11 +64,12 @@ public class DirtController : MonoBehaviour {
 		duplicate.SetPixels32 (Mathf.FloorToInt (pixelUV.x), Mathf.FloorToInt (pixelUV.y), brushSize, brushSize, colors);
 //		Debug.Log (Mathf.FloorToInt (pixelUV.x) + " " + Mathf.FloorToInt (pixelUV.y) + " " + brushSize + " " + brushSize + " " + colors);
 		duplicate.Apply ();
-		CalculateStuff ();
+		CalculateStuff (playerNumber);
 
+       
 	}
 
-	public void CalculateStuff () 
+	public void CalculateStuff (int playerNumber) 
 	{
 		alreadyWashed = duplicate.GetPixels32 ();
 		washCount = 0;
@@ -89,16 +90,41 @@ public class DirtController : MonoBehaviour {
 		curPrcnt = ((float)pixelsWashedCount / (float)totalPixels)*100;
 
 		if (curPrcnt > minPrcntCleaned) {
-			Cleaned ();
+            
+            Cleaned(playerNumber);
 		}
 
 	}
 
-	void Cleaned () {
-		//Something happens when the dirt is cleaned
-        //TODO: put scoring for the different players here 
-		Destroy (this.gameObject, 0.5f);
-
+	void Cleaned (int playerNumber) {
         //Increase player score, spawn scrolling score at the position of the destroyed object
-	}
+        //Write what to to with the int PlayerNumber, by sending the score to socreboard
+        switch (playerNumber)
+        {
+            case 0:
+                GameObject.FindGameObjectWithTag("Gamecontroller").GetComponent<ScoreCalculator>().player0Score += 100;
+                Debug.Log("Player 0 has " + GameObject.FindGameObjectWithTag("Gamecontroller").GetComponent<ScoreCalculator>().player0Score + " points");
+                break;
+            case 1:
+                GameObject.FindGameObjectWithTag("Gamecontroller").GetComponent<ScoreCalculator>().player1Score += 100;
+                Debug.Log(GameObject.FindGameObjectWithTag("Gamecontroller").GetComponent<ScoreCalculator>().player1Score);
+
+                break;
+            case 2:
+                GameObject.FindGameObjectWithTag("Gamecontroller").GetComponent<ScoreCalculator>().player2Score += 100;
+                Debug.Log(GameObject.FindGameObjectWithTag("Gamecontroller").GetComponent<ScoreCalculator>().player2Score);
+
+                break;
+            case 3:
+                GameObject.FindGameObjectWithTag("Gamecontroller").GetComponent<ScoreCalculator>().player3Score += 100;
+                Debug.Log(GameObject.FindGameObjectWithTag("Gamecontroller").GetComponent<ScoreCalculator>().player3Score);
+                break;
+        }
+
+        //Something happens when the dirt is cleaned
+        //TODO: put scoring for the different players here 
+        Destroy (this.gameObject, 0.5f);
+        ;
+      
+    }
 }
