@@ -27,7 +27,8 @@ public class Movement : MonoBehaviour {
 	Vector2 ragdollHandVel;
 	public float magnetDelay;
 	public float washHandSpeed;
-
+	DistanceJoint2D [] distJs;
+	public DistanceJoint2D magnetDistJ;
 	[Header ("Movement without controllers")]
 	public KeyCode left; 
 	public KeyCode right, up, down, magnetBoots, detach;
@@ -42,15 +43,15 @@ public class Movement : MonoBehaviour {
 	public bool washing;
 	public Vector3 curVelocity, curShipVel;
 	public Vector2 velX, velZ;
-
+	public bool magnet;
+	public Vector3 posOnShip;
+	public bool stoppingBoost;
 	[HideInInspector]
 	public List <GameObject> childrenNotThis = new List<GameObject>();
 	[HideInInspector]
 	public Rigidbody2D [] childRbs;
 	[HideInInspector]
 	public Rigidbody2D rb, spaceshipRb;
-	[HideInInspector]
-	public bool magnet;
 	[HideInInspector]
 	public InputDevice inputDevice;
 //	public GameObject [] childSprites;
@@ -83,6 +84,12 @@ public class Movement : MonoBehaviour {
 			}
 		}
 
+		distJs = GetComponents<DistanceJoint2D>();
+		foreach (DistanceJoint2D dj in distJs) {
+			if (dj.anchor.y == (-0.1f)){
+				magnetDistJ = dj;
+			}
+		}
 //		if (playerNr == 1) {
 //			lHorAxis = "Horizontal";
 //			lVerAxis = "Vertical";
@@ -208,12 +215,16 @@ public class Movement : MonoBehaviour {
 //			rb.velocity = Vector2.zero+spaceshipRb.velocity;
 //		}
 
-		if (Input.GetKeyDown (magnetBoots) || inputDevice.RightBumper)
+		if (Input.GetKeyDown (magnetBoots) 
+		    || inputDevice.RightBumper
+		    )
 		{
 			Invoke ("Boots", magnetDelay);
 		}
 
-		if (inputDevice.RightStickX != 0 || inputDevice.RightStickY != 0  || Input.GetKey(KeyCode.Space)) {
+		if (Input.GetKey(KeyCode.Space)
+		    || inputDevice.RightStickX != 0 || inputDevice.RightStickY != 0
+		    ) {
 			washing = true;
 //			Debug.Log ("Rhor: " + Input.GetAxis(rHorAxis) + ", rVer: " + Input.GetAxis(rVerAxis));
 		}else{
@@ -235,7 +246,9 @@ public class Movement : MonoBehaviour {
 			}
 		}
 
-		if (Input.GetKey (detach) || inputDevice.LeftBumper) {
+		if (Input.GetKey (detach)
+		    || inputDevice.LeftBumper
+		    ) {
 			cord.gameObject.GetComponent<RopeStart> ().Detach (tf.position);
 		}
 //		line.SetPosition (0, tf.position);
@@ -251,23 +264,25 @@ public class Movement : MonoBehaviour {
 //			rb.velocity = new Vector2 (rb.velocity.x, spaceshipRb.velocity.x*Time.deltaTime);
 //		}
 
+		//When controllers are connected
+//		if (inputDevice.RightStickX > 0) {
+//			ragdollHandVel.x = washHandSpeed;
+//			ragdollHandRb.velocity = ragdollHandVel+rb.velocity;
+//		}if (inputDevice.RightStickX < 0) {
+//			ragdollHandVel.x = (-washHandSpeed);
+//			ragdollHandRb.velocity = ragdollHandVel+rb.velocity;
+//		}if (inputDevice.RightStickY > 0) {
+//			ragdollHandVel.y = washHandSpeed;
+//			ragdollHandRb.velocity = ragdollHandVel+rb.velocity;
+//		}if (inputDevice.RightStickY < 0) {
+//			ragdollHandVel.y = (-washHandSpeed);
+//			ragdollHandRb.velocity = ragdollHandVel+rb.velocity;
+//		}
+//		if (inputDevice.RightStick == Vector2.zero){
+//			ragdollHandVel = Vector2.zero;
+//		}
 
-		if (inputDevice.RightStickX > 0) {
-			ragdollHandVel.x = washHandSpeed;
-			ragdollHandRb.velocity = ragdollHandVel+rb.velocity;
-		}if (inputDevice.RightStickX < 0) {
-			ragdollHandVel.x = (-washHandSpeed);
-			ragdollHandRb.velocity = ragdollHandVel+rb.velocity;
-		}if (inputDevice.RightStickY > 0) {
-			ragdollHandVel.y = washHandSpeed;
-			ragdollHandRb.velocity = ragdollHandVel+rb.velocity;
-		}if (inputDevice.RightStickY < 0) {
-			ragdollHandVel.y = (-washHandSpeed);
-			ragdollHandRb.velocity = ragdollHandVel+rb.velocity;
-		}
-		if (inputDevice.RightStick == Vector2.zero){
-			ragdollHandVel = Vector2.zero;
-		}
+
 //		if (ragdollHandVel != Vector2.zero && (velX != Vector2.zero || velZ != Vector2.zero)){
 //			ragdollHandRb.velocity = ragdollHandRb.velocity+rb.velocity;
 //		}
@@ -281,6 +296,38 @@ public class Movement : MonoBehaviour {
 			rb.velocity = spaceshipRb.velocity+new Vector2 (velX.x, velZ.y);
 		}
 
+		if (GameObject.FindGameObjectWithTag("Spaceship").GetComponent<SpaceshipController>().boostActive){
+//			BoostAndMagnet ();			
+		}
+
+		if (!GameObject.FindGameObjectWithTag("Spaceship").GetComponent<SpaceshipController>().boostActive && !rb.simulated){
+//			for (int i = 0; i < childrenNotThis.Count; i++) {
+//				childrenNotThis[i].GetComponent<Rigidbody2D>().simulated = true;
+//			}
+//			rb.simulated = true;;
+		}
+		if (stoppingBoost && (rb.velocity.y-spaceshipRb.velocity.y) > 1) {
+			rb.velocity = new Vector2 (rb.velocity.x, rb.velocity.y - Time.deltaTime*20);
+
+		}
+		if (stoppingBoost && (rb.velocity.y-spaceshipRb.velocity.y) < 1) {
+			stoppingBoost = false;
+		}
+	}
+
+	void BoostAndMagnet () {
+		if (magnet) {
+			if (rb.simulated) {
+				for (int i = 0; i < childrenNotThis.Count; i++) {
+					childrenNotThis[i].GetComponent<Rigidbody2D>().simulated = false;;
+				}
+				rb.simulated = false;
+//				posOnShip = playerHolder.transform.localPosition;
+			}
+//			if (playerHolder.transform.localPosition != posOnShip){
+//				playerHolder.transform.localPosition = posOnShip;
+//			}
+		}
 	}
 
 	void Move () {
@@ -304,6 +351,7 @@ public class Movement : MonoBehaviour {
 //			rb.angularVelocity = 0+spaceshipRb.angularVelocity;
 //			rb.drag = magnetDrag;
 			magnet = false;
+			magnetDistJ.enabled = false;
 			Flipback();
 			washHand.GetComponent<PaintTest>().washHand = washHand.GetComponent<PaintTest>().washHandWithoutBoots;
 //			velZ = Vector2.zero;
@@ -319,6 +367,7 @@ public class Movement : MonoBehaviour {
 //			rb.detectCollisions = true;
 			magnet = true;
 			washHand.GetComponent<PaintTest>().washHand = washHand.GetComponent<PaintTest>().washHandWithBoots;
+			magnetDistJ.enabled = true;
 //			velZ = Vector2.zero;
 //			velX = Vector2.zero;
 //			rb.drag = normalDrag;

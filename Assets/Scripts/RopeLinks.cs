@@ -18,7 +18,7 @@ public class RopeLinks : MonoBehaviour {
 	
 	// Update is called once per frame
 	void LateUpdate () {
-		line.SetPosition (0, tf.position);
-		line.SetPosition (1, cnctdRb.position);
+//		line.SetPosition (0, tf.position);
+//		line.SetPosition (1, cnctdRb.position);
 	}
 }

@@ -5,7 +5,7 @@ using System.Collections.Generic;
 using Uniduino;
 
 public class SpaceshipController : MonoBehaviour {
-
+	public Bounds spriteBounds;
 	public Vector2 startPos, lPos, rPos;
 	public Vector3 targetPos;
 	public Quaternion targetRot, startRot;
@@ -85,6 +85,7 @@ public class SpaceshipController : MonoBehaviour {
 		curSpeed = 0;
 		maxAccSpeed = speeds.Count;
 		changingSpeed = false;
+		spriteBounds = GetComponent<SpriteRenderer>().sprite.bounds;
     }
 	
 	// Update is called once per frame
@@ -395,7 +396,8 @@ public class SpaceshipController : MonoBehaviour {
 		boostBar.rectTransform.localScale = boostBarScale;
 		for (int i = 0; i < players.Length; i++) {
 			if (players[i].GetComponent<PlayerHead>().head.GetComponent<Movement>().magnet){
-				players[i].GetComponent<PlayerHead>().head.GetComponent<Movement>().rb.velocity = rb.velocity;		
+				players[i].GetComponent<PlayerHead>().head.GetComponent<Movement>().stoppingBoost = true;
+				Debug.Log ("stopboost");
 			}
 		}
 		if (curBoostSpeed > 0) {

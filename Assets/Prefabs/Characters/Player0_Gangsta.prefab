@@ -73,6 +73,7 @@ GameObject:
   - 114: {fileID: 11479520}
   - 232: {fileID: 23254042}
   - 114: {fileID: 11452342}
+  - 232: {fileID: 23215826}
   m_Layer: 9
   m_Name: Gangsta Head
   m_TagString: Untagged
@@ -844,7 +845,7 @@ Animator:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 196450}
-  m_Enabled: 0
+  m_Enabled: 1
   m_Avatar: {fileID: 0}
   m_Controller: {fileID: 9100000, guid: a62bb512d0bb1413395c3862199e4a38, type: 2}
   m_CullingMode: 0
@@ -947,6 +948,7 @@ MonoBehaviour:
   magnetDrag: 3
   magnetDelay: .5
   washHandSpeed: 5
+  magnetDistJ: {fileID: 0}
   left: 276
   right: 275
   up: 273
@@ -964,11 +966,13 @@ MonoBehaviour:
   curShipVel: {x: 0, y: 0, z: 0}
   velX: {x: 0, y: 0}
   velZ: {x: 0, y: 0}
+  magnet: 0
+  posOnShip: {x: 0, y: 0, z: 0}
+  stoppingBoost: 0
   childrenNotThis: []
   childRbs: []
   rb: {fileID: 0}
   spaceshipRb: {fileID: 0}
-  magnet: 0
 --- !u!114 &11456690
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -1434,6 +1438,20 @@ SpringJoint2D:
   m_Distance: .100000001
   m_DampingRatio: 0
   m_Frequency: 0
+--- !u!232 &23215826
+DistanceJoint2D:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 134066}
+  m_Enabled: 0
+  serializedVersion: 3
+  m_EnableCollision: 0
+  m_ConnectedRigidBody: {fileID: 0}
+  m_Anchor: {x: 0, y: -.100000001}
+  m_ConnectedAnchor: {x: 0, y: 0}
+  m_Distance: 1
+  m_MaxDistanceOnly: 1
 --- !u!232 &23254042
 DistanceJoint2D:
   m_ObjectHideFlags: 1
